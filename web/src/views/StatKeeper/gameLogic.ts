@@ -464,6 +464,55 @@ export class GameMethods {
   updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): void {
     this.game.homeRoster = [...homeRoster].sort((a, b) => a.name.localeCompare(b.name));
     this.game.awayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
+
+    // Automatically remove players from active line if they're no longer in roster
+    const homeRosterNames = new Set(homeRoster.map(player => player.name));
+    const awayRosterNames = new Set(awayRoster.map(player => player.name));
+
+    let homePlayersChanged = false;
+    let awayPlayersChanged = false;
+
+    // Remove players from home line if they're no longer in home roster
+    if (this.game.homePlayers) {
+      const filteredHomePlayers = this.game.homePlayers.filter(playerName =>
+        homeRosterNames.has(playerName)
+      );
+      if (filteredHomePlayers.length !== this.game.homePlayers.length) {
+        this.game.homePlayers = filteredHomePlayers;
+        homePlayersChanged = true;
+      }
+    }
+
+    // Remove players from away line if they're no longer in away roster
+    if (this.game.awayPlayers) {
+      const filteredAwayPlayers = this.game.awayPlayers.filter(playerName =>
+        awayRosterNames.has(playerName)
+      );
+      if (filteredAwayPlayers.length !== this.game.awayPlayers.length) {
+        this.game.awayPlayers = filteredAwayPlayers;
+        awayPlayersChanged = true;
+      }
+    }
+
+    // If we have an active point and players were removed, update the active point as well
+    if ((homePlayersChanged || awayPlayersChanged) && this.game.activePoint) {
+      const activePointMethods = this.getActivePointMethods();
+      if (activePointMethods && this.game.homePlayers && this.game.awayPlayers) {
+        // Update the active point with the new filtered player lists
+        let newOffensePlayers: string[];
+        let newDefensePlayers: string[];
+
+        if (this.game.homePossession) {
+          newOffensePlayers = [...this.game.homePlayers];
+          newDefensePlayers = [...this.game.awayPlayers];
+        } else {
+          newOffensePlayers = [...this.game.awayPlayers];
+          newDefensePlayers = [...this.game.homePlayers];
+        }
+
+        activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
+      }
+    }
   }
 
   recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void {

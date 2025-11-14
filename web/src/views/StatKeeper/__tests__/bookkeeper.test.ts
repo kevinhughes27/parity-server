@@ -533,4 +533,194 @@ describe('Bookkeeper', () => {
     expect(bookkeeper.activePoint).toBeNull();
     expect(bookkeeper.getUndoCount()).toBe(0);
   });
+
+  test('should automatically remove players from active line when removed from roster - no active point', async () => {
+    // Verify initial state
+    expect(bookkeeper.homePlayers).toEqual(homeLine);
+    expect(bookkeeper.awayPlayers).toEqual(awayLine);
+
+    // Create new rosters with some players removed
+    const newHomeRoster = [
+      { name: PLAYER1, is_open: true },
+      { name: PLAYER3, is_open: true },
+      { name: 'HP3', is_open: true },
+      // HP4, HP5, HP6, HP7 removed
+    ];
+
+    const newAwayRoster = [
+      { name: PLAYER2, is_open: true },
+      // PLAYER4 removed
+      { name: 'AP3', is_open: true },
+      { name: 'AP4', is_open: true },
+      { name: 'AP5', is_open: true },
+      { name: 'AP6', is_open: true },
+      { name: 'AP7', is_open: true },
+    ];
+
+    // Update rosters
+    await bookkeeper.updateRosters(newHomeRoster, newAwayRoster);
+
+    // Verify removed players are no longer in active lines
+    expect(bookkeeper.homePlayers).toEqual([PLAYER1, PLAYER3, 'HP3']);
+    expect(bookkeeper.awayPlayers).toEqual([PLAYER2, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7']);
+  });
+
+  test('should automatically remove players from active line and active point when removed from roster during point', async () => {
+    // Start a point
+    await bookkeeper.recordFirstActor(PLAYER1, true);
+    expect(bookkeeper.activePoint).not.toBeNull();
+
+    // Verify initial state using toJSON() method
+    const initialActivePointData = bookkeeper.activePoint!.toJSON();
+    expect(initialActivePointData.offensePlayers).toEqual(homeLine); // Home has possession
+    expect(initialActivePointData.defensePlayers).toEqual(awayLine);
+
+    // Create new rosters with some players removed
+    const newHomeRoster = [
+      { name: PLAYER1, is_open: true },
+      { name: PLAYER3, is_open: true },
+      // HP3, HP4, HP5, HP6, HP7 removed
+    ];
+
+    const newAwayRoster = [
+      { name: PLAYER2, is_open: true },
+      { name: PLAYER4, is_open: true },
+      // AP3, AP4, AP5, AP6, AP7 removed
+    ];
+
+    // Update rosters
+    await bookkeeper.updateRosters(newHomeRoster, newAwayRoster);
+
+    // Verify active lines are updated
+    expect(bookkeeper.homePlayers).toEqual([PLAYER1, PLAYER3]);
+    expect(bookkeeper.awayPlayers).toEqual([PLAYER2, PLAYER4]);
+
+    // Verify active point is also updated
+    const updatedActivePointData = bookkeeper.activePoint!.toJSON();
+    expect(updatedActivePointData.offensePlayers).toEqual([PLAYER1, PLAYER3]); // Home has possession
+    expect(updatedActivePointData.defensePlayers).toEqual([PLAYER2, PLAYER4]);
+  });
+
+  test('should automatically remove players from active line and active point when away team has possession', async () => {
+    // Start a point with away team possession
+    await bookkeeper.recordFirstActor(PLAYER2, false); // Away player starts
+    expect(bookkeeper.activePoint).not.toBeNull();
+    expect(bookkeeper.homePossession).toBe(false);
+
+    // Verify initial state - away team has offense
+    const initialActivePointData = bookkeeper.activePoint!.toJSON();
+    expect(initialActivePointData.offensePlayers).toEqual(awayLine); // Away has possession
+    expect(initialActivePointData.defensePlayers).toEqual(homeLine);
+
+    // Create new rosters with some players removed
+    const newHomeRoster = [
+      { name: PLAYER1, is_open: true },
+      { name: PLAYER3, is_open: true },
+      // HP3, HP4, HP5, HP6, HP7 removed
+    ];
+
+    const newAwayRoster = [
+      { name: PLAYER2, is_open: true },
+      { name: PLAYER4, is_open: true },
+      // AP3, AP4, AP5, AP6, AP7 removed
+    ];
+
+    // Update rosters
+    await bookkeeper.updateRosters(newHomeRoster, newAwayRoster);
+
+    // Verify active lines are updated
+    expect(bookkeeper.homePlayers).toEqual([PLAYER1, PLAYER3]);
+    expect(bookkeeper.awayPlayers).toEqual([PLAYER2, PLAYER4]);
+
+    // Verify active point is also updated correctly (away team has possession)
+    const updatedActivePointData = bookkeeper.activePoint!.toJSON();
+    expect(updatedActivePointData.offensePlayers).toEqual([PLAYER2, PLAYER4]); // Away has possession
+    expect(updatedActivePointData.defensePlayers).toEqual([PLAYER1, PLAYER3]);
+  });
+
+  test('should handle roster update when no players are removed', async () => {
+    // Verify initial state
+    expect(bookkeeper.homePlayers).toEqual(homeLine);
+    expect(bookkeeper.awayPlayers).toEqual(awayLine);
+
+    // Create rosters with all existing players plus new ones
+    const newHomeRoster = [
+      ...homeLine.map(name => ({ name, is_open: true })),
+      { name: 'NewHomePlayer1', is_open: true },
+      { name: 'NewHomePlayer2', is_open: true },
+    ];
+
+    const newAwayRoster = [
+      ...awayLine.map(name => ({ name, is_open: true })),
+      { name: 'NewAwayPlayer1', is_open: true },
+    ];
+
+    // Update rosters
+    await bookkeeper.updateRosters(newHomeRoster, newAwayRoster);
+
+    // Verify active lines remain unchanged since no players were removed
+    expect(bookkeeper.homePlayers).toEqual(homeLine);
+    expect(bookkeeper.awayPlayers).toEqual(awayLine);
+  });
+
+  test('should handle roster update when active lines are null', async () => {
+    // Create a fresh game without any active players selected
+    const initialStoredGame = createInitialStoredGame(
+      mockLeague,
+      mockWeek,
+      mockHomeTeam,
+      mockAwayTeam
+    );
+
+    // Create team objects with rosters
+    const homeTeamWithRoster: Team = {
+      ...mockHomeTeam,
+      players: homeLine.map(name => ({
+        name,
+        team: mockHomeTeam.name,
+        is_open: true,
+      })),
+    };
+
+    const awayTeamWithRoster: Team = {
+      ...mockAwayTeam,
+      players: awayLine.map(name => ({
+        name,
+        team: mockAwayTeam.name,
+        is_open: true,
+      })),
+    };
+
+    const gameId = 2; // Different from the main test
+    const freshBookkeeper = new Bookkeeper(
+      initialStoredGame,
+      mockLeague,
+      homeTeamWithRoster,
+      awayTeamWithRoster,
+      gameId
+    );
+
+    // Verify active lines are null initially
+    expect(freshBookkeeper.homePlayers).toBeNull();
+    expect(freshBookkeeper.awayPlayers).toBeNull();
+
+    const newHomeRoster = [
+      { name: PLAYER1, is_open: true },
+      { name: PLAYER3, is_open: true },
+    ];
+
+    const newAwayRoster = [
+      { name: PLAYER2, is_open: true },
+      { name: PLAYER4, is_open: true },
+    ];
+
+    // Update rosters - should not crash when active lines are null
+    await expect(
+      freshBookkeeper.updateRosters(newHomeRoster, newAwayRoster)
+    ).resolves.not.toThrow();
+
+    // Verify active lines remain null
+    expect(freshBookkeeper.homePlayers).toBeNull();
+    expect(freshBookkeeper.awayPlayers).toBeNull();
+  });
 });
