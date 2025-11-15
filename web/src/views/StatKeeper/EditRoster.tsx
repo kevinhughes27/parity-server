@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {
   Box,
-  List,
-  ListItem,
   Typography,
   Button,
   TextField,
@@ -12,6 +10,7 @@ import {
   InputLabel,
 } from '@mui/material';
 import { StoredPlayer } from './db';
+import { TeamPlayer } from '../../api';
 
 interface EditRosterProps {
   teamName: string;
@@ -75,7 +74,7 @@ const EmptyRosterMessage: React.FC = () => (
 
 // Component for the player list section
 const PlayerList: React.FC<{
-    currentRoster: StoredPlayer[];
+  currentRoster: StoredPlayer[];
   onRemovePlayer: (playerName: string) => void;
 }> = ({ currentRoster, onRemovePlayer }) => {
   return (
@@ -223,7 +222,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
 
   const handleAddSubByName = () => {
     if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
-        const newPlayer: StoredPlayer = {
+      const newPlayer: StoredPlayer = {
         name: `${newSubName.trim()}(S)`,
         is_open: newSubGender,
       };
@@ -238,7 +237,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
     if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
       const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
       if (leaguePlayer) {
-      const newPlayer: StoredPlayer = {
+        const newPlayer: StoredPlayer = {
           name: `${leaguePlayer.name}(S)`,
           is_open: leaguePlayer.is_open,
         };

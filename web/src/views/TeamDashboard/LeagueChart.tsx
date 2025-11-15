@@ -6,33 +6,23 @@ import {
   BarElement,
   Tooltip,
   Legend,
+  ChartOptions,
+  Scale,
+  CoreScaleOptions,
+  Tick,
+  TooltipPositionerMap,
 } from 'chart.js';
 import annotationPlugin from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
-import {
-  groupBy,
-  sortBy,
-  meanBy,
-  map,
-  fromPairs,
-  keys,
-  values,
-  max,
-  min,
-  difference,
-} from 'lodash';
+import { sortBy, map, flatten, sum } from 'lodash';
+import format from 'format-number';
+import { colors, overColors, underColors } from '../../helpers';
 import { Player } from '../../api';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, annotationPlugin);
 
-interface LeagueChartProps {
-  players: Player[];
-  teamNames: string[];
-  salaryCap: number;
-  salaryFloor: number;
-}
-
-interface ChartDataset {
+// Local interface for chart dataset to avoid Chart.js type complexity
+interface LocalChartDataset {
   label: string;
   stack: string;
   data: Array<{ x: string; y: number }>;
@@ -40,6 +30,13 @@ interface ChartDataset {
   hoverBackgroundColor: string;
   categoryPercentage: number;
   barPercentage: number;
+}
+
+interface LeagueChartProps {
+  players: Player[];
+  teamNames: string[];
+  salaryCap: number;
+  salaryFloor: number;
 }
 
 export default function Chart(props: LeagueChartProps): React.ReactElement {
@@ -73,7 +70,7 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
             hoverBackgroundColor: teamColors[idx],
             categoryPercentage: 0.2,
             barPercentage: 24.0,
-          } as ChartDataset;
+          } as LocalChartDataset;
         });
       })
     ),
@@ -117,7 +114,7 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
             return item.stack;
           },
           label: (item: { datasetIndex: number; dataIndex: number }) => {
-            const dataset = data.datasets[item.datasetIndex];
+            const dataset = data.datasets[item.datasetIndex] as LocalChartDataset;
             const value = dataset.data[item.dataIndex];
 
             const salary = Math.round(value.y);

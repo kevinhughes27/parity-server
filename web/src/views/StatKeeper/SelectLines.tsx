@@ -87,8 +87,12 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       setSelectedAwayPlayers(bookkeeper.awayPlayers);
     } else if (lastPlayedLine) {
       // pre-select players not on the last played line.
-      setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p.name)).map(p => p.name));
-      setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p.name)).map(p => p.name));
+      setSelectedHomePlayers(
+        homeRoster.filter(p => !lastPlayedLine.home.includes(p.name)).map(p => p.name)
+      );
+      setSelectedAwayPlayers(
+        awayRoster.filter(p => !lastPlayedLine.away.includes(p.name)).map(p => p.name)
+      );
     } else {
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
