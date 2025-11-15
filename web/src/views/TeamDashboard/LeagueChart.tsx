@@ -6,25 +6,24 @@ import {
   BarElement,
   Tooltip,
   Legend,
-  TooltipPositionerMap,
-  Scale,
-  CoreScaleOptions,
-  ChartOptions,
-  Tick,
 } from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import format from 'format-number';
 import annotationPlugin from 'chartjs-plugin-annotation';
-import { flatten, sortBy, map, sum } from 'lodash';
-import { colors, underColors, overColors } from '../../helpers';
+import { Bar } from 'react-chartjs-2';
+import {
+  groupBy,
+  sortBy,
+  meanBy,
+  map,
+  fromPairs,
+  keys,
+  values,
+  max,
+  min,
+  difference,
+} from 'lodash';
+import { Player } from '../../api';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, annotationPlugin);
-
-interface Player {
-  name: string;
-  team: string;
-  salary: number;
-}
 
 interface LeagueChartProps {
   players: Player[];

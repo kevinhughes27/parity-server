@@ -1,12 +1,7 @@
 import { map, sum, uniq } from 'lodash';
+import { Player } from './api';
 
-interface IPlayer {
-  name: string;
-  team: string;
-  salary: number;
-}
-
-export function calcSalaryLimits(weeks: number[], players: IPlayer[]) {
+export function calcSalaryLimits(weeks: number[], players: Player[]) {
   const numWeeks = weeks.length;
   const numTeams = uniq(players.map(p => p.team)).length;
 
