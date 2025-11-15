@@ -6,23 +6,29 @@ import {
   BarElement,
   Tooltip,
   Legend,
-  ChartOptions,
+  TooltipPositionerMap,
   Scale,
   CoreScaleOptions,
+  ChartOptions,
   Tick,
-  TooltipPositionerMap,
 } from 'chart.js';
-import annotationPlugin from 'chartjs-plugin-annotation';
 import { Bar } from 'react-chartjs-2';
-import { sortBy, map, flatten, sum } from 'lodash';
 import format from 'format-number';
-import { colors, overColors, underColors } from '../../helpers';
+import annotationPlugin from 'chartjs-plugin-annotation';
+import { flatten, sortBy, map, sum } from 'lodash';
+import { colors, underColors, overColors } from '../../helpers';
 import { Player } from '../../api';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, annotationPlugin);
 
-// Local interface for chart dataset to avoid Chart.js type complexity
-interface LocalChartDataset {
+interface LeagueChartProps {
+  players: Player[];
+  teamNames: string[];
+  salaryCap: number;
+  salaryFloor: number;
+}
+
+interface ChartDataset {
   label: string;
   stack: string;
   data: Array<{ x: string; y: number }>;
@@ -30,13 +36,6 @@ interface LocalChartDataset {
   hoverBackgroundColor: string;
   categoryPercentage: number;
   barPercentage: number;
-}
-
-interface LeagueChartProps {
-  players: Player[];
-  teamNames: string[];
-  salaryCap: number;
-  salaryFloor: number;
 }
 
 export default function Chart(props: LeagueChartProps): React.ReactElement {
@@ -70,7 +69,7 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
             hoverBackgroundColor: teamColors[idx],
             categoryPercentage: 0.2,
             barPercentage: 24.0,
-          } as LocalChartDataset;
+          } as ChartDataset;
         });
       })
     ),
@@ -114,7 +113,7 @@ export default function Chart(props: LeagueChartProps): React.ReactElement {
             return item.stack;
           },
           label: (item: { datasetIndex: number; dataIndex: number }) => {
-            const dataset = data.datasets[item.datasetIndex] as LocalChartDataset;
+            const dataset = data.datasets[item.datasetIndex];
             const value = dataset.data[item.dataIndex];
 
             const salary = Math.round(value.y);

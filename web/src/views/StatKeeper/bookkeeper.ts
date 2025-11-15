@@ -133,21 +133,6 @@ export class Bookkeeper {
       lineSize: apiLeague.lineSize,
     };
 
-    // Ensure roster data is in the correct format (handle backward compatibility)
-    storedGame.homeRoster = storedGame.homeRoster.map(player => {
-      if (typeof player === 'string') {
-        return { name: player, is_open: true }; // Default for backward compatibility
-      }
-      return player;
-    });
-
-    storedGame.awayRoster = storedGame.awayRoster.map(player => {
-      if (typeof player === 'string') {
-        return { name: player, is_open: true }; // Default for backward compatibility
-      }
-      return player;
-    });
-
     return new Bookkeeper(storedGame, league, gameId);
   }
 
@@ -189,19 +174,16 @@ export class Bookkeeper {
   }
 
   private transformForAPI(): UploadedGamePayload {
+    // When we deprecate the Android App we can start changing this payload atomically to further refactor
     return {
       league_id: this.game.league_id,
       week: this.game.week,
       homeTeam: this.game.homeTeam,
       homeScore: this.game.homeScore,
-      homeRoster: [...this.game.homeRoster.map(p => (typeof p === 'string' ? p : p.name))].sort(
-        (a, b) => a.localeCompare(b)
-      ),
+      homeRoster: [...this.game.homeRoster.map(p => p.name)].sort((a, b) => a.localeCompare(b)),
       awayTeam: this.game.awayTeam,
       awayScore: this.game.awayScore,
-      awayRoster: [...this.game.awayRoster.map(p => (typeof p === 'string' ? p : p.name))].sort(
-        (a, b) => a.localeCompare(b)
-      ),
+      awayRoster: [...this.game.awayRoster.map(p => p.name)].sort((a, b) => a.localeCompare(b)),
       points: this.game.points.map(point => ({
         offensePlayers: [...point.offensePlayers].sort(),
         defensePlayers: [...point.defensePlayers].sort(),
@@ -698,31 +680,6 @@ export class Bookkeeper {
 
   getAwayTeamId(): number {
     return this.game.awayTeamId;
-  }
-
-  // Helper method to get team info as Team objects when needed for compatibility
-  getHomeTeam(): Team {
-    return {
-      id: this.game.homeTeamId,
-      name: this.game.homeTeam,
-      players: this.game.homeRoster.map(player => ({
-        name: player.name,
-        team: this.game.homeTeam,
-        is_open: player.is_open,
-      })),
-    };
-  }
-
-  getAwayTeam(): Team {
-    return {
-      id: this.game.awayTeamId,
-      name: this.game.awayTeam,
-      players: this.game.awayRoster.map(player => ({
-        name: player.name,
-        team: this.game.awayTeam,
-        is_open: player.is_open,
-      })),
-    };
   }
 
   getGameStatus(): StoredGame['status'] {

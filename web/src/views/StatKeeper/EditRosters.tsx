@@ -26,7 +26,6 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   useEffect(() => {
     if (bookkeeper) {
-      // Get current rosters directly from the game
       sortAndSetHomeRoster(bookkeeper.getHomeRoster());
       sortAndSetAwayRoster(bookkeeper.getAwayRoster());
     } else {

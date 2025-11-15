@@ -360,15 +360,11 @@ function NewGame() {
         is_open: p.is_open,
       }));
 
-      // The team objects should already have is_open from the normalized data
-      const homeTeamWithGender = selectedHomeTeamObj;
-      const awayTeamWithGender = selectedAwayTeamObj;
-
       const id = await Bookkeeper.newGame(
         currentLeague,
         week,
-        homeTeamWithGender,
-        awayTeamWithGender,
+        selectedHomeTeamObj,
+        selectedAwayTeamObj,
         homeRoster,
         awayRoster
       );

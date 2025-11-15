@@ -7,7 +7,6 @@ import {
   leagues as apiLeagues,
   fetchSchedule,
   Schedule,
-  normalizeTeamPlayer,
 } from '../../api';
 import { Bookkeeper } from './bookkeeper';
 
@@ -121,9 +120,7 @@ export function useTeams(leagueId: string | undefined): UseTeamsResult {
       .then(teams => {
         const sortedTeams = teams.map(team => ({
           ...team,
-          players: [...team.players]
-            .map(normalizeTeamPlayer) // Convert API format to internal format
-            .sort((a, b) => a.name.localeCompare(b.name)),
+          players: [...team.players].sort((a, b) => a.name.localeCompare(b.name)),
         }));
         setLeagueTeams(sortedTeams);
 
