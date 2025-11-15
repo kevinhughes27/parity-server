@@ -321,9 +321,7 @@ describe('Bookkeeper', () => {
       { league: mockLeague },
       mockWeek,
       mockHomeTeam,
-      mockAwayTeam,
-      homeLine.map(name => ({ name, is_open: true })),
-      awayLine.map(name => ({ name, is_open: true }))
+      mockAwayTeam
     );
 
     // Load a fresh bookkeeper from the database

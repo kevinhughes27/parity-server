@@ -351,22 +351,11 @@ function NewGame() {
     }
 
     try {
-      const homeRoster = selectedHomeTeamObj.players.map(p => ({
-        name: p.name,
-        is_open: p.is_open,
-      }));
-      const awayRoster = selectedAwayTeamObj.players.map(p => ({
-        name: p.name,
-        is_open: p.is_open,
-      }));
-
       const id = await Bookkeeper.newGame(
         currentLeague,
         week,
         selectedHomeTeamObj,
-        selectedAwayTeamObj,
-        homeRoster,
-        awayRoster
+        selectedAwayTeamObj
       );
       console.log(`New game added with localId: ${id}`);
       navigate(`/stat_keeper/game/${id}`);

@@ -43,11 +43,20 @@ export class Bookkeeper {
   public static async newGame(
     currentLeague: { league: { id: number; name: string; lineSize: number } },
     week: number,
-    homeTeam: { id: number; name: string },
-    awayTeam: { id: number; name: string },
-    homeRoster: StoredPlayer[],
-    awayRoster: StoredPlayer[]
+    homeTeam: Team,
+    awayTeam: Team
   ): Promise<number> {
+    // Convert team players to StoredPlayer format and sort them
+    const homeRoster: StoredPlayer[] = homeTeam.players.map(p => ({
+      name: p.name,
+      is_open: p.is_open,
+    }));
+    const awayRoster: StoredPlayer[] = awayTeam.players.map(p => ({
+      name: p.name,
+      is_open: p.is_open,
+    }));
+
+    // Sort
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.name.localeCompare(b.name));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
 
