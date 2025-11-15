@@ -47,10 +47,10 @@ export class Bookkeeper {
   public static async newGame(
     currentLeague: { league: { id: number; name: string; lineSize: number } },
     week: number,
-    homeTeam: { id: number; name: string; players: { name: string; is_open: boolean }[] },
-    awayTeam: { id: number; name: string; players: { name: string; is_open: boolean }[] },
-    homeRoster: { name: string; is_open: boolean }[],
-    awayRoster: { name: string; is_open: boolean }[]
+    homeTeam: { id: number; name: string; players: StoredPlayer[] },
+    awayTeam: { id: number; name: string; players: StoredPlayer[] },
+    homeRoster: StoredPlayer[],
+    awayRoster: StoredPlayer[]
   ): Promise<number> {
     const sortedHomeRoster = [...homeRoster].sort((a, b) => a.name.localeCompare(b.name));
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
@@ -714,12 +714,16 @@ export class Bookkeeper {
 
   // Convenience methods for React components
 
-  getHomeRoster(): string[] {
-    return this.homeTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
+  getHomeRoster(): StoredPlayer[] {
+    return this.homeTeam.players
+      .map(p => ({ name: p.name, is_open: p.is_open }))
+      .sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  getAwayRoster(): string[] {
-    return this.awayTeam.players.map(p => p.name).sort((a, b) => a.localeCompare(b));
+  getAwayRoster(): StoredPlayer[] {
+    return this.awayTeam.players
+      .map(p => ({ name: p.name, is_open: p.is_open }))
+      .sort((a, b) => a.name.localeCompare(b.name));
   }
 
   getGameStatus(): StoredGame['status'] {

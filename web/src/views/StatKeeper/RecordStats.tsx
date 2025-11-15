@@ -2,8 +2,7 @@ import React from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
-import { useTeams } from './hooks';
-import { getPlayerGender } from '../../api';
+import { StoredPlayer } from './db';
 import { Box, Button, Typography } from '@mui/material';
 
 const playerButtonStyles = {
@@ -31,11 +30,8 @@ const playerButtonStyles = {
 };
 
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
-  const fullHomeRoster = bookkeeper.getHomeRoster();
-  const fullAwayRoster = bookkeeper.getAwayRoster();
-
-  // Fetch team data to get gender information
-  const { allLeaguePlayers } = useTeams(bookkeeper.league.id.toString());
+  const homeRoster = bookkeeper.getHomeRoster();
+  const awayRoster = bookkeeper.getAwayRoster();
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -81,9 +77,9 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     await bookkeeper.undo();
   };
 
-  const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
-    const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
-    const isOpen = getPlayerGender(playerName, allLeaguePlayers);
+  const renderPlayerButton = (player: StoredPlayer, isHomeTeamButton: boolean) => {
+    const buttonState = bookkeeper.getPlayerButtonState(player.name, isHomeTeamButton);
+    const isOpen = player.is_open;
 
     // Get base style from existing logic
     const baseStyle = playerButtonStyles[buttonState.variant];
@@ -121,8 +117,8 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
     return (
       <Button
-        key={playerName}
-        onClick={() => handlePlayerClick(playerName, isHomeTeamButton)}
+        key={player.name}
+        onClick={() => handlePlayerClick(player.name, isHomeTeamButton)}
         disabled={!buttonState.enabled}
         fullWidth
         variant="text"
@@ -140,7 +136,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           ...(applyGenderStyle ? genderStyle : {}),
         }}
       >
-        {playerName}
+        {player.name}
       </Button>
     );
   };
@@ -161,7 +157,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.homeTeam.name}
             </Typography>
-            {fullHomeRoster.map(player => renderPlayerButton(player, true))}
+            {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
 
           <Box sx={{ width: '40%' }}>
@@ -172,7 +168,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
               {bookkeeper.awayTeam.name}
             </Typography>
-            {fullAwayRoster.map(player => renderPlayerButton(player, false))}
+            {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
         </Box>
       </Box>

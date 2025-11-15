@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import { useTeams } from './hooks';
-import EditRoster, { RosterPlayer } from './EditRoster';
+import EditRoster from './EditRoster';
+import { StoredPlayer } from './db';
 import ActionBar from './ActionBar';
 import { Box, Typography } from '@mui/material';
 
@@ -12,20 +13,20 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     errorTeams: errorLeaguePlayers,
   } = useTeams(bookkeeper.league.id.toString());
 
-  const [homeRoster, setHomeRoster] = useState<RosterPlayer[]>([]);
-  const [awayRoster, setAwayRoster] = useState<RosterPlayer[]>([]);
+  const [homeRoster, setHomeRoster] = useState<StoredPlayer[]>([]);
+  const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
 
-  const sortAndSetHomeRoster = (roster: RosterPlayer[]) => {
+  const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
     setHomeRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
   };
 
-  const sortAndSetAwayRoster = (roster: RosterPlayer[]) => {
+  const sortAndSetAwayRoster = (roster: StoredPlayer[]) => {
     setAwayRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
   };
 
   useEffect(() => {
     if (bookkeeper) {
-      // Convert current team players to RosterPlayer format
+      // Convert current team players to StoredPlayer format
       const homeRosterPlayers = bookkeeper.homeTeam.players.map(p => ({
         name: p.name,
         is_open: p.is_open ?? true,

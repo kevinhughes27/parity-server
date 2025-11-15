@@ -1,31 +1,28 @@
 import React, { useState } from 'react';
-import { TeamPlayer } from '../../api';
 import {
   Box,
-  Button,
+  List,
+  ListItem,
   Typography,
+  Button,
+  TextField,
   Select,
   MenuItem,
   FormControl,
   InputLabel,
-  TextField,
 } from '@mui/material';
-
-export interface RosterPlayer {
-  name: string;
-  is_open: boolean;
-}
+import { StoredPlayer } from './db';
 
 interface EditRosterProps {
   teamName: string;
+  currentRoster: StoredPlayer[];
+  onRosterChange: (newRoster: StoredPlayer[]) => void;
   allLeaguePlayers: TeamPlayer[]; // Assumed to be pre-sorted by parent
-  currentRoster: RosterPlayer[];
-  onRosterChange: (newRoster: RosterPlayer[]) => void;
 }
 
 // Component for a single player row in the roster list
 const PlayerListItem: React.FC<{
-  player: RosterPlayer;
+  player: StoredPlayer;
   onRemove: (playerName: string) => void;
 }> = ({ player, onRemove }) => {
   const borderColor = player.is_open ? '#2196f3' : '#ce93d8';
@@ -78,7 +75,7 @@ const EmptyRosterMessage: React.FC = () => (
 
 // Component for the player list section
 const PlayerList: React.FC<{
-  currentRoster: RosterPlayer[];
+    currentRoster: StoredPlayer[];
   onRemovePlayer: (playerName: string) => void;
 }> = ({ currentRoster, onRemovePlayer }) => {
   return (
@@ -226,7 +223,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
 
   const handleAddSubByName = () => {
     if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
-      const newPlayer: RosterPlayer = {
+        const newPlayer: StoredPlayer = {
         name: `${newSubName.trim()}(S)`,
         is_open: newSubGender,
       };
@@ -241,7 +238,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
     if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
       const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
       if (leaguePlayer) {
-        const newPlayer: RosterPlayer = {
+      const newPlayer: StoredPlayer = {
           name: `${leaguePlayer.name}(S)`,
           is_open: leaguePlayer.is_open,
         };

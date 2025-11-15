@@ -2,8 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
-import { useTeams } from './hooks';
-import { getPlayerGender } from '../../api';
+import { StoredPlayer } from './db';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
@@ -12,9 +11,6 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
   const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
-
-  // Fetch team data to get gender information
-  const { allLeaguePlayers } = useTeams(bookkeeper.league.id.toString());
 
   // Memoize rosters to prevent infinite re-renders
   const homeRoster = useMemo(() => bookkeeper.getHomeRoster(), [bookkeeper]);
@@ -28,7 +24,10 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   // Helper functions for ratio counting
   const getRatioCounts = (playerNames: string[]) => {
-    const open = playerNames.filter(name => getPlayerGender(name, allLeaguePlayers)).length;
+    const open = playerNames.filter(name => {
+      const player = [...homeRoster, ...awayRoster].find(p => p.name === name);
+      return player?.is_open ?? true;
+    }).length;
     const women = playerNames.length - open;
     return { open, women };
   };
@@ -88,8 +87,8 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       setSelectedAwayPlayers(bookkeeper.awayPlayers);
     } else if (lastPlayedLine) {
       // pre-select players not on the last played line.
-      setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
-      setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
+      setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p.name)).map(p => p.name));
+      setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p.name)).map(p => p.name));
     } else {
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
@@ -169,10 +168,10 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     }
   };
 
-  const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
+  const renderPlayerButton = (player: StoredPlayer, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
-    const isSelected = selectedList.includes(playerName);
-    const isOpen = getPlayerGender(playerName, allLeaguePlayers);
+    const isSelected = selectedList.includes(player.name);
+    const isOpen = player.is_open;
 
     // Color logic: Blue for open players, purple for women players
     const getButtonSx = () => {
@@ -213,13 +212,13 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
     return (
       <Button
-        key={playerName}
-        onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
+        key={player.name}
+        onClick={() => togglePlayerSelection(player.name, isHomeTeam)}
         fullWidth
         variant={isSelected ? 'contained' : 'outlined'}
         sx={getButtonSx()}
       >
-        {playerName}
+        {player.name}
       </Button>
     );
   };
