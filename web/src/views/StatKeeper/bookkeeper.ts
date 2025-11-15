@@ -665,6 +665,9 @@ export class Bookkeeper {
   }
 
   // Convenience methods for React components
+  getLeagueRatio() {
+    return { open: 4, women: 2 };
+  }
 
   getHomeRoster(): StoredPlayer[] {
     return [...this.game.homeRoster].sort((a, b) => a.name.localeCompare(b.name));

@@ -19,10 +19,6 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
-  // Hard-coded league ratio (4:2 - updated ratio)
-  const LEAGUE_RATIO = { open: 4, women: 2 };
-
-  // Helper functions for ratio counting
   const getRatioCounts = (playerNames: string[]) => {
     const open = playerNames.filter(name => {
       const player = [...homeRoster, ...awayRoster].find(p => p.name === name);
@@ -34,7 +30,8 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const checkRatioCompliance = (playerNames: string[]) => {
     const { open, women } = getRatioCounts(playerNames);
-    return open === LEAGUE_RATIO.open && women === LEAGUE_RATIO.women;
+    const ratio = bookkeeper.getLeagueRatio();
+    return open === ratio.open && women === ratio.women;
   };
 
   const getRatioWarnings = () => {
@@ -43,9 +40,10 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     if (selectedHomePlayers.length === lineSize) {
       const homeCompliant = checkRatioCompliance(selectedHomePlayers);
       if (!homeCompliant) {
+        const ratio = bookkeeper.getLeagueRatio();
         const { open, women } = getRatioCounts(selectedHomePlayers);
         warnings.push(
-          `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
+          `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
         );
       }
     }
@@ -54,8 +52,9 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       const awayCompliant = checkRatioCompliance(selectedAwayPlayers);
       if (!awayCompliant) {
         const { open, women } = getRatioCounts(selectedAwayPlayers);
+        const ratio = bookkeeper.getLeagueRatio();
         warnings.push(
-          `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
+          `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
         );
       }
     }
@@ -131,7 +130,6 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     const enoughPlayers = leftPlayerCount > 2 && rightPlayerCount > 2;
 
     if (enoughPlayers) {
-      // Get all warnings
       const ratioWarnings = getRatioWarnings();
       const incompleteWarnings = getIncompleteLinesWarning();
       const allWarnings = [...ratioWarnings, ...incompleteWarnings];
@@ -146,7 +144,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         }
       }
 
-      // prepare new line
+      // Prepare new line
       const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
       const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
 
