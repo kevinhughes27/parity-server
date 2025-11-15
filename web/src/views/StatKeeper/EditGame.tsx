@@ -153,6 +153,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       alert(`Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
       console.error('Submission error:', error);
     } finally {
+      // Always redirect to StatKeeper home regardless of success or failure
       navigate('/stat_keeper');
     }
   };
@@ -249,7 +250,7 @@ function TopBar({
       </Toolbar>
       <Box sx={{ textAlign: 'center', pb: 1 }}>
         <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-          {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
+          {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
         </Typography>
         <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
           <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}

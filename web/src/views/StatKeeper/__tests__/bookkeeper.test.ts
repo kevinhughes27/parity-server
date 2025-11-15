@@ -27,12 +27,21 @@ const PLAYER3 = 'Patrick Kenzie';
 const PLAYER4 = 'Player 4';
 
 const mockLeague: League = { name: 'OCUA', id: 101, lineSize: 7 };
-const mockHomeTeam: Team = { name: 'Team A', id: 1, players: [] };
-const mockAwayTeam: Team = { name: 'Team B', id: 2, players: [] };
-const mockWeek = 1;
 
 const homeLine = [PLAYER1, PLAYER3, 'HP3', 'HP4', 'HP5', 'HP6', 'HP7'];
 const awayLine = [PLAYER2, PLAYER4, 'AP3', 'AP4', 'AP5', 'AP6', 'AP7'];
+
+const mockHomeTeam: Team = {
+  name: 'Team A',
+  id: 1,
+  players: homeLine.map(name => ({ name, team: 'Team A', is_open: true })),
+};
+const mockAwayTeam: Team = {
+  name: 'Team B',
+  id: 2,
+  players: awayLine.map(name => ({ name, team: 'Team B', is_open: true })),
+};
+const mockWeek = 1;
 
 const createInitialStoredGame = (
   league: League,
@@ -47,8 +56,8 @@ const createInitialStoredGame = (
     homeTeamId: homeTeam.id,
     awayTeam: awayTeam.name,
     awayTeamId: awayTeam.id,
-    homeRoster: [],
-    awayRoster: [],
+    homeRoster: homeLine.map(name => ({ name, is_open: true })),
+    awayRoster: awayLine.map(name => ({ name, is_open: true })),
     points: [],
     activePoint: null,
     homeScore: 0,
@@ -80,34 +89,8 @@ describe('Bookkeeper', () => {
       mockAwayTeam
     );
 
-    // Create team objects with rosters
-    const homeTeamWithRoster: Team = {
-      ...mockHomeTeam,
-      players: homeLine.map(name => ({
-        name,
-        team: mockHomeTeam.name,
-        is_open: true, // Default for tests
-      })),
-    };
-
-    const awayTeamWithRoster: Team = {
-      ...mockAwayTeam,
-      players: awayLine.map(name => ({
-        name,
-        team: mockAwayTeam.name,
-        is_open: true, // Default for tests
-      })),
-    };
-
     const gameId = 1;
-
-    bookkeeper = new Bookkeeper(
-      initialStoredGame,
-      mockLeague,
-      homeTeamWithRoster,
-      awayTeamWithRoster,
-      gameId
-    );
+    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, gameId);
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
   });
 
@@ -237,32 +220,7 @@ describe('Bookkeeper', () => {
       mockAwayTeam
     );
 
-    // Create team objects with rosters
-    const homeTeamWithRoster: Team = {
-      ...mockHomeTeam,
-      players: homeLine.map(name => ({
-        name,
-        team: mockHomeTeam.name,
-        is_open: true, // Default for tests
-      })),
-    };
-
-    const awayTeamWithRoster: Team = {
-      ...mockAwayTeam,
-      players: awayLine.map(name => ({
-        name,
-        team: mockAwayTeam.name,
-        is_open: true, // Default for tests
-      })),
-    };
-
-    bookkeeper = new Bookkeeper(
-      initialStoredGame,
-      mockLeague,
-      homeTeamWithRoster,
-      awayTeamWithRoster,
-      gameId
-    );
+    bookkeeper = new Bookkeeper(initialStoredGame, mockLeague, gameId);
     await bookkeeper.recordActivePlayers(homeLine, awayLine);
 
     //1. P2 (Away) has disc, to pull. Point starts. Away possession.
@@ -358,29 +316,12 @@ describe('Bookkeeper', () => {
     const awayScoreBeforeSave = bookkeeper.awayScore;
     const firstActorBeforeSave = bookkeeper.firstActor;
 
-    // Create team objects with rosters for saving
-    const homeTeamForSave = {
-      ...mockHomeTeam,
-      players: homeLine.map(name => ({
-        name,
-        is_open: true, // Default for tests
-      })),
-    };
-
-    const awayTeamForSave = {
-      ...mockAwayTeam,
-      players: awayLine.map(name => ({
-        name,
-        is_open: true, // Default for tests
-      })),
-    };
-
     // Save the current game state to database
     const gameId = await Bookkeeper.newGame(
       { league: mockLeague },
       mockWeek,
-      homeTeamForSave,
-      awayTeamForSave,
+      mockHomeTeam,
+      mockAwayTeam,
       homeLine.map(name => ({ name, is_open: true })),
       awayLine.map(name => ({ name, is_open: true }))
     );
@@ -672,33 +613,10 @@ describe('Bookkeeper', () => {
       mockAwayTeam
     );
 
-    // Create team objects with rosters
-    const homeTeamWithRoster: Team = {
-      ...mockHomeTeam,
-      players: homeLine.map(name => ({
-        name,
-        team: mockHomeTeam.name,
-        is_open: true,
-      })),
-    };
-
-    const awayTeamWithRoster: Team = {
-      ...mockAwayTeam,
-      players: awayLine.map(name => ({
-        name,
-        team: mockAwayTeam.name,
-        is_open: true,
-      })),
-    };
+    // Team objects no longer needed since bookkeeper uses game roster data directly
 
     const gameId = 2; // Different from the main test
-    const freshBookkeeper = new Bookkeeper(
-      initialStoredGame,
-      mockLeague,
-      homeTeamWithRoster,
-      awayTeamWithRoster,
-      gameId
-    );
+    const freshBookkeeper = new Bookkeeper(initialStoredGame, mockLeague, gameId);
 
     // Verify active lines are null initially
     expect(freshBookkeeper.homePlayers).toBeNull();

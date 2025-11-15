@@ -45,7 +45,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       if (!homeCompliant) {
         const { open, women } = getRatioCounts(selectedHomePlayers);
         warnings.push(
-          `${bookkeeper.homeTeam.name}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
+          `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
         );
       }
     }
@@ -55,7 +55,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       if (!awayCompliant) {
         const { open, women } = getRatioCounts(selectedAwayPlayers);
         warnings.push(
-          `${bookkeeper.awayTeam.name}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
+          `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${LEAGUE_RATIO.open} ON2, ${LEAGUE_RATIO.women} WN2)`
         );
       }
     }
@@ -68,13 +68,13 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
     if (selectedHomePlayers.length !== lineSize) {
       warnings.push(
-        `${bookkeeper.homeTeam.name}: ${selectedHomePlayers.length}/${lineSize} players selected`
+        `${bookkeeper.getHomeTeamName()}: ${selectedHomePlayers.length}/${lineSize} players selected`
       );
     }
 
     if (selectedAwayPlayers.length !== lineSize) {
       warnings.push(
-        `${bookkeeper.awayTeam.name}: ${selectedAwayPlayers.length}/${lineSize} players selected`
+        `${bookkeeper.getAwayTeamName()}: ${selectedAwayPlayers.length}/${lineSize} players selected`
       );
     }
 
@@ -109,7 +109,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const togglePlayerSelection = (playerName: string, isHomeTeam: boolean) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
-    const teamName = isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name;
+    const teamName = isHomeTeam ? bookkeeper.getHomeTeamName() : bookkeeper.getAwayTeamName();
 
     let newSelection;
     if (currentSelection.includes(playerName)) {
@@ -251,7 +251,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{lineSize})
+              {bookkeeper.getHomeTeamName()} ({selectedHomePlayers.length}/{lineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -262,7 +262,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{lineSize})
+              {bookkeeper.getAwayTeamName()} ({selectedAwayPlayers.length}/{lineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>

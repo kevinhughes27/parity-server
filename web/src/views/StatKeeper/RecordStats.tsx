@@ -155,7 +155,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1, overflowX: 'hidden' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name}
+              {bookkeeper.getHomeTeamName()}
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -166,7 +166,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1, overflowX: 'hidden' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name}
+              {bookkeeper.getAwayTeamName()}
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
