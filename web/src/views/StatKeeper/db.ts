@@ -80,30 +80,15 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 };
 
 // Define the database schema and versioning
-db.version(1).stores({
-  games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
-});
-
-// Migration for v2 - handle the roster format change
+// When schema changes, we simply clear all data since local data isn't important after submission
 db.version(2)
   .stores({
     games:
       '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
   })
   .upgrade(tx => {
-    // Migration: Convert string rosters to player objects
-    return tx
-      .table('games')
-      .toCollection()
-      .modify(game => {
-        if (game.homeRoster && typeof game.homeRoster[0] === 'string') {
-          game.homeRoster = game.homeRoster.map((name: string) => ({ name, is_open: true }));
-        }
-        if (game.awayRoster && typeof game.awayRoster[0] === 'string') {
-          game.awayRoster = game.awayRoster.map((name: string) => ({ name, is_open: true }));
-        }
-      });
+    // Clear all existing data on schema changes - local data isn't important after submission
+    return tx.table('games').clear();
   });
 
 export { db };
