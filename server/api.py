@@ -58,6 +58,7 @@ class TeamPlayer(BaseSchema):
     name: str
     team: str
     is_male: bool
+    is_open: bool
 
 
 class Team(BaseSchema):
@@ -317,8 +318,8 @@ def build_players_response(session, league_id) -> list[Player]:
             player.salary = base + total_earnings
 
     # Estimate Salaries 👎
-    male_salaries = [p.salary for p in players if p.is_male and p.salary]
-    female_salaries = [p.salary for p in players if not p.is_male and p.salary]
+    male_salaries = [p.salary for p in players if p.is_open and p.salary]
+    female_salaries = [p.salary for p in players if not p.is_open and p.salary]
 
     avg_male_salary = round(sum(male_salaries) / (len(male_salaries) or 1))
     avg_female_salary = round(sum(female_salaries) / (len(female_salaries) or 1))
@@ -327,7 +328,7 @@ def build_players_response(session, league_id) -> list[Player]:
         if player.salary is None:
             if player.fallback_salary:
                 player.salary = player.fallback_salary
-            elif player.is_male:
+            elif player.is_open:
                 player.salary = avg_male_salary
             else:
                 player.salary = avg_female_salary
@@ -341,7 +342,7 @@ def build_teams_response(session: Session, league_id: int) -> list[Team]:
     for team in teams:
         players = []
         for player in team.players:
-            players.append(TeamPlayer(name=player.name, team=team.name, is_male=player.is_male))
+            players.append(TeamPlayer(name=player.name, team=team.name, is_male=player.is_male, is_open=player.is_open))
         teams_response.append(Team(id=team.id, name=team.name, players=players))
     return teams_response
 

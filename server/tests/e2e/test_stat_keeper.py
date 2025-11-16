@@ -77,7 +77,16 @@ def start_game(page: Page):
     click_button(page, "Update Rosters")
 
 
+def ignore_ratio_warning(page: Page):
+    def handle_ratio_warning(dialog):
+        if "expected 4 ON2, 2 WN2" in dialog.message:
+            dialog.accept()
+
+    page.once("dialog", handle_ratio_warning)
+
+
 def start_point(page: Page):
+    ignore_ratio_warning(page)
     click_button(page, "Start Point")
 
 
@@ -90,12 +99,14 @@ def select_lines(page: Page, home_line: list[str], away_line: list[str]):
 
 def expect_players_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-colorInfo")
+        # Players are now selected with contained variant (vs outlined when not selected)
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-contained")
 
 
 def expect_players_not_selected(page: Page, players: list[str]):
     for player in players:
-        expect(page.get_by_role("button", name=player)).not_to_contain_class("MuiButton-colorInfo")
+        # Players are now not selected with outlined variant (vs contained when selected)
+        expect(page.get_by_role("button", name=player)).to_contain_class("MuiButton-outlined")
 
 
 def expect_lines_selected(page: Page, home: str, away: str):
@@ -158,7 +169,30 @@ def open_hamburger_menu(page: Page):
 
 def submit_game(page: Page, *, failed: bool = False):
     open_hamburger_menu(page)
-    page.once("dialog", lambda dialog: dialog.accept())
+
+    # handle confirm and complete dialogs
+    def handle_confirm(dialog):
+        assert "Are you sure you want to submit this game?" in dialog.message
+
+        def handle_failed(dialog):
+            assert "Game submission failed" in dialog.message
+            dialog.accept()
+
+        def handle_complete(dialog):
+            assert "Game submitted and uploaded successfully!" in dialog.message
+            dialog.accept()
+
+        # setup second dialog handler
+        if failed:
+            page.once("dialog", handle_failed)
+        else:
+            page.once("dialog", handle_complete)
+
+        # accept first dialog
+        dialog.accept()
+
+    page.once("dialog", handle_confirm)
+
     page.get_by_role("menuitem", name="Submit Game").click()
 
     page.wait_for_url("**/stat_keeper")
@@ -922,7 +956,12 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     # record half
     expect_next_line_text(page)
     open_hamburger_menu(page)
-    page.once("dialog", lambda dialog: dialog.accept())
+
+    def handle_half_dialog(dialog):
+        if "Half time recorded" in dialog.message:
+            dialog.accept()
+
+    page.once("dialog", handle_half_dialog)
     page.get_by_role("menuitem", name="Record Half").click()
 
     # select lines again
@@ -1116,8 +1155,8 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     page.get_by_role("button", name="Add").first.click()
 
     # add sub (away team - second textbox and button)
-    page.get_by_role("textbox", name="Substitute name").nth(1).click()
-    page.get_by_role("textbox", name="Substitute name").nth(1).fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").nth(1).click()
+    page.get_by_role("textbox", name="Name").nth(1).fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").nth(1).click()
 
     # remove player (away team)
@@ -1125,9 +1164,9 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
 
     # check updated rosters
     home_roster = rosters[home]
-    home_roster.append("Matthew Schijns")
+    home_roster.append("Matthew Schijns(S)")
     away_roster = rosters[away]
-    away_roster.append("Kevin Hughes")
+    away_roster.append("Kevin Hughes(S)")
     away_roster.remove("Kevin Barford")
     expect_rosters(page, home_roster, away_roster)
 
@@ -1171,20 +1210,30 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Substitute name").first.click()
-    page.get_by_role("textbox", name="Substitute name").first.fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").first.click()
+    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").first.click()
     click_button(page, "Update Rosters")
 
     # select lines
-    # expect_text(page, "Select players for the next point.")
     expect_text(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
-    select_lines(page, rosters[home][:5] + ["Kevin Hughes"], rosters[away][:6])
+    # we added one sub so the flip selection selects the other 7 players now
+    # we need to un-select one. this isn't really realistic as it is easier and better to remove
+    # players who aren't there so in practice the flip logic works fine.
+    click_button(page, "Rob Ives")
     expect_lines_selected(page, home, away)
     start_point(page)
 
     expect(page.get_by_role("button", name="Point!")).to_be_visible()
-    expect(page.get_by_role("button", name="Kevin Hughes")).to_be_visible()
+    expect(page.get_by_role("button", name="Kevin Hughes(S)")).to_be_enabled()
+
+    click_button(page, "Kevin Hughes(S)")
+    click_button(page, "Krys Kudakiewicz")
+
+    play_by_play = [
+        "1.Kevin Hughes(S) passed to Krys Kudakiewicz",
+    ]
+    expect_play_by_play(page, play_by_play)
 
 
 def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: Page) -> None:
@@ -1215,23 +1264,24 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Substitute name").first.click()
-    page.get_by_role("textbox", name="Substitute name").first.fill("Kevin Hughes")
+    page.get_by_role("textbox", name="Name").first.click()
+    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").first.click()
     click_button(page, "Update Rosters")
 
     # change line
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
+    ignore_ratio_warning(page)
     expect(page.locator("#root")).to_contain_text("Resume Point")
 
     # sub brian for kevin
     click_button(page, "Brian Kells")
-    click_button(page, "Kevin Hughes")
+    click_button(page, "Kevin Hughes(S)")
     click_button(page, "Resume Point")
 
     click_button(page, "Throwaway")
-    click_button(page, "Kevin Hughes")
+    click_button(page, "Kevin Hughes(S)")
     click_button(page, "Catch D")
     click_button(page, "Ashlin Kelly")
     click_button(page, "Point!")
@@ -1241,12 +1291,12 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
 
     # verify stats
     stats = get_stats()
-    assert stats["Kevin Hughes"]["assists"] == 1
+    assert stats["Kevin Hughes(S)"]["assists"] == 1
 
     # verify game
     game = get_game(1)
-    assert "Kevin Hughes" in game["homeRoster"]
-    assert "Kevin Hughes" in game["points"][0]["defensePlayers"]
+    assert "Kevin Hughes(S)" in game["homeRoster"]
+    assert "Kevin Hughes(S)" in game["points"][0]["defensePlayers"]
 
 
 def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
@@ -1294,6 +1344,7 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     click_button(page, "Kyle Sprysa")
 
     # resume
+    ignore_ratio_warning(page)
     click_button(page, "Resume Point")
 
     # play by play
@@ -1507,6 +1558,87 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     assert stats["Ashlin Kelly"]["d_points_for"] == 1
 
 
+def test_custom_substitutes(session, server, league, rosters, page: Page) -> None:
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+
+    # add open sub to the home team
+    page.get_by_role("textbox", name="Name").first.click()
+    page.get_by_role("textbox", name="Name").first.fill("Open Sub")
+    page.get_by_role("button", name="Add Sub").first.click()
+
+    # add wn2 sub to away team
+    page.get_by_role("textbox", name="Name").nth(1).click()
+    page.get_by_role("textbox", name="Name").nth(1).fill("WN2 Sub")
+    page.get_by_role("checkbox", name="ON2").nth(1).uncheck()
+    page.get_by_role("button", name="Add Sub").nth(1).click()
+
+    # check updated rosters - these should now include the subs
+    home_roster = rosters[home]
+    home_roster.append("Open Sub(S)")
+    away_roster = rosters[away]
+    away_roster.append("WN2 Sub(S)")
+    expect_rosters(page, home_roster, away_roster)
+
+    # start game
+    start_game(page)
+
+    # select lines including the substitutes
+    home_line = rosters[home][:5] + ["Open Sub(S)"]
+    away_line = rosters[away][:5] + ["WN2 Sub(S)"]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # check that the subs are styled properly
+    open_sub_button = page.get_by_role("button", name="Open Sub(S)")
+    wn2_sub_button = page.get_by_role("button", name="WN2 Sub(S)")
+
+    expect(open_sub_button).to_have_css("background-color", "rgb(227, 242, 253)")  # blue
+    expect(wn2_sub_button).to_have_css("background-color", "rgb(243, 229, 245)")  # purple
+
+    # record a simple point using the substitute
+    click_button(page, "Brian Kells")
+    click_button(page, "Pull")
+    click_button(page, "Owen Lumley")
+    click_button(page, "Karen Kavanagh")
+    click_button(page, "WN2 Sub(S)")
+    click_button(page, "Point!")
+
+    # submit game
+    submit_game(page)
+
+    # verify submitted stats - check that the substitute appears in stats
+    stats = get_stats()
+    assert "WN2 Sub(S)" in stats
+    assert stats["WN2 Sub(S)"]["goals"] == 1
+
+    # Get the game data to check roster submission
+    game = get_game(1)
+    assert "Open Sub(S)" in game["homeRoster"]
+    assert "WN2 Sub(S)" in game["awayRoster"]
+
+    # this bug isn't exposed to the API because we only return the gender in the teams response
+    # and not in the game stats response which means there is nothing that returns substitute genders
+    # none the less they are wrong, they get defaulted in the database. this can be fixed after we deprecate
+    # the android app and can change the upload format.
+    from sqlmodel import select
+
+    import server.db as db
+
+    player = session.exec(select(db.Player).where(db.Player.name == "Open Sub(S)")).first()
+    assert player.gender is None
+    assert not player.is_open  # bug
+    player = session.exec(select(db.Player).where(db.Player.name == "WN2 Sub(S)")).first()
+    assert player.gender is None
+    assert not player.is_open
+
+
 def test_select_scheduled_matchup(server, league, rosters, matchup, page: Page) -> None:
     start_stats_keeper(page)
     home_team_name = "Kells Angels Bicycle Club"
@@ -1562,6 +1694,120 @@ def test_select_scheduled_matchup(server, league, rosters, matchup, page: Page) 
     assert game["homeTeam"] == home_team_name
     assert game["awayTeam"] == away_team_name
     assert game["week"] == matchup.week
+
+
+def set_player_gender(session, league_id: int, name: str, gender: str) -> None:
+    from sqlmodel import select
+
+    import server.db as db
+
+    player = session.exec(select(db.Player).where(db.Player.league_id == league_id, db.Player.name == name)).first()
+    player.gender = gender
+    session.add(player)
+
+
+def test_select_lines_warnings(session, server, league, rosters, page: Page) -> None:
+    home_team_name = "Kells Angels Bicycle Club"
+    away_team_name = "lumleysexuals"
+
+    # the app will sort players so we sort the list here so we know
+    # what order the genders will be
+    sorted_home_roster = sorted(rosters[home_team_name])
+    sorted_away_roster = sorted(rosters[away_team_name])
+
+    # set player genders in order (the app will sort them) for convience
+    for name in sorted_home_roster[:8]:
+        set_player_gender(session, league.id, name, "male")
+    for name in sorted_home_roster[8:]:
+        set_player_gender(session, league.id, name, "female")
+    for name in sorted_away_roster[:8]:
+        set_player_gender(session, league.id, name, "male")
+    for name in sorted_away_roster[8:]:
+        set_player_gender(session, league.id, name, "female")
+    session.commit()
+
+    # create game
+    start_stats_keeper(page)
+    select_teams(page, home_team_name, away_team_name)
+    expect_rosters(page, rosters[home_team_name], rosters[away_team_name])
+    start_game(page)
+
+    # select lines
+    expect_help_message(page, "Select players for the first point.")
+    expect_game_state(page, "SelectingLines")
+
+    # Helper function to create dialog handlers for different warning types
+    def expect_dialog_and_dismiss(expected_messages):
+        """Helper to create a dialog handler that checks for expected messages and dismisses"""
+
+        def handler(dialog):
+            for expected in expected_messages:
+                assert expected in dialog.message
+            dialog.dismiss()
+
+        return handler
+
+    # not enough left
+    home_line = rosters[home_team_name][:5]
+    away_line = rosters[away_team_name][:6]
+    select_lines(page, home_line, away_line)
+
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5/6 players selected"]))
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # not enough right
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:5]
+    select_lines(page, home_line, away_line)
+
+    page.once("dialog", expect_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"]))
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # too many setup
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:6]
+
+    # too many left
+    select_lines(page, home_line, away_line)
+    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {home_team_name}."]))
+    # click 7th player triggers dialog
+    click_button(page, rosters[home_team_name][7])
+
+    # too many right
+    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {away_team_name}."]))
+    click_button(page, rosters[away_team_name][7])
+
+    # reset
+    select_lines(page, home_line, away_line)
+
+    # Ratio error
+    home_line = sorted_home_roster[:5] + sorted_home_roster[9:10]  # 5 ON2 1 WN2
+    away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
+    select_lines(page, home_line, away_line)
+
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"]))
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # Ratio error
+    home_line = sorted_home_roster[:2] + sorted_home_roster[8:]  # 2 ON2 4 WN2
+    away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
+    select_lines(page, home_line, away_line)
+
+    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"]))
+    click_button(page, "Start Point")
+    select_lines(page, home_line, away_line)  # reset
+
+    # Valid line
+    home_line = sorted_home_roster[:4] + sorted_home_roster[10:]  # 4 ON2 2 WN2
+    away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
+    select_lines(page, home_line, away_line)
+    click_button(page, "Start Point")
+
+    # game started
+    expect_game_state(page, "Start")
 
 
 def test_perf(server, league, rosters, page: Page) -> None:
