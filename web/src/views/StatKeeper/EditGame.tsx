@@ -27,6 +27,7 @@ interface ActionsMenuProps {
   numericGameId: number | undefined;
   gameStatus: StoredGame['status'] | undefined;
   isHalfRecorded: boolean;
+  isSubmitting: boolean;
   currentGameState: GameState;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
@@ -38,6 +39,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   numericGameId,
   gameStatus,
   isHalfRecorded,
+  isSubmitting,
   currentGameState,
   onRecordHalf,
   onSubmitGame,
@@ -47,7 +49,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded';
+  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting;
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -105,7 +107,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
           disabled={!canSubmitGame}
           sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
         >
-          Submit Game
+          {isSubmitting ? 'Submitting...' : 'Submit Game'}
         </MenuItem>
       </Menu>
     </Box>
@@ -114,6 +116,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const currentView = bookkeeper.getCurrentView();
   const currentGameState = bookkeeper.gameState();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
@@ -128,6 +131,21 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   };
 
   const handleSubmitGame = async () => {
+    // Prevent multiple simultaneous submissions
+    if (isSubmitting) {
+      return;
+    }
+
+    // First, confirm the user wants to submit
+    const confirmed = window.confirm(
+      'Are you sure you want to submit this game? This action cannot be undone and the game will be uploaded to the server.'
+    );
+
+    if (!confirmed) {
+      return;
+    }
+
+    setIsSubmitting(true);
     try {
       await bookkeeper.submitGame();
       alert('Game submitted and uploaded successfully!');
@@ -169,6 +187,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         localGameId={localGameId}
         currentGameState={currentGameState}
         isHalfRecorded={isHalfRecorded}
+        isSubmitting={isSubmitting}
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
         onChangeLine={handleChangeLine}
@@ -184,6 +203,7 @@ function TopBar({
   localGameId,
   currentGameState,
   isHalfRecorded,
+  isSubmitting,
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
@@ -193,6 +213,7 @@ function TopBar({
   localGameId: string;
   currentGameState: GameState;
   isHalfRecorded: boolean;
+  isSubmitting: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => Promise<void>;
@@ -219,6 +240,7 @@ function TopBar({
             gameStatus={bookkeeper.getGameStatus()}
             currentGameState={currentGameState}
             isHalfRecorded={isHalfRecorded}
+            isSubmitting={isSubmitting}
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}
             onChangeLine={onChangeLine}
@@ -228,7 +250,7 @@ function TopBar({
       </Toolbar>
       <Box sx={{ textAlign: 'center', pb: 1 }}>
         <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-          {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
+          {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
         </Typography>
         <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
           <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}

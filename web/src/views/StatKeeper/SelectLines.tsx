@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
+import { StoredPlayer } from './db';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
@@ -18,14 +19,79 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
 
+  const getRatioCounts = (playerNames: string[]) => {
+    const open = playerNames.filter(name => {
+      const player = [...homeRoster, ...awayRoster].find(p => p.name === name);
+      return player?.is_open ?? true;
+    }).length;
+    const women = playerNames.length - open;
+    return { open, women };
+  };
+
+  const checkRatioCompliance = (playerNames: string[]) => {
+    const { open, women } = getRatioCounts(playerNames);
+    const ratio = bookkeeper.getLeagueRatio();
+    return open === ratio.open && women === ratio.women;
+  };
+
+  const getRatioWarnings = () => {
+    const warnings: string[] = [];
+
+    if (selectedHomePlayers.length === lineSize) {
+      const homeCompliant = checkRatioCompliance(selectedHomePlayers);
+      if (!homeCompliant) {
+        const ratio = bookkeeper.getLeagueRatio();
+        const { open, women } = getRatioCounts(selectedHomePlayers);
+        warnings.push(
+          `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
+        );
+      }
+    }
+
+    if (selectedAwayPlayers.length === lineSize) {
+      const awayCompliant = checkRatioCompliance(selectedAwayPlayers);
+      if (!awayCompliant) {
+        const { open, women } = getRatioCounts(selectedAwayPlayers);
+        const ratio = bookkeeper.getLeagueRatio();
+        warnings.push(
+          `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
+        );
+      }
+    }
+
+    return warnings;
+  };
+
+  const getIncompleteLinesWarning = () => {
+    const warnings: string[] = [];
+
+    if (selectedHomePlayers.length !== lineSize) {
+      warnings.push(
+        `${bookkeeper.getHomeTeamName()}: ${selectedHomePlayers.length}/${lineSize} players selected`
+      );
+    }
+
+    if (selectedAwayPlayers.length !== lineSize) {
+      warnings.push(
+        `${bookkeeper.getAwayTeamName()}: ${selectedAwayPlayers.length}/${lineSize} players selected`
+      );
+    }
+
+    return warnings;
+  };
+
   useEffect(() => {
     if (isEditingLine && bookkeeper.homePlayers && bookkeeper.awayPlayers) {
       setSelectedHomePlayers(bookkeeper.homePlayers);
       setSelectedAwayPlayers(bookkeeper.awayPlayers);
     } else if (lastPlayedLine) {
       // pre-select players not on the last played line.
-      setSelectedHomePlayers(homeRoster.filter(p => !lastPlayedLine.home.includes(p)));
-      setSelectedAwayPlayers(awayRoster.filter(p => !lastPlayedLine.away.includes(p)));
+      setSelectedHomePlayers(
+        homeRoster.filter(p => !lastPlayedLine.home.includes(p.name)).map(p => p.name)
+      );
+      setSelectedAwayPlayers(
+        awayRoster.filter(p => !lastPlayedLine.away.includes(p.name)).map(p => p.name)
+      );
     } else {
       setSelectedHomePlayers([]);
       setSelectedAwayPlayers([]);
@@ -42,7 +108,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const togglePlayerSelection = (playerName: string, isHomeTeam: boolean) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
-    const teamName = isHomeTeam ? bookkeeper.homeTeam.name : bookkeeper.awayTeam.name;
+    const teamName = isHomeTeam ? bookkeeper.getHomeTeamName() : bookkeeper.getAwayTeamName();
 
     let newSelection;
     if (currentSelection.includes(playerName)) {
@@ -61,14 +127,27 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const handleDone = async () => {
     const leftPlayerCount = selectedHomePlayers.length;
     const rightPlayerCount = selectedAwayPlayers.length;
+    const enoughPlayers = leftPlayerCount > 2 && rightPlayerCount > 2;
 
-    const leftCorrectNumPlayers = leftPlayerCount === lineSize;
-    const rightCorrectNumPlayers = rightPlayerCount === lineSize;
+    if (enoughPlayers) {
+      const ratioWarnings = getRatioWarnings();
+      const incompleteWarnings = getIncompleteLinesWarning();
+      const allWarnings = [...ratioWarnings, ...incompleteWarnings];
 
-    const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
-    const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
+      // If there are warnings, show them but allow user to continue
+      if (allWarnings.length > 0) {
+        const continueAnyway = window.confirm(
+          `Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`
+        );
+        if (!continueAnyway) {
+          return;
+        }
+      }
 
-    if (leftCorrectNumPlayers && rightCorrectNumPlayers) {
+      // Prepare new line
+      const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
+      const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
+
       if (currentGameState === GameState.EditingLines && bookkeeper.activePoint) {
         // This is a mid-point substitution (active point exists)
         await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
@@ -77,14 +156,8 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
       }
     } else {
-      let message = 'Incorrect number of players:';
-      if (!leftCorrectNumPlayers) {
-        message += `\n${bookkeeper.homeTeam.name}: ${leftPlayerCount}/${lineSize} selected`;
-      }
-      if (!rightCorrectNumPlayers) {
-        message += `\n${bookkeeper.awayTeam.name}: ${rightPlayerCount}/${lineSize} selected`;
-      }
-      window.alert(message);
+      // this is a technical limitation. also the submit is disabled with the same criteria
+      window.alert('Please select at least two players from each team.');
     }
   };
 
@@ -97,28 +170,57 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     }
   };
 
-  const renderPlayerButton = (playerName: string, isHomeTeam: boolean) => {
+  const renderPlayerButton = (player: StoredPlayer, isHomeTeam: boolean) => {
     const selectedList = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
-    const isSelected = selectedList.includes(playerName);
+    const isSelected = selectedList.includes(player.name);
+    const isOpen = player.is_open;
+
+    // Color logic: Blue for open players, purple for women players
+    const getButtonSx = () => {
+      const baseSx = {
+        my: 0.2,
+        py: 1.2,
+        justifyContent: 'center',
+        whiteSpace: 'nowrap',
+        textTransform: 'none',
+        fontSize: '0.9em',
+        fontWeight: isSelected ? 'bold' : 'normal',
+      };
+
+      if (isOpen) {
+        // Open players: blue styling
+        return {
+          ...baseSx,
+          backgroundColor: isSelected ? '#1976d2' : 'transparent',
+          borderColor: isSelected ? '#1976d2' : '#2196f3',
+          color: isSelected ? 'white' : '#1976d2',
+          '&:hover': {
+            backgroundColor: isSelected ? '#1565c0' : '#e3f2fd',
+          },
+        };
+      } else {
+        // Women players: purple styling
+        return {
+          ...baseSx,
+          backgroundColor: isSelected ? '#9c27b0' : 'transparent',
+          borderColor: isSelected ? '#9c27b0' : '#ce93d8',
+          color: isSelected ? 'white' : '#9c27b0',
+          '&:hover': {
+            backgroundColor: isSelected ? '#7b1fa2' : '#f3e5f5',
+          },
+        };
+      }
+    };
 
     return (
       <Button
-        key={playerName}
-        onClick={() => togglePlayerSelection(playerName, isHomeTeam)}
+        key={player.name}
+        onClick={() => togglePlayerSelection(player.name, isHomeTeam)}
         fullWidth
         variant={isSelected ? 'contained' : 'outlined'}
-        color={isSelected ? 'info' : 'inherit'}
-        sx={{
-          my: 0.2,
-          py: 1.2,
-          justifyContent: 'flex-start',
-          whiteSpace: 'nowrap',
-          textTransform: 'none',
-          fontSize: '0.9em',
-          fontWeight: isSelected ? 'bold' : 'normal',
-        }}
+        sx={getButtonSx()}
       >
-        {playerName}
+        {player.name}
       </Button>
     );
   };
@@ -147,7 +249,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name} ({selectedHomePlayers.length}/{lineSize})
+              {bookkeeper.getHomeTeamName()} ({selectedHomePlayers.length}/{lineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -158,7 +260,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1 }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name} ({selectedAwayPlayers.length}/{lineSize})
+              {bookkeeper.getAwayTeamName()} ({selectedAwayPlayers.length}/{lineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
@@ -176,7 +278,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           {
             label: buttonText,
             onClick: handleDone,
-            disabled: selectedHomePlayers.length === 0 || selectedAwayPlayers.length === 0,
+            disabled: selectedHomePlayers.length < 2 || selectedAwayPlayers.length < 2,
             color: 'success',
             variant: 'contained',
           },

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Bookkeeper } from './bookkeeper';
 import { useTeams } from './hooks';
 import EditRoster from './EditRoster';
+import { StoredPlayer } from './db';
 import ActionBar from './ActionBar';
 import { Box, Typography } from '@mui/material';
 
@@ -12,15 +13,15 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     errorTeams: errorLeaguePlayers,
   } = useTeams(bookkeeper.league.id.toString());
 
-  const [homeRosterNames, setHomeRosterNames] = useState<string[]>([]);
-  const [awayRosterNames, setAwayRosterNames] = useState<string[]>([]);
+  const [homeRoster, setHomeRoster] = useState<StoredPlayer[]>([]);
+  const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
 
-  const sortAndSetHomeRoster = (roster: string[]) => {
-    setHomeRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
+    setHomeRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
   };
 
-  const sortAndSetAwayRoster = (roster: string[]) => {
-    setAwayRosterNames([...roster].sort((a, b) => a.localeCompare(b)));
+  const sortAndSetAwayRoster = (roster: StoredPlayer[]) => {
+    setAwayRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
   };
 
   useEffect(() => {
@@ -34,25 +35,14 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   }, [bookkeeper]);
 
   const handleUpdateRosters = async () => {
-    if (homeRosterNames.length === 0 || awayRosterNames.length === 0) {
+    if (homeRoster.length === 0 || awayRoster.length === 0) {
       alert('Rosters cannot be empty.');
       return;
     }
 
     try {
-      // Update the team objects with new rosters
-      bookkeeper.homeTeam.players = homeRosterNames.map(name => ({
-        name,
-        team: bookkeeper.homeTeam.name,
-      }));
-
-      bookkeeper.awayTeam.players = awayRosterNames.map(name => ({
-        name,
-        team: bookkeeper.awayTeam.name,
-      }));
-
       // Update the stored game rosters
-      await bookkeeper.updateRosters(homeRosterNames, awayRosterNames);
+      await bookkeeper.updateRosters(homeRoster, awayRoster);
 
       bookkeeper.cancelEditingRosters();
 
@@ -66,8 +56,11 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const handleCancel = () => {
-    sortAndSetHomeRoster(bookkeeper.getHomeRoster());
-    sortAndSetAwayRoster(bookkeeper.getAwayRoster());
+    // Reset to original rosters
+    if (bookkeeper) {
+      sortAndSetHomeRoster(bookkeeper.getHomeRoster());
+      sortAndSetAwayRoster(bookkeeper.getAwayRoster());
+    }
     bookkeeper.cancelEditingRosters();
   };
 
@@ -127,17 +120,17 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%', gap: 1.25 }}>
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             <EditRoster
-              teamName={bookkeeper.homeTeam.name}
+              teamName={bookkeeper.getHomeTeamName()}
               allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
-              currentRosterNames={homeRosterNames} // Already sorted by sortAndSetHomeRoster
+              currentRoster={homeRoster} // Already sorted by sortAndSetHomeRoster
               onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
             />
           </Box>
           <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
             <EditRoster
-              teamName={bookkeeper.awayTeam.name}
+              teamName={bookkeeper.getAwayTeamName()}
               allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
-              currentRosterNames={awayRosterNames} // Already sorted by sortAndSetAwayRoster
+              currentRoster={awayRoster} // Already sorted by sortAndSetAwayRoster
               onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
             />
           </Box>
@@ -149,7 +142,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           {
             label: 'Update Rosters',
             onClick: handleUpdateRosters,
-            disabled: homeRosterNames.length === 0 || awayRosterNames.length === 0,
+            disabled: homeRoster.length === 0 || awayRoster.length === 0,
             color: 'success',
             variant: 'contained',
           },

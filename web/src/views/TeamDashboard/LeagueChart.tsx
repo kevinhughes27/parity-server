@@ -17,14 +17,9 @@ import format from 'format-number';
 import annotationPlugin from 'chartjs-plugin-annotation';
 import { flatten, sortBy, map, sum } from 'lodash';
 import { colors, underColors, overColors } from '../../helpers';
+import { Player } from '../../api';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, annotationPlugin);
-
-interface Player {
-  name: string;
-  team: string;
-  salary: number;
-}
 
 interface LeagueChartProps {
   players: Player[];

@@ -1,4 +1,4 @@
-import { StoredGame, UndoCommand, type GameView } from './db';
+import { StoredGame, StoredPlayer, UndoCommand, type GameView } from './db';
 import { type PointEvent as ApiPointEvent, type Point as ApiPoint } from '../../api';
 
 export enum EventType {
@@ -228,6 +228,10 @@ export class GameMethods {
     return GameState.Normal;
   }
 
+  timestamp(): string {
+    return new Date().toLocaleString('en-US');
+  }
+
   shouldRecordNewPass(): boolean {
     return this.game.firstActor !== null;
   }
@@ -243,7 +247,7 @@ export class GameMethods {
   recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
     this.game.undoStack.push({
       type: 'recordFirstActor',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     if (this.game.activePoint === null) {
@@ -281,7 +285,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordPull',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     activePointMethods.swapOffenseAndDefense();
@@ -290,7 +294,7 @@ export class GameMethods {
       type: EventType.PULL,
       firstActor: this.game.firstActor!,
       secondActor: null,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     this.game.firstActor = null;
   }
@@ -301,14 +305,14 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordPass',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     activePointMethods.addEvent({
       type: EventType.PASS,
       firstActor: this.game.firstActor!,
       secondActor: receiver,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     this.game.firstActor = receiver;
   }
@@ -319,7 +323,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordDrop',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     this.changePossession();
@@ -327,7 +331,7 @@ export class GameMethods {
       type: EventType.DROP,
       firstActor: this.game.firstActor!,
       secondActor: null,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     this.game.firstActor = null;
   }
@@ -338,7 +342,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordThrowAway',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     this.changePossession();
@@ -346,7 +350,7 @@ export class GameMethods {
       type: EventType.THROWAWAY,
       firstActor: this.game.firstActor!,
       secondActor: null,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     this.game.firstActor = null;
   }
@@ -357,14 +361,14 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordD',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     activePointMethods.addEvent({
       type: EventType.DEFENSE,
       firstActor: this.game.firstActor!,
       secondActor: null,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     this.game.firstActor = null; // After a D, the disc is loose, so no specific player has it.
   }
@@ -375,14 +379,14 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordCatchD',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     activePointMethods.addEvent({
       type: EventType.DEFENSE, // Still a DEFENSE event type
       firstActor: this.game.firstActor!, // Player who got the D
       secondActor: null, // No second actor for a D itself
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
     // For a Catch D, the player who made the D (firstActor) now has possession.
     // Possession does not change here, as it's assumed their team was already on D.
@@ -404,7 +408,7 @@ export class GameMethods {
     // Store the possession state for this point before flipping it
     this.game.undoStack.push({
       type: 'recordPoint',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
       data: {
         wasHomePossession: this.game.homePossession,
       },
@@ -414,7 +418,7 @@ export class GameMethods {
       type: EventType.POINT,
       firstActor: this.game.firstActor!,
       secondActor: null,
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     // Add the completed point to the game
@@ -440,7 +444,7 @@ export class GameMethods {
 
     this.game.undoStack.push({
       type: 'recordHalf',
-      timestamp: new Date().toISOString(),
+      timestamp: this.timestamp(),
     });
 
     this.game.pointsAtHalf = this.game.points.length;
@@ -457,9 +461,58 @@ export class GameMethods {
     this.game.isEditingLines = false; // Clear editing state
   }
 
-  updateRosters(homeRoster: string[], awayRoster: string[]): void {
-    this.game.homeRoster = [...homeRoster].sort((a, b) => a.localeCompare(b));
-    this.game.awayRoster = [...awayRoster].sort((a, b) => a.localeCompare(b));
+  updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): void {
+    this.game.homeRoster = [...homeRoster].sort((a, b) => a.name.localeCompare(b.name));
+    this.game.awayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
+
+    // Automatically remove players from active line if they're no longer in roster
+    const homeRosterNames = new Set(homeRoster.map(player => player.name));
+    const awayRosterNames = new Set(awayRoster.map(player => player.name));
+
+    let homePlayersChanged = false;
+    let awayPlayersChanged = false;
+
+    // Remove players from home line if they're no longer in home roster
+    if (this.game.homePlayers) {
+      const filteredHomePlayers = this.game.homePlayers.filter(playerName =>
+        homeRosterNames.has(playerName)
+      );
+      if (filteredHomePlayers.length !== this.game.homePlayers.length) {
+        this.game.homePlayers = filteredHomePlayers;
+        homePlayersChanged = true;
+      }
+    }
+
+    // Remove players from away line if they're no longer in away roster
+    if (this.game.awayPlayers) {
+      const filteredAwayPlayers = this.game.awayPlayers.filter(playerName =>
+        awayRosterNames.has(playerName)
+      );
+      if (filteredAwayPlayers.length !== this.game.awayPlayers.length) {
+        this.game.awayPlayers = filteredAwayPlayers;
+        awayPlayersChanged = true;
+      }
+    }
+
+    // If we have an active point and players were removed, update the active point as well
+    if ((homePlayersChanged || awayPlayersChanged) && this.game.activePoint) {
+      const activePointMethods = this.getActivePointMethods();
+      if (activePointMethods && this.game.homePlayers && this.game.awayPlayers) {
+        // Update the active point with the new filtered player lists
+        let newOffensePlayers: string[];
+        let newDefensePlayers: string[];
+
+        if (this.game.homePossession) {
+          newOffensePlayers = [...this.game.homePlayers];
+          newDefensePlayers = [...this.game.awayPlayers];
+        } else {
+          newOffensePlayers = [...this.game.awayPlayers];
+          newDefensePlayers = [...this.game.homePlayers];
+        }
+
+        activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
+      }
+    }
   }
 
   recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void {
@@ -680,8 +733,10 @@ export class GameMethods {
   determinePointPossession(point: any): boolean {
     // Simple heuristic: if home team players are in offense, it was home possession
     // This is a simplified version - in practice you might need more sophisticated logic
-    const homeRoster = new Set(this.game.homeRoster);
-    const offensePlayersFromHome = point.offensePlayers.filter((p: string) => homeRoster.has(p));
+    const homeRosterNames = new Set(this.game.homeRoster.map(p => p.name));
+    const offensePlayersFromHome = point.offensePlayers.filter((p: string) =>
+      homeRosterNames.has(p)
+    );
     return offensePlayersFromHome.length > 0;
   }
 

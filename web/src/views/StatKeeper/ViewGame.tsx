@@ -75,7 +75,7 @@ function TopBar({
 
       <Box sx={{ textAlign: 'center', pb: 1 }}>
         <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-          {bookkeeper.homeTeam.name} vs {bookkeeper.awayTeam.name}
+          {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
         </Typography>
         <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
           <strong>Score:</strong> {apiPayload.homeScore} - {apiPayload.awayScore} |
@@ -124,7 +124,7 @@ function ViewGame({ bookkeeper }: ViewGameProps) {
     const url = URL.createObjectURL(blob);
 
     const timestamp = new Date().toISOString().slice(0, 19).replace(/:/g, '-');
-    const filename = `game_${bookkeeper.homeTeam.name}_vs_${bookkeeper.awayTeam.name}_week${bookkeeper.week}_${timestamp}.json`;
+    const filename = `game_${bookkeeper.getHomeTeamName()}_vs_${bookkeeper.getAwayTeamName()}_week${bookkeeper.week}_${timestamp}.json`;
 
     const link = document.createElement('a');
     link.href = url;

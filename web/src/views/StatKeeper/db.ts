@@ -25,6 +25,11 @@ export interface UndoCommand {
   data?: any; // minimal data only when we can't infer
 }
 
+export interface StoredPlayer {
+  name: string;
+  is_open: boolean;
+}
+
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
   league_id: number;
@@ -33,12 +38,12 @@ export interface StoredGame {
   // homeTeam
   homeTeam: string; // This is homeTeamName
   homeTeamId: number;
-  homeRoster: string[];
+  homeRoster: StoredPlayer[];
 
   // awayTeam
   awayTeam: string; // This is awayTeamName
   awayTeamId: number;
-  awayRoster: string[];
+  awayRoster: StoredPlayer[];
 
   // Game state
   points: Point[];
@@ -75,9 +80,15 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 };
 
 // Define the database schema and versioning
-db.version(1).stores({
-  games:
-    '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
-});
+// When schema changes, we simply clear all data since local data isn't important after submission
+db.version(2)
+  .stores({
+    games:
+      '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
+  })
+  .upgrade(tx => {
+    // Clear all existing data on schema changes - local data isn't important after submission
+    return tx.table('games').clear();
+  });
 
 export { db };

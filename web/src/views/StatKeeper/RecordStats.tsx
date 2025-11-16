@@ -2,20 +2,18 @@ import React from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
+import { StoredPlayer } from './db';
 import { Box, Button, Typography } from '@mui/material';
 
 const playerButtonStyles = {
   enabled: {
     color: '#000',
-    backgroundColor: '#e3f2fd',
-    border: '1px solid #2196f3',
     fontWeight: 'normal',
   },
   active: {
     color: '#000',
-    backgroundColor: '#a7d7f5',
-    border: '1px solid #2196f3',
     fontWeight: 'bold',
+    border: '2px solid',
   },
   'not-on-line': {
     color: '#adb5bd',
@@ -32,8 +30,8 @@ const playerButtonStyles = {
 };
 
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
-  const fullHomeRoster = bookkeeper.getHomeRoster();
-  const fullAwayRoster = bookkeeper.getAwayRoster();
+  const homeRoster = bookkeeper.getHomeRoster();
+  const awayRoster = bookkeeper.getAwayRoster();
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -79,14 +77,48 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     await bookkeeper.undo();
   };
 
-  const renderPlayerButton = (playerName: string, isHomeTeamButton: boolean) => {
-    const buttonState = bookkeeper.getPlayerButtonState(playerName, isHomeTeamButton);
-    const buttonStyle = playerButtonStyles[buttonState.variant];
+  const renderPlayerButton = (player: StoredPlayer, isHomeTeamButton: boolean) => {
+    const buttonState = bookkeeper.getPlayerButtonState(player.name, isHomeTeamButton);
+    const isOpen = player.is_open;
+
+    // Get base style from existing logic
+    const baseStyle = playerButtonStyles[buttonState.variant];
+
+    // Apply gender-based coloring
+    const genderStyle = isOpen
+      ? {
+          // Open players: blue theme
+          backgroundColor: buttonState.variant === 'active' ? '#a7d7f5' : '#e3f2fd',
+          borderColor: buttonState.variant === 'active' ? '#1976d2' : '#2196f3',
+          // Override MUI disabled state for active players
+          ...(buttonState.variant === 'active' && {
+            '&.Mui-disabled': {
+              color: baseStyle.color,
+              backgroundColor: '#a7d7f5',
+              borderColor: '#1976d2',
+            },
+          }),
+        }
+      : {
+          // Women players: purple theme
+          backgroundColor: buttonState.variant === 'active' ? '#ce93d8' : '#f3e5f5',
+          borderColor: buttonState.variant === 'active' ? '#ab47bc' : '#ce93d8',
+          // Override MUI disabled state for active players
+          ...(buttonState.variant === 'active' && {
+            '&.Mui-disabled': {
+              color: baseStyle.color,
+              backgroundColor: '#ce93d8',
+              borderColor: '#ab47bc',
+            },
+          }),
+        };
+
+    const applyGenderStyle = buttonState.variant === 'active' || buttonState.enabled;
 
     return (
       <Button
-        key={playerName}
-        onClick={() => handlePlayerClick(playerName, isHomeTeamButton)}
+        key={player.name}
+        onClick={() => handlePlayerClick(player.name, isHomeTeamButton)}
         disabled={!buttonState.enabled}
         fullWidth
         variant="text"
@@ -100,10 +132,11 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           whiteSpace: 'nowrap',
           fontSize: '0.9em',
           textTransform: 'none',
-          ...buttonStyle,
+          ...baseStyle,
+          ...(applyGenderStyle ? genderStyle : {}),
         }}
       >
-        {playerName}
+        {player.name}
       </Button>
     );
   };
@@ -122,9 +155,9 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1, overflowX: 'hidden' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.homeTeam.name}
+              {bookkeeper.getHomeTeamName()}
             </Typography>
-            {fullHomeRoster.map(player => renderPlayerButton(player, true))}
+            {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
 
           <Box sx={{ width: '40%' }}>
@@ -133,9 +166,9 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
           <Box sx={{ width: '30%', pl: 1, overflowX: 'hidden' }}>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.awayTeam.name}
+              {bookkeeper.getAwayTeamName()}
             </Typography>
-            {fullAwayRoster.map(player => renderPlayerButton(player, false))}
+            {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
         </Box>
       </Box>
@@ -147,7 +180,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             onClick: handlePull,
             disabled: !pullState.enabled,
             color: 'info',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'Point!',
@@ -161,28 +194,28 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             onClick: handleDrop,
             disabled: !dropState.enabled,
             color: 'warning',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'Throwaway',
             onClick: handleThrowaway,
             disabled: !throwawayState.enabled,
             color: 'warning',
-            variant: 'outlined',
+            variant: 'contained',
           },
           {
             label: 'D (Block)',
             onClick: handleD,
             disabled: !dState.enabled,
-            color: 'warning',
-            variant: 'outlined',
+            color: 'success',
+            variant: 'contained',
           },
           {
             label: 'Catch D',
             onClick: handleCatchD,
             disabled: !catchDState.enabled,
-            color: 'warning',
-            variant: 'outlined',
+            color: 'success',
+            variant: 'contained',
           },
         ]}
         secondaryActions={[

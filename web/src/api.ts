@@ -137,6 +137,7 @@ export interface Player {
 export interface TeamPlayer {
   name: string;
   team: string;
+  is_open: boolean;
 }
 
 export interface Team {
