@@ -58,6 +58,7 @@ class TeamPlayer(BaseSchema):
     name: str
     team: str
     is_male: bool
+    is_open: bool
 
 
 class Team(BaseSchema):
@@ -341,7 +342,7 @@ def build_teams_response(session: Session, league_id: int) -> list[Team]:
     for team in teams:
         players = []
         for player in team.players:
-            players.append(TeamPlayer(name=player.name, team=team.name, is_male=player.is_male))
+            players.append(TeamPlayer(name=player.name, team=team.name, is_male=player.is_male, is_open=player.is_open))
         teams_response.append(Team(id=team.id, name=team.name, players=players))
     return teams_response
 
