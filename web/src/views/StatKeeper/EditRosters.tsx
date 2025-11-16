@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bookkeeper } from './bookkeeper';
+import { Bookkeeper, sortRosters } from './bookkeeper';
 import { useTeams } from './hooks';
 import EditRoster from './EditRoster';
 import { StoredPlayer } from './db';
@@ -17,11 +17,11 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
 
   const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
-    setHomeRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
+    setHomeRoster(sortRosters(roster));
   };
 
   const sortAndSetAwayRoster = (roster: StoredPlayer[]) => {
-    setAwayRoster([...roster].sort((a, b) => a.name.localeCompare(b.name)));
+    setAwayRoster(sortRosters(roster));
   };
 
   useEffect(() => {
