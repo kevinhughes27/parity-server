@@ -11,6 +11,8 @@ from server.api import CURRENT_LEAGUE_ID
 # start the recorder. Then use the UI to make drive the test
 # before copying the code back. select pytest for export
 
+# can also use --slowmo=1000 to better watch a test
+
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args, playwright):
@@ -1736,11 +1738,19 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     expect_help_message(page, "Select players for the first point.")
     expect_game_state(page, "SelectingLines")
 
+    # dialogs are auto-clicked in playwright. this adds extra insurance we hit each
+    # handler and make the message assertions.
+    dialog_handled = False
+
     # Helper function to create dialog handlers for different warning types
     def expect_dialog_and_dismiss(expected_messages):
         """Helper to create a dialog handler that checks for expected messages and dismisses"""
+        nonlocal dialog_handled
+        dialog_handled = False
 
         def handler(dialog):
+            nonlocal dialog_handled
+            dialog_handled = True
             for expected in expected_messages:
                 assert expected in dialog.message
             dialog.dismiss()
@@ -1752,8 +1762,10 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:6]
     select_lines(page, home_line, away_line)
 
+    dialog_handled = False
     page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
+    assert dialog_handled
     select_lines(page, home_line, away_line)  # reset
 
     # not enough right
@@ -1761,8 +1773,10 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:5]
     select_lines(page, home_line, away_line)
 
+    dialog_handled = False
     page.once("dialog", expect_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
+    assert dialog_handled
     select_lines(page, home_line, away_line)  # reset
 
     # too many setup
@@ -1770,14 +1784,18 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:6]
 
     # too many left
+    dialog_handled = False
     select_lines(page, home_line, away_line)
     page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {home_team_name}."]))
     # click 7th player triggers dialog
     click_button(page, rosters[home_team_name][7])
+    assert dialog_handled
 
     # too many right
+    dialog_handled = False
     page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {away_team_name}."]))
     click_button(page, rosters[away_team_name][7])
+    assert dialog_handled
 
     # reset
     select_lines(page, home_line, away_line)
@@ -1787,8 +1805,10 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
     select_lines(page, home_line, away_line)
 
+    dialog_handled = False
     page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"]))
     click_button(page, "Start Point")
+    assert dialog_handled
     select_lines(page, home_line, away_line)  # reset
 
     # Ratio error
@@ -1796,8 +1816,10 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
     select_lines(page, home_line, away_line)
 
+    dialog_handled = False
     page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"]))
     click_button(page, "Start Point")
+    assert dialog_handled
     select_lines(page, home_line, away_line)  # reset
 
     # Valid line

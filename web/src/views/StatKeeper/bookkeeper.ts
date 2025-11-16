@@ -9,6 +9,18 @@ import {
 import { type GameView } from './db';
 import { EventType, GameMethods, GameState, PointMethods } from './gameLogic';
 
+// Helper function to sort players by gender (open first) then alphabetically
+export function sortRosters(players: StoredPlayer[]): StoredPlayer[] {
+  return [...players].sort((a, b) => {
+    // First sort by gender (open first)
+    if (a.is_open !== b.is_open) {
+      return a.is_open ? -1 : 1;
+    }
+    // Then sort alphabetically
+    return a.name.localeCompare(b.name);
+  });
+}
+
 interface UploadedGamePayload {
   league_id: number;
   week: number;
@@ -670,11 +682,11 @@ export class Bookkeeper {
   }
 
   getHomeRoster(): StoredPlayer[] {
-    return [...this.game.homeRoster].sort((a, b) => a.name.localeCompare(b.name));
+    return sortRosters(this.game.homeRoster);
   }
 
   getAwayRoster(): StoredPlayer[] {
-    return [...this.game.awayRoster].sort((a, b) => a.name.localeCompare(b.name));
+    return sortRosters(this.game.awayRoster);
   }
 
   // Team information accessors
