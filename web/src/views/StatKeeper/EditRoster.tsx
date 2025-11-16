@@ -1,14 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Typography,
-  Button,
-  TextField,
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-} from '@mui/material';
+import { Box, Typography, Button, TextField, Switch, FormControlLabel } from '@mui/material';
 import { StoredPlayer } from './db';
 import { TeamPlayer } from '../../api';
 
@@ -153,7 +144,7 @@ const AddLeaguePlayerForm: React.FC<{
 // Component for adding a custom substitute
 const AddSubstituteForm: React.FC<{
   newSubName: string;
-  newSubGender: boolean; // true for open, false for women
+  newSubGender: boolean; // true for ON2, false for WN2
   onSubNameChange: (name: string) => void;
   onSubGenderChange: (isOpen: boolean) => void;
   onAddSub: () => void;
@@ -163,38 +154,43 @@ const AddSubstituteForm: React.FC<{
       <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
         Add Custom Substitute
       </Typography>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.0 }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
         <TextField
           value={newSubName}
           onChange={e => onSubNameChange(e.target.value)}
           placeholder="Name"
           size="small"
-          fullWidth
-          sx={{ fontSize: '0.9em' }}
+          sx={{ flexGrow: 1, fontSize: '0.9em' }}
         />
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-          <FormControl sx={{ flexGrow: 1 }} size="small">
-            <InputLabel sx={{ fontSize: '0.9em' }}>Gender</InputLabel>
-            <Select
-              value={newSubGender ? 'open' : 'women'}
-              onChange={e => onSubGenderChange(e.target.value === 'open')}
-              label="Gender"
-              sx={{ fontSize: '0.9em' }}
-            >
-              <MenuItem value="open">Open</MenuItem>
-              <MenuItem value="women">Women</MenuItem>
-            </Select>
-          </FormControl>
-          <Button
-            onClick={onAddSub}
-            disabled={!newSubName.trim()}
-            variant="outlined"
-            size="small"
-            sx={{ fontSize: '0.9em', flexShrink: 0 }}
-          >
-            Add Sub
-          </Button>
-        </Box>
+        <FormControlLabel
+          control={
+            <Switch
+              checked={newSubGender}
+              onChange={e => onSubGenderChange(e.target.checked)}
+              size="small"
+            />
+          }
+          label={newSubGender ? 'ON2' : 'WN2'}
+          labelPlacement="start"
+          sx={{
+            m: 0,
+            fontSize: '0.9em',
+            '& .MuiFormControlLabel-label': {
+              fontSize: '0.9em',
+              fontWeight: 500,
+              minWidth: '35px',
+            },
+          }}
+        />
+        <Button
+          onClick={onAddSub}
+          disabled={!newSubName.trim()}
+          variant="outlined"
+          size="small"
+          sx={{ fontSize: '0.9em', flexShrink: 0 }}
+        >
+          Add Sub
+        </Button>
       </Box>
     </Box>
   );

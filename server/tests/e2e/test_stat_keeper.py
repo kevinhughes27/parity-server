@@ -78,7 +78,11 @@ def start_game(page: Page):
 
 
 def ignore_ratio_warning(page: Page):
-    page.once("dialog", lambda dialog: dialog.accept())
+    def handle_ratio_warning(dialog):
+        if "expected 4 ON2, 2 WN2" in dialog.message:
+            dialog.accept()
+
+    page.once("dialog", handle_ratio_warning)
 
 
 def start_point(page: Page):
@@ -952,7 +956,12 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     # record half
     expect_next_line_text(page)
     open_hamburger_menu(page)
-    page.once("dialog", lambda dialog: dialog.accept())
+
+    def handle_half_dialog(dialog):
+        if "Half time recorded" in dialog.message:
+            dialog.accept()
+
+    page.once("dialog", handle_half_dialog)
     page.get_by_role("menuitem", name="Record Half").click()
 
     # select lines again
@@ -1207,14 +1216,24 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     click_button(page, "Update Rosters")
 
     # select lines
-    # expect_text(page, "Select players for the next point.")
     expect_text(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
-    select_lines(page, rosters[home][:5] + ["Kevin Hughes(S)"], rosters[away][:6])
+    # we added one sub so the flip selection selects the other 7 players now
+    # we need to un-select one. this isn't really realistic as it is easier and better to remove
+    # players who aren't there so in practice the flip logic works fine.
+    click_button(page, "Rob Ives")
     expect_lines_selected(page, home, away)
     start_point(page)
 
     expect(page.get_by_role("button", name="Point!")).to_be_visible()
-    expect(page.get_by_role("button", name="Kevin Hughes(S)")).to_be_visible()
+    expect(page.get_by_role("button", name="Kevin Hughes(S)")).to_be_enabled()
+
+    click_button(page, "Kevin Hughes(S)")
+    click_button(page, "Krys Kudakiewicz")
+
+    play_by_play = [
+        "1.Kevin Hughes(S) passed to Krys Kudakiewicz",
+    ]
+    expect_play_by_play(page, play_by_play)
 
 
 def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: Page) -> None:
@@ -1539,87 +1558,85 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
     assert stats["Ashlin Kelly"]["d_points_for"] == 1
 
 
-def test_custom_female_substitute_gender_tracking(server, league, rosters, page: Page) -> None:
-    """Test that custom female substitutes maintain their gender through the stat keeping process.
-
-    This test demonstrates two gender-related bugs:
-    1. Fixed bug: Custom female subs would appear blue (male) in stat recording pages
-    2. Existing bug: Custom subs in API submission don't have proper gender until we update the API
-    """
+def test_custom_substitutes(session, server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
     away = "lumleysexuals"
 
-    # create game (now navigates to roster editing view)
+    # create game
     select_teams(page, home, away)
     expect_rosters(page, rosters[home], rosters[away])
 
-    # add default sub to home team (will default to Open/male)
+    # add open sub to the home team
     page.get_by_role("textbox", name="Name").first.click()
-    page.get_by_role("textbox", name="Name").first.fill("Test Sub Player")
+    page.get_by_role("textbox", name="Name").first.fill("Open Sub")
     page.get_by_role("button", name="Add Sub").first.click()
 
-    # add sub to away team for comparison
+    # add wn2 sub to away team
     page.get_by_role("textbox", name="Name").nth(1).click()
-    page.get_by_role("textbox", name="Name").nth(1).fill("Away Sub Player")
+    page.get_by_role("textbox", name="Name").nth(1).fill("WN2 Sub")
+    page.get_by_role("checkbox", name="ON2").nth(1).uncheck()
     page.get_by_role("button", name="Add Sub").nth(1).click()
 
     # check updated rosters - these should now include the subs
     home_roster = rosters[home]
-    home_roster.append("Test Sub Player(S)")
+    home_roster.append("Open Sub(S)")
     away_roster = rosters[away]
-    away_roster.append("Away Sub Player(S)")
+    away_roster.append("WN2 Sub(S)")
     expect_rosters(page, home_roster, away_roster)
 
     # start game
     start_game(page)
 
     # select lines including the substitutes
-    home_line = rosters[home][:5] + ["Test Sub Player(S)"]
-    away_line = rosters[away][:5] + ["Away Sub Player(S)"]
+    home_line = rosters[home][:5] + ["Open Sub(S)"]
+    away_line = rosters[away][:5] + ["WN2 Sub(S)"]
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
 
-    # Now in record stats mode - the substitutes should be visible and working
-    # Note: Without changing gender to female, this sub will appear blue (Open/male)
-    # This demonstrates that our changes work - the gender is properly tracked
-    test_sub_button = page.get_by_role("button", name="Test Sub Player(S)")
-    away_sub_button = page.get_by_role("button", name="Away Sub Player(S)")
+    # check that the subs are styled properly
+    open_sub_button = page.get_by_role("button", name="Open Sub(S)")
+    wn2_sub_button = page.get_by_role("button", name="WN2 Sub(S)")
 
-    expect(test_sub_button).to_be_visible()
-    expect(away_sub_button).to_be_visible()
+    expect(open_sub_button).to_have_css("background-color", "rgb(227, 242, 253)")  # blue
+    expect(wn2_sub_button).to_have_css("background-color", "rgb(243, 229, 245)")  # purple
 
     # record a simple point using the substitute
     click_button(page, "Brian Kells")
     click_button(page, "Pull")
     click_button(page, "Owen Lumley")
-    click_button(page, "Karen Kavanagh")  # Pass to another player
-    click_button(page, "Away Sub Player(S)")  # Pass to substitute
-    click_button(page, "Point!")  # Score
+    click_button(page, "Karen Kavanagh")
+    click_button(page, "WN2 Sub(S)")
+    click_button(page, "Point!")
 
     # submit game
     submit_game(page)
 
     # verify submitted stats - check that the substitute appears in stats
     stats = get_stats()
-    assert "Away Sub Player(S)" in stats
-    assert stats["Away Sub Player(S)"]["goals"] == 1
+    assert "WN2 Sub(S)" in stats
+    assert stats["WN2 Sub(S)"]["goals"] == 1
 
     # Get the game data to check roster submission
     game = get_game(1)
-    assert "Test Sub Player(S)" in game["homeRoster"]
-    assert "Away Sub Player(S)" in game["awayRoster"]
+    assert "Open Sub(S)" in game["homeRoster"]
+    assert "WN2 Sub(S)" in game["awayRoster"]
 
-    # TODO: This demonstrates the second bug that we can't fix yet:
-    # Custom substitutes don't have proper gender in the final API submission
-    # because the submission API only accepts names, not full player objects.
-    # When we update the API to accept gender information, we can remove this
-    # comment and add proper gender verification.
-    #
-    # Expected future behavior:
-    # - Query player gender from database after submission
-    # - Assert that substitutes have proper gender in the database
+    # this bug isn't exposed to the API because we only return the gender in the teams response
+    # and not in the game stats response which means there is nothing that returns substitute genders
+    # none the less they are wrong, they get defaulted in the database. this can be fixed after we deprecate
+    # the android app and can change the upload format.
+    from sqlmodel import select
+
+    import server.db as db
+
+    player = session.exec(select(db.Player).where(db.Player.name == "Open Sub(S)")).first()
+    assert player.gender is None
+    assert not player.is_open  # bug
+    player = session.exec(select(db.Player).where(db.Player.name == "WN2 Sub(S)")).first()
+    assert player.gender is None
+    assert not player.is_open
 
 
 def test_select_scheduled_matchup(server, league, rosters, matchup, page: Page) -> None:
