@@ -82,11 +82,19 @@ export interface PointEvent {
 
 export const fetchGames = async (leagueId: string): Promise<Game[]> => {
   const response = await cachedFetch(`/api/${leagueId}/games`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch games for league ${leagueId}: ${response.statusText}`);
+  }
   return await response.json();
 };
 
 export const fetchGame = async (gameId: string, leagueId: string): Promise<Game> => {
   const response = await cachedFetch(`/api/${leagueId}/games/${gameId}`);
+  if (!response.ok) {
+    throw new Error(
+      `Failed to fetch game ${gameId} for league ${leagueId}: ${response.statusText}`
+    );
+  }
   return await response.json();
 };
 
