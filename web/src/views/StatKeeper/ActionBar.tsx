@@ -18,6 +18,10 @@ interface ActionBarProps {
   }[];
 }
 
+// The ActionBar needs to fit horizontally on the tablet screens.
+// The screen size is: 800 x 1280, density 189
+// use a device simulator to make sure it looks proper when making changes
+
 const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
   return (
     <Box
@@ -52,7 +56,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'contained'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '120px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
+            sx={{ minWidth: '90px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>
@@ -68,7 +72,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'outlined'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '120px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
+            sx={{ minWidth: '90px', fontSize: '1.0rem', px: 2, py: 1, whiteSpace: 'nowrap' }}
           >
             {action.label}
           </Button>
