@@ -268,6 +268,7 @@ function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView
         overflowY: 'auto',
         pb: '78px', // 70 for action bar + 8
         position: 'relative',
+        overscrollBehavior: 'none',
       }}
     >
       {currentView === 'selectLines' && <SelectLines bookkeeper={bookkeeper} />}
