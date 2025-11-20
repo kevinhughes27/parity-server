@@ -15,6 +15,8 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const [homeRoster, setHomeRoster] = useState<StoredPlayer[]>([]);
   const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
+  const [originalHomeRoster, setOriginalHomeRoster] = useState<StoredPlayer[]>([]);
+  const [originalAwayRoster, setOriginalAwayRoster] = useState<StoredPlayer[]>([]);
 
   const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
     setHomeRoster(sortRosters(roster));
@@ -26,11 +28,17 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   useEffect(() => {
     if (bookkeeper) {
-      sortAndSetHomeRoster(bookkeeper.getHomeRoster());
-      sortAndSetAwayRoster(bookkeeper.getAwayRoster());
+      const homeRosterFromBookkeeper = bookkeeper.getHomeRoster();
+      const awayRosterFromBookkeeper = bookkeeper.getAwayRoster();
+      sortAndSetHomeRoster(homeRosterFromBookkeeper);
+      sortAndSetAwayRoster(awayRosterFromBookkeeper);
+      setOriginalHomeRoster(homeRosterFromBookkeeper);
+      setOriginalAwayRoster(awayRosterFromBookkeeper);
     } else {
       sortAndSetHomeRoster([]);
       sortAndSetAwayRoster([]);
+      setOriginalHomeRoster([]);
+      setOriginalAwayRoster([]);
     }
   }, [bookkeeper]);
 
@@ -123,6 +131,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
               teamName={bookkeeper.getHomeTeamName()}
               allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
               currentRoster={homeRoster} // Already sorted by sortAndSetHomeRoster
+              originalRoster={originalHomeRoster} // Original roster for reference
               onRosterChange={sortAndSetHomeRoster} // Pass the sorting setter
             />
           </Box>
@@ -131,6 +140,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
               teamName={bookkeeper.getAwayTeamName()}
               allLeaguePlayers={allLeaguePlayers} // Already sorted from useTeams
               currentRoster={awayRoster} // Already sorted by sortAndSetAwayRoster
+              originalRoster={originalAwayRoster} // Original roster for reference
               onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
             />
           </Box>

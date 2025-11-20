@@ -1215,6 +1215,18 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("textbox", name="Name").first.click()
     page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
     page.get_by_role("button", name="Add Sub").first.click()
+
+    # test removing and re-adding a roster player doesn't add (S) suffix
+    page.get_by_role("listitem").filter(has_text="Brian KellsRemove").get_by_role("button").click()
+    expect(page.locator("#root")).not_to_contain_text("Brian KellsRemove")
+    page.get_by_role("combobox").first.select_option("Brian Kells")
+    page.get_by_role("button", name="Add").first.click()
+
+    # verify Brian Kells was added back WITHOUT (S) suffix
+    expect(page.locator("#root")).to_contain_text("Brian KellsRemove")
+    expect(page.locator("#root")).not_to_contain_text("Brian Kells(S)")
+
+    # finish
     click_button(page, "Update Rosters")
 
     # select lines

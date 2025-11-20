@@ -6,6 +6,7 @@ import { TeamPlayer } from '../../api';
 interface EditRosterProps {
   teamName: string;
   currentRoster: StoredPlayer[];
+  originalRoster: StoredPlayer[]; // Reference to the original roster before any edits
   onRosterChange: (newRoster: StoredPlayer[]) => void;
   allLeaguePlayers: TeamPlayer[]; // Assumed to be pre-sorted by parent
 }
@@ -199,6 +200,7 @@ const AddSubstituteForm: React.FC<{
 const EditRoster: React.FC<EditRosterProps> = ({
   allLeaguePlayers,
   currentRoster,
+  originalRoster,
   onRosterChange,
 }) => {
   const [newSubName, setNewSubName] = useState('');
@@ -233,10 +235,9 @@ const EditRoster: React.FC<EditRosterProps> = ({
     if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
       const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
       if (leaguePlayer) {
-        const newPlayer: StoredPlayer = {
-          name: `${leaguePlayer.name}(S)`,
-          is_open: leaguePlayer.is_open,
-        };
+        const wasInOriginalRoster = originalRoster.some(p => p.name === leaguePlayer.name);
+        const name = wasInOriginalRoster ? leaguePlayer.name : `${leaguePlayer.name}(S)`;
+        const newPlayer: StoredPlayer = { name: name, is_open: leaguePlayer.is_open };
         onRosterChange([...currentRoster, newPlayer]);
         setSelectedLeaguePlayer('');
       }
