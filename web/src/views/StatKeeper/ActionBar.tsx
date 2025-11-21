@@ -24,6 +24,7 @@ interface ActionBarProps {
 // 690 x 900 in the simulator seems to be closer to reality
 
 const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
+  const btnSx = { minWidth: '64px', fontSize: '0.8rem', px: 1.5, py: 1.2, whiteSpace: 'nowrap' }
   return (
     <Box
       sx={{
@@ -32,7 +33,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
         left: 0,
         right: 0,
         height: '70px',
-        p: '10px 15px',
+        p: '10px 10px',
         backgroundColor: 'white',
         borderTop: '1px solid #ccc',
         display: 'flex',
@@ -57,7 +58,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'contained'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '62px', fontSize: '1.0rem', px: 1.5, py: 1, whiteSpace: 'nowrap' }}
+            sx={btnSx}
           >
             {action.label}
           </Button>
@@ -73,7 +74,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
             variant={action.variant || 'outlined'}
             color={action.color || 'primary'}
             size="small"
-            sx={{ minWidth: '62px', fontSize: '1.0rem', px: 1.5, py: 1, whiteSpace: 'nowrap' }}
+            sx={btnSx}
           >
             {action.label}
           </Button>
