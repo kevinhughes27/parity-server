@@ -7,7 +7,8 @@ import { json as jsonLang } from '@codemirror/lang-json';
 import { saveGame, deleteGame, Game } from '../../api';
 
 export default function GameEditor(props: { gameId: string; leagueId: string; game: Game }) {
-  const { homeTeam, homeRoster, homeScore, awayTeam, awayRoster, awayScore, points, week } = props.game;
+  const { homeTeam, homeRoster, homeScore, awayTeam, awayRoster, awayScore, points, week } =
+    props.game;
 
   const fields = {
     homeTeam,

@@ -24,7 +24,7 @@ interface ActionBarProps {
 // 690 x 900 in the simulator seems to be closer to reality
 
 const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
-  const btnSx = { minWidth: '64px', fontSize: '0.8rem', px: 1.5, py: 1.2, whiteSpace: 'nowrap' }
+  const btnSx = { minWidth: '64px', fontSize: '0.8rem', px: 1.5, py: 1.2, whiteSpace: 'nowrap' };
   return (
     <Box
       sx={{
