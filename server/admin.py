@@ -36,6 +36,7 @@ class EditedGame(api.BaseSchema):
     home_roster: list[str]
     away_roster: list[str]
     points: list[api.Point]
+    week: int
 
 
 def edit_game(
@@ -54,6 +55,7 @@ def edit_game(
     game.home_roster = edited_game.home_roster
     game.away_roster = edited_game.away_roster
     game.points = [point.model_dump() for point in edited_game.points]
+    game.week = edited_game.week
 
     session.add(game)
     session.commit()
