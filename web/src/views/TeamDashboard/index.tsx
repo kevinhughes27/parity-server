@@ -89,8 +89,8 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     const playerBIdx = findIndex(allPlayers, p => p.name === playerB.name);
 
     const newPlayers = [...allPlayers];
-    newPlayers[playerAIdx] = { ...newPlayers[playerAIdx], team: newPlayers[playerBIdx].team };
-    newPlayers[playerBIdx] = { ...newPlayers[playerBIdx], team: newPlayers[playerAIdx].team };
+    newPlayers[playerAIdx] = { ...allPlayers[playerAIdx], team: allPlayers[playerBIdx].team };
+    newPlayers[playerBIdx] = { ...allPlayers[playerBIdx], team: allPlayers[playerAIdx].team };
 
     const newTrades = [...trades, { playerA, playerB }];
 
@@ -105,8 +105,8 @@ export default function TeamDashboard(props: TeamDashboardProps) {
     const playerBIdx = findIndex(allPlayers, p => p.name === trade.playerB.name);
 
     const newPlayers = [...allPlayers];
-    newPlayers[playerAIdx] = { ...newPlayers[playerAIdx], team: newPlayers[playerBIdx].team };
-    newPlayers[playerBIdx] = { ...newPlayers[playerBIdx], team: newPlayers[playerAIdx].team };
+    newPlayers[playerAIdx] = { ...allPlayers[playerAIdx], team: allPlayers[playerBIdx].team };
+    newPlayers[playerBIdx] = { ...allPlayers[playerBIdx], team: allPlayers[playerAIdx].team };
 
     const newTrades = [...trades].filter(t => !isEqual(t, trade));
 
