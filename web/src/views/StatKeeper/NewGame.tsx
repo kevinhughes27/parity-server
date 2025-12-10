@@ -17,7 +17,7 @@ import {
   Alert,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Matchup } from '../../api';
+import { clearCache, Matchup } from '../../api';
 import { homeColors, awayColors } from '../../helpers';
 
 interface CurrentLeague {
@@ -293,6 +293,11 @@ const ActionBar: React.FC<{
 function NewGame() {
   const navigate = useNavigate();
   useFullscreen();
+
+  // clear cache
+  useEffect(() => {
+    clearCache()
+  }, [])
 
   const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);

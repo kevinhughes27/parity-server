@@ -229,3 +229,9 @@ export const fetchStats = async (weekNum: number, leagueId: string): Promise<Sta
   const data = json.stats || {};
   return data;
 };
+
+export const clearCache = () => {
+  Object.keys(dataCache).forEach(key => {
+    delete dataCache[key];
+  });
+}
