@@ -291,6 +291,10 @@ export class Bookkeeper {
     return this.gameMethods.firstPointOfGameOrHalf();
   }
 
+  public isEditingRosters(): boolean {
+    return this.game.isEditingRosters;
+  }
+
   private async performAction(action: () => void): Promise<void> {
     // Action
     action();
