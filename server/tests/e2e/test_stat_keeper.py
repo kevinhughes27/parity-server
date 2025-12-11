@@ -1196,7 +1196,32 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     # start (Update Rosters button)
     start_game(page)
 
-    # need to do at least one point before we can submit now
+    # need to do at least one point before we can submit
+
+    # select lines
+    expect_help_message(page, "Select players for the first point.")
+    expect_game_state(page, "SelectingLines")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record stats
+    click_button(page, "Brian Kells")
+    click_button(page, "Pull")
+    click_button(page, "Owen Lumley")
+    click_button(page, "Heather McCabe")
+    click_button(page, "Owen Lumley")
+    click_button(page, "Point!")
+
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Owen Lumley",
+        "4.Owen Lumley scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
 
     # submit and check game rosters
     submit_game(page)
