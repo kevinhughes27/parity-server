@@ -243,6 +243,30 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     return 'Players not on the previous line are pre-selected. Adjust and confirm.';
   };
 
+  const secondaryActions = [];
+
+  if (isEditingLine) {
+    secondaryActions.push({
+      label: 'Cancel',
+      onClick: handleUndo,
+      color: 'warning' as const,
+      variant: 'contained' as const,
+    });
+  } else if (bookkeeper.getUndoCount() > 0) {
+    let text = 'Undo';
+    if (bookkeeper.getUndoEvent() == 'recordPoint') {
+      text = 'Undo Point';
+    } else if (bookkeeper.getUndoEvent() == 'recordHalf') {
+      text = 'Undo Half';
+    }
+    secondaryActions.push({
+      label: text,
+      onClick: handleUndo,
+      color: 'warning' as const,
+      variant: 'contained' as const,
+    });
+  }
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', p: 1.25 }}>
       <Box sx={{ flexGrow: 1, overflowX: 'hidden', mb: 1.25 }}>
@@ -279,31 +303,11 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
             label: buttonText,
             onClick: handleDone,
             disabled: selectedHomePlayers.length < 2 || selectedAwayPlayers.length < 2,
-            color: 'success',
-            variant: 'contained',
+            color: 'success' as const,
+            variant: 'contained' as const,
           },
         ]}
-        secondaryActions={
-          currentGameState === GameState.EditingLines
-            ? [
-                {
-                  label: 'Cancel',
-                  onClick: handleUndo,
-                  color: 'warning',
-                  variant: 'contained',
-                },
-              ]
-            : bookkeeper.getUndoCount() > 0 && !isEditingLine
-              ? [
-                  {
-                    label: 'Undo Point',
-                    onClick: handleUndo,
-                    color: 'warning',
-                    variant: 'contained',
-                  },
-                ]
-              : []
-        }
+        secondaryActions={secondaryActions}
       />
     </Box>
   );
