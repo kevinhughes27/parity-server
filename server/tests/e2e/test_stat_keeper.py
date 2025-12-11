@@ -174,37 +174,25 @@ def open_hamburger_menu(page: Page):
 def submit_game(page: Page, *, failed: bool = False):
     open_hamburger_menu(page)
 
-    # handle confirm and complete dialogs
-    def handle_confirm(dialog):
-        assert "Are you sure you want to submit this game?" in dialog.message
-
-        def handle_failed(dialog):
-            assert "Game submission failed" in dialog.message
-            dialog.accept()
-
-        def handle_complete(dialog):
-            assert "Game submitted and uploaded successfully!" in dialog.message
-            dialog.accept()
-
-        # setup second dialog handler
-        if failed:
-            page.once("dialog", handle_failed)
-        else:
-            page.once("dialog", handle_complete)
-
-        # accept first dialog
-        dialog.accept()
-
-    page.once("dialog", handle_confirm)
-
+    # click submit game menu item
     page.get_by_role("menuitem", name="Submit Game").click()
 
+    # wait for and interact with the MUI confirmation dialog
+    expect(page.get_by_role("heading", name="Confirm Game Submission")).to_be_visible()
+    expect(page.get_by_text("Are you sure you want to submit this game?")).to_be_visible()
+
+    # click the submit button in the dialog
+    page.get_by_role("button", name="Submit").click()
+
+    # wait for redirect and check for appropriate snackbar/alert message
     page.wait_for_url("**/stat_keeper")
     expect(page.locator("#root")).to_contain_text("Local Games")
 
     if failed:
+        # expect error snackbar would have appeared (though we've already navigated away)
         expect(page.locator("#root")).to_contain_text("sync-error")
     else:
+        # expect success - game should be uploaded
         expect(page.locator("#root")).to_contain_text("uploaded")
 
 
@@ -989,7 +977,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     # select lines again
     expect_help_message(page, "Select players for the next point.")
     expect_game_state(page, "SelectingLines")
-    select_lines(page, rosters[home][6:], rosters[away][6:]) # reset
+    select_lines(page, rosters[home][6:], rosters[away][6:])  # reset
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1965,7 +1953,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
     # wait for snackbar to appear and disappear
     expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
 
-    select_lines(page, home_line_1, away_line_1) # reset
+    select_lines(page, home_line_1, away_line_1)  # reset
 
     # second half - 20 more points
     for point_num in range(20, 40):

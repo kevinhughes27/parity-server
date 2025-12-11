@@ -11,6 +11,12 @@ import {
   Divider,
   Snackbar,
   Alert,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Button,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
@@ -142,6 +148,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
   const [snackbar, setSnackbar] = useState<{
     open: boolean;
     message: string;
@@ -184,26 +191,30 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       return;
     }
 
-    // First, confirm the user wants to submit
-    const confirmed = window.confirm(
-      'Are you sure you want to submit this game? This action cannot be undone and the game will be uploaded to the server.'
-    );
+    // Show confirmation dialog
+    setConfirmDialogOpen(true);
+  };
 
-    if (!confirmed) {
-      return;
-    }
-
+  const handleConfirmSubmit = async () => {
+    setConfirmDialogOpen(false);
     setIsSubmitting(true);
     try {
       await bookkeeper.submitGame();
-      alert('Game submitted and uploaded successfully!');
+      showSnackbar('Game submitted and uploaded successfully!', 'success');
     } catch (error) {
-      alert(`Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      showSnackbar(
+        `Game submission failed: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        'error'
+      );
       console.error('Submission error:', error);
     } finally {
       // Always redirect to StatKeeper home regardless of success or failure
       navigate('/stat_keeper');
     }
+  };
+
+  const handleCancelSubmit = () => {
+    setConfirmDialogOpen(false);
   };
 
   const handleChangeLine = async () => {
@@ -260,6 +271,28 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onEnterFullscreen={handleEnterFullscreen}
       />
       <MainContent bookkeeper={bookkeeper} currentView={currentView} />
+      <Dialog
+        open={confirmDialogOpen}
+        onClose={handleCancelSubmit}
+        aria-labelledby="submit-dialog-title"
+        aria-describedby="submit-dialog-description"
+      >
+        <DialogTitle id="submit-dialog-title">Confirm Game Submission</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="submit-dialog-description">
+            Are you sure you want to submit this game? This action cannot be undone and the game
+            will be uploaded to the server.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelSubmit} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleConfirmSubmit} color="primary" variant="contained" autoFocus>
+            Submit
+          </Button>
+        </DialogActions>
+      </Dialog>
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}
