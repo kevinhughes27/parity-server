@@ -34,6 +34,7 @@ interface ActionsMenuProps {
   isHalfRecorded: boolean;
   isSubmitting: boolean;
   currentGameState: GameState;
+  isEditingRosters: boolean;
   hasActivePoint: boolean;
   pointsCount: number;
   onRecordHalf: () => Promise<void>;
@@ -49,6 +50,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   isHalfRecorded,
   isSubmitting,
   currentGameState,
+  isEditingRosters,
   hasActivePoint,
   pointsCount,
   onRecordHalf,
@@ -59,6 +61,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
+  // need to redo all of this logic here really
 
   const canSubmitGame =
     gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
@@ -85,24 +89,26 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
       </IconButton>
 
       <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <MenuItem onClick={() => handleAction(onEditRosters)}>Edit Rosters</MenuItem>
-
         <MenuItem
           onClick={() => handleAction(onChangeLine)}
           disabled={
             currentGameState === GameState.SelectingLines ||
-            currentGameState === GameState.EditingLines
+            currentGameState === GameState.EditingLines ||
+            isEditingRosters
           }
           sx={{
             color:
               currentGameState === GameState.SelectingLines ||
-              currentGameState === GameState.EditingLines
+              currentGameState === GameState.EditingLines ||
+              isEditingRosters
                 ? '#999'
                 : 'inherit',
           }}
         >
-          Change Line
+          🔄 Change Line
         </MenuItem>
+
+        <MenuItem onClick={() => handleAction(onEditRosters)}>📝 Edit Rosters</MenuItem>
 
         <Divider />
 
@@ -118,7 +124,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
           disabled={isHalfRecorded || hasActivePoint || pointsCount === 0}
           sx={{ color: isHalfRecorded || hasActivePoint || pointsCount === 0 ? '#999' : 'inherit' }}
         >
-          Record Half
+          ⏸️ Record Half
         </MenuItem>
 
         <MenuItem
@@ -126,7 +132,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
           disabled={!canSubmitGame}
           sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
         >
-          {isSubmitting ? 'Submitting...' : 'Submit Game'}
+          {isSubmitting ? '⏳ Submitting...' : '✅ Submit Game'}
         </MenuItem>
       </Menu>
     </Box>
@@ -242,6 +248,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         bookkeeper={bookkeeper}
         localGameId={localGameId}
         currentGameState={currentGameState}
+        isEditingRosters={bookkeeper.isEditingRosters()}
         isHalfRecorded={isHalfRecorded}
         hasActivePoint={hasActivePoint}
         pointsCount={pointsCount}
@@ -276,6 +283,7 @@ function TopBar({
   bookkeeper,
   localGameId,
   currentGameState,
+  isEditingRosters,
   isHalfRecorded,
   hasActivePoint,
   pointsCount,
@@ -289,6 +297,7 @@ function TopBar({
   bookkeeper: any;
   localGameId: string;
   currentGameState: GameState;
+  isEditingRosters: boolean;
   isHalfRecorded: boolean;
   hasActivePoint: boolean;
   pointsCount: number;
@@ -319,6 +328,7 @@ function TopBar({
             numericGameId={parseInt(localGameId)}
             gameStatus={bookkeeper.getGameStatus()}
             currentGameState={currentGameState}
+            isEditingRosters={isEditingRosters}
             isHalfRecorded={isHalfRecorded}
             hasActivePoint={hasActivePoint}
             pointsCount={pointsCount}
