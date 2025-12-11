@@ -4,14 +4,14 @@ import { Box, Button, Stack } from '@mui/material';
 interface ActionBarProps {
   primaryActions: {
     label: string;
-    onClick: () => void;
+    onClick: () => void | Promise<void>;
     disabled?: boolean;
     color?: 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
     variant?: 'text' | 'outlined' | 'contained';
   }[];
   secondaryActions: {
     label: string;
-    onClick: () => void;
+    onClick: () => void | Promise<void>;
     disabled?: boolean;
     color?: 'primary' | 'secondary' | 'success' | 'error' | 'info' | 'warning';
     variant?: 'text' | 'outlined' | 'contained';

@@ -9,8 +9,11 @@ import {
   Menu,
   MenuItem,
   Divider,
+  Snackbar,
+  Alert,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import { Bookkeeper, GameState } from './bookkeeper';
 import { StoredGame } from './db';
 import SelectLines from './SelectLines';
@@ -23,6 +26,8 @@ interface EditGameProps {
   localGameId: string;
 }
 
+type SnackbarSeverity = 'success' | 'info' | 'warning' | 'error';
+
 interface ActionsMenuProps {
   numericGameId: number | undefined;
   gameStatus: StoredGame['status'] | undefined;
@@ -33,6 +38,7 @@ interface ActionsMenuProps {
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
   onEditRosters: () => void;
+  onEnterFullscreen: () => void;
 }
 
 const ActionsMenu: React.FC<ActionsMenuProps> = ({
@@ -45,6 +51,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   onSubmitGame,
   onChangeLine,
   onEditRosters,
+  onEnterFullscreen,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
@@ -94,6 +101,13 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 
         <Divider />
 
+        <MenuItem onClick={() => handleAction(onEnterFullscreen)}>
+          <FullscreenIcon sx={{ mr: 1, fontSize: '1.2em' }} />
+          Enter Fullscreen
+        </MenuItem>
+
+        <Divider />
+
         <MenuItem
           onClick={() => handleAction(onRecordHalf)}
           disabled={isHalfRecorded}
@@ -117,17 +131,30 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string; severity: SnackbarSeverity }>({
+    open: false,
+    message: '',
+    severity: 'info',
+  });
   const currentView = bookkeeper.getCurrentView();
   const currentGameState = bookkeeper.gameState();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
+  const showSnackbar = (message: string, severity: SnackbarSeverity = 'info') => {
+    setSnackbar({ open: true, message, severity });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
   const handleRecordHalf = async () => {
     if (isHalfRecorded) {
-      alert('Half has already been recorded.');
+      showSnackbar('Half has already been recorded.', 'warning');
       return;
     }
     await bookkeeper.recordHalf();
-    alert('Half time recorded.');
+    showSnackbar('Half time recorded.', 'success');
   };
 
   const handleSubmitGame = async () => {
@@ -180,6 +207,20 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     bookkeeper.startEditingRosters();
   };
 
+  const handleEnterFullscreen = async () => {
+    try {
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen();
+        showSnackbar('Entered fullscreen mode', 'success');
+      } else {
+        showSnackbar('Fullscreen not supported on this device', 'error');
+      }
+    } catch (error) {
+      showSnackbar('Failed to enter fullscreen', 'error');
+      console.error('Fullscreen error:', error);
+    }
+  };
+
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       <TopBar
@@ -192,8 +233,24 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onSubmitGame={handleSubmitGame}
         onChangeLine={handleChangeLine}
         onEditRosters={handleEditRosters}
+        onEnterFullscreen={handleEnterFullscreen}
       />
       <MainContent bookkeeper={bookkeeper} currentView={currentView} />
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert 
+          onClose={handleCloseSnackbar} 
+          severity={snackbar.severity} 
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }
@@ -208,6 +265,7 @@ function TopBar({
   onSubmitGame,
   onChangeLine,
   onEditRosters,
+  onEnterFullscreen,
 }: {
   bookkeeper: any;
   localGameId: string;
@@ -218,6 +276,7 @@ function TopBar({
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => Promise<void>;
   onEditRosters: () => Promise<void>;
+  onEnterFullscreen: () => Promise<void>;
 }) {
   return (
     <AppBar position="static" color="default" elevation={1}>
@@ -245,6 +304,7 @@ function TopBar({
             onSubmitGame={onSubmitGame}
             onChangeLine={onChangeLine}
             onEditRosters={onEditRosters}
+            onEnterFullscreen={onEnterFullscreen}
           />
         </Box>
       </Toolbar>
