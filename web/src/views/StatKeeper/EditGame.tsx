@@ -60,7 +60,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
+  const canSubmitGame =
+    gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -135,7 +136,11 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string; severity: SnackbarSeverity }>({
+  const [snackbar, setSnackbar] = useState<{
+    open: boolean;
+    message: string;
+    severity: SnackbarSeverity;
+  }>({
     open: false,
     message: '',
     severity: 'info',
@@ -163,10 +168,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       await bookkeeper.recordHalf();
       showSnackbar('Half time recorded.', 'success');
     } catch (error) {
-      showSnackbar(
-        error instanceof Error ? error.message : 'Failed to record half time.',
-        'error'
-      );
+      showSnackbar(error instanceof Error ? error.message : 'Failed to record half time.', 'error');
     }
   };
 
@@ -257,9 +259,9 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onClose={handleCloseSnackbar}
         anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       >
-        <Alert 
-          onClose={handleCloseSnackbar} 
-          severity={snackbar.severity} 
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
           variant="filled"
           sx={{ width: '100%' }}
         >
