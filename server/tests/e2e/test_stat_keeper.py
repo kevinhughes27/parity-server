@@ -93,6 +93,8 @@ def start_point(page: Page):
 
 
 def select_lines(page: Page, home_line: list[str], away_line: list[str]):
+    # it would be nice if this would force the state by reseting any other selected players
+    # that would remove some custom reset logic in a few tests
     for player in home_line:
         page.get_by_role("button", name=player).click()
     for player in away_line:
@@ -958,17 +960,36 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     # record half
     expect_next_line_text(page)
     open_hamburger_menu(page)
+    page.get_by_role("menuitem", name="Record Half").click()
 
-    def handle_half_dialog(dialog):
-        if "Half time recorded" in dialog.message:
-            dialog.accept()
+    # expect success snackbar
+    expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
 
-    page.once("dialog", handle_half_dialog)
+    # expect select lines state with no players selected
+    expect_help_message(page, "Select players for the next point.")
+    expect_game_state(page, "SelectingLines")
+
+    # test undoing half time
+    click_button(page, "Undo Half")
+    expect_next_line_text(page)
+
+    # should also be able to undo point from here
+    click_button(page, "Undo Point")
+
+    # the correct line is selected still
+    expect_players_enabled(page, [p for p in home_line if p != "Ashlin Kelly"])
+    expect_players_disabled(page, away_line)
+    click_button(page, "Point!")
+
+    # record half again
+    expect_next_line_text(page)
+    open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Record Half").click()
 
     # select lines again
     expect_help_message(page, "Select players for the next point.")
     expect_game_state(page, "SelectingLines")
+    select_lines(page, rosters[home][6:], rosters[away][6:]) # reset
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1174,6 +1195,8 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
 
     # start (Update Rosters button)
     start_game(page)
+
+    # need to do at least one point before we can submit now
 
     # submit and check game rosters
     submit_game(page)
@@ -1912,8 +1935,12 @@ def test_perf(server, league, rosters, page: Page) -> None:
 
     # record half
     open_hamburger_menu(page)
-    page.once("dialog", lambda dialog: dialog.accept())
     page.get_by_role("menuitem", name="Record Half").click()
+
+    # wait for snackbar to appear and disappear
+    expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
+
+    select_lines(page, home_line_1, away_line_1) # reset
 
     # second half - 20 more points
     for point_num in range(20, 40):
