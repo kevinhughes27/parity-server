@@ -34,6 +34,8 @@ interface ActionsMenuProps {
   isHalfRecorded: boolean;
   isSubmitting: boolean;
   currentGameState: GameState;
+  hasActivePoint: boolean;
+  pointsCount: number;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
@@ -47,6 +49,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   isHalfRecorded,
   isSubmitting,
   currentGameState,
+  hasActivePoint,
+  pointsCount,
   onRecordHalf,
   onSubmitGame,
   onChangeLine,
@@ -56,7 +60,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
 
-  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting;
+  const canSubmitGame = gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -110,8 +114,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
 
         <MenuItem
           onClick={() => handleAction(onRecordHalf)}
-          disabled={isHalfRecorded}
-          sx={{ color: isHalfRecorded ? '#999' : 'inherit' }}
+          disabled={isHalfRecorded || hasActivePoint || pointsCount === 0}
+          sx={{ color: isHalfRecorded || hasActivePoint || pointsCount === 0 ? '#999' : 'inherit' }}
         >
           Record Half
         </MenuItem>
@@ -139,6 +143,8 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const currentView = bookkeeper.getCurrentView();
   const currentGameState = bookkeeper.gameState();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
+  const hasActivePoint = bookkeeper.activePoint !== null;
+  const pointsCount = bookkeeper.pointsCount;
 
   const showSnackbar = (message: string, severity: SnackbarSeverity = 'info') => {
     setSnackbar({ open: true, message, severity });
@@ -153,8 +159,15 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       showSnackbar('Half has already been recorded.', 'warning');
       return;
     }
-    await bookkeeper.recordHalf();
-    showSnackbar('Half time recorded.', 'success');
+    try {
+      await bookkeeper.recordHalf();
+      showSnackbar('Half time recorded.', 'success');
+    } catch (error) {
+      showSnackbar(
+        error instanceof Error ? error.message : 'Failed to record half time.',
+        'error'
+      );
+    }
   };
 
   const handleSubmitGame = async () => {
@@ -228,6 +241,8 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         localGameId={localGameId}
         currentGameState={currentGameState}
         isHalfRecorded={isHalfRecorded}
+        hasActivePoint={hasActivePoint}
+        pointsCount={pointsCount}
         isSubmitting={isSubmitting}
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
@@ -260,6 +275,8 @@ function TopBar({
   localGameId,
   currentGameState,
   isHalfRecorded,
+  hasActivePoint,
+  pointsCount,
   isSubmitting,
   onRecordHalf,
   onSubmitGame,
@@ -271,6 +288,8 @@ function TopBar({
   localGameId: string;
   currentGameState: GameState;
   isHalfRecorded: boolean;
+  hasActivePoint: boolean;
+  pointsCount: number;
   isSubmitting: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
@@ -299,6 +318,8 @@ function TopBar({
             gameStatus={bookkeeper.getGameStatus()}
             currentGameState={currentGameState}
             isHalfRecorded={isHalfRecorded}
+            hasActivePoint={hasActivePoint}
+            pointsCount={pointsCount}
             isSubmitting={isSubmitting}
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}

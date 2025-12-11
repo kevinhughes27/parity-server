@@ -6,6 +6,7 @@ import { StoredPlayer } from './db';
 import { Box, Button, Typography, Paper } from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
+  // I'm coming for this odditity here
   const currentGameState = bookkeeper.gameState();
   const isEditingLine =
     currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;

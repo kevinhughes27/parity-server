@@ -441,6 +441,9 @@ export class GameMethods {
 
   recordHalf(): void {
     if (this.game.pointsAtHalf > 0) return; // Half already recorded
+    if (this.game.activePoint !== null) {
+      throw new Error('Cannot record half time during an active point. Finish the current point first.');
+    }
 
     this.game.undoStack.push({
       type: 'recordHalf',
@@ -448,11 +451,6 @@ export class GameMethods {
     });
 
     this.game.pointsAtHalf = this.game.points.length;
-
-    // Reset line selection and UI state for second half
-    this.game.homePlayers = null;
-    this.game.awayPlayers = null;
-    this.game.lastPlayedLine = null;
   }
 
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
@@ -675,59 +673,23 @@ export class GameMethods {
     // Restore possession to what it was during the point
     this.game.homePossession = data.wasHomePossession;
 
-    // Check if this was a fresh point (no events after removing POINT)
-    if (activePointMethods.getEventCount() === 0) {
-      // Fresh point - return to line selection
-      this.game.activePoint = null;
-      this.game.homePlayers = null;
-      this.game.awayPlayers = null;
-      this.game.firstActor = null;
+    // Point had events - restore firstActor from the last event
+    const lastEvent = activePointMethods.getLastEvent();
+    if (lastEvent?.type === EventType.PASS) {
+      this.game.firstActor = lastEvent.secondActor; // The receiver who scored
     } else {
-      // Point had events - restore firstActor from the last event
-      const lastEvent = activePointMethods.getLastEvent();
-      if (lastEvent?.type === EventType.PASS) {
-        this.game.firstActor = lastEvent.secondActor; // The receiver who scored
-      } else {
-        this.game.firstActor = lastEvent?.firstActor || null;
-      }
+      this.game.firstActor = lastEvent?.firstActor || null;
+    }
 
-      // Restore line selection from the lastPlayedLine (which was set when the point was scored)
-      if (this.game.lastPlayedLine) {
-        this.game.homePlayers = [...this.game.lastPlayedLine.home];
-        this.game.awayPlayers = [...this.game.lastPlayedLine.away];
-      }
+    // Restore line selection from the lastPlayedLine (which was set when the point was scored)
+    if (this.game.lastPlayedLine) {
+      this.game.homePlayers = [...this.game.lastPlayedLine.home];
+      this.game.awayPlayers = [...this.game.lastPlayedLine.away];
     }
   }
 
   undoRecordHalf(): void {
     this.game.pointsAtHalf = 0; // Reset to "no half recorded"
-
-    // Restore line state from the last completed point
-    if (this.game.points.length > 0) {
-      const lastPoint = this.game.points[this.game.points.length - 1];
-
-      // Determine which team had possession for that point
-      const lastPointWasHomePossession = this.determinePointPossession(lastPoint);
-
-      if (lastPointWasHomePossession) {
-        this.game.homePlayers = [...lastPoint.offensePlayers];
-        this.game.awayPlayers = [...lastPoint.defensePlayers];
-      } else {
-        this.game.homePlayers = [...lastPoint.defensePlayers];
-        this.game.awayPlayers = [...lastPoint.offensePlayers];
-      }
-
-      // Restore lastPlayedLine
-      this.game.lastPlayedLine = {
-        home: [...this.game.homePlayers],
-        away: [...this.game.awayPlayers],
-      };
-    } else {
-      // No points played yet, clear everything
-      this.game.homePlayers = null;
-      this.game.awayPlayers = null;
-      this.game.lastPlayedLine = null;
-    }
   }
 
   determinePointPossession(point: any): boolean {

@@ -244,6 +244,9 @@ export class Bookkeeper {
   get pointsAtHalf(): number {
     return this.game.pointsAtHalf;
   }
+  get pointsCount(): number {
+    return this.game.points.length;
+  }
   get homePlayers(): string[] | null {
     return this.game.homePlayers;
   }
