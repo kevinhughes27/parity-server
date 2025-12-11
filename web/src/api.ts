@@ -234,4 +234,4 @@ export const clearCache = () => {
   Object.keys(dataCache).forEach(key => {
     delete dataCache[key];
   });
-}
+};

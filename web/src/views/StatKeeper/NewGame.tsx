@@ -296,8 +296,8 @@ function NewGame() {
 
   // clear cache
   useEffect(() => {
-    clearCache()
-  }, [])
+    clearCache();
+  }, []);
 
   const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);

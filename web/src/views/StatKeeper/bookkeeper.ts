@@ -714,11 +714,11 @@ export class Bookkeeper {
   }
 
   getUndoEvent(): string {
-    const undoStackSize = this.game.undoStack.length
+    const undoStackSize = this.game.undoStack.length;
     if (undoStackSize > 0) {
-      return this.game.undoStack[undoStackSize-1].type
+      return this.game.undoStack[undoStackSize - 1].type;
     } else {
-      return ""
+      return '';
     }
   }
 

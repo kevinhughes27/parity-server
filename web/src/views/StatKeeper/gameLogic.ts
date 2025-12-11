@@ -442,7 +442,9 @@ export class GameMethods {
   recordHalf(): void {
     if (this.game.pointsAtHalf > 0) return; // Half already recorded
     if (this.game.activePoint !== null) {
-      throw new Error('Cannot record half time during an active point. Finish the current point first.');
+      throw new Error(
+        'Cannot record half time during an active point. Finish the current point first.'
+      );
     }
 
     this.game.undoStack.push({
