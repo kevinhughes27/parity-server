@@ -4,7 +4,8 @@ import { useTeams } from './hooks';
 import EditRoster from './EditRoster';
 import { StoredPlayer } from './db';
 import ActionBar from './ActionBar';
-import { Box, Typography, Snackbar, Alert } from '@mui/material';
+import { Box, Typography } from '@mui/material';
+import { useSnackbar } from './notifications';
 
 const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const {
@@ -17,23 +18,8 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
   const [originalHomeRoster, setOriginalHomeRoster] = useState<StoredPlayer[]>([]);
   const [originalAwayRoster, setOriginalAwayRoster] = useState<StoredPlayer[]>([]);
-  const [snackbar, setSnackbar] = useState<{
-    open: boolean;
-    message: string;
-    severity: 'error' | 'warning';
-  }>({
-    open: false,
-    message: '',
-    severity: 'warning',
-  });
 
-  const showSnackbar = (message: string, severity: 'error' | 'warning' = 'warning') => {
-    setSnackbar({ open: true, message, severity });
-  };
-
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
-  };
+  const { showSnackbar, SnackbarComponent } = useSnackbar();
 
   const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
     setHomeRoster(sortRosters(roster));
@@ -61,7 +47,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const handleUpdateRosters = async () => {
     if (homeRoster.length === 0 || awayRoster.length === 0) {
-      showSnackbar('Rosters cannot be empty.', 'warning');
+      showSnackbar('Rosters cannot be empty.');
       return;
     }
 
@@ -185,21 +171,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         ]}
       />
 
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert
-          onClose={handleCloseSnackbar}
-          severity={snackbar.severity}
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
+      {SnackbarComponent}
     </Box>
   );
 };

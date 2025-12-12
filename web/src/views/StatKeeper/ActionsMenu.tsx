@@ -50,6 +50,8 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   const canSubmitGame =
     gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
 
+  // edit rosters menu should be disabled when alreadying editing rosters
+
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };

@@ -1,59 +1,31 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import {
-  Box,
-  Typography,
-  AppBar,
-  Toolbar,
-  Snackbar,
-  Alert,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-  Button,
-} from '@mui/material';
+import { Box, Typography, AppBar, Toolbar } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Bookkeeper, GameState } from './bookkeeper';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
 import ActionsMenu from './ActionsMenu';
+import { useSnackbar } from './notifications';
+import { useConfirmDialog } from './confirm';
 
 interface EditGameProps {
   bookkeeper: Bookkeeper;
   localGameId: string;
 }
 
-type SnackbarSeverity = 'success' | 'info' | 'warning' | 'error';
-
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
-  const [snackbar, setSnackbar] = useState<{
-    open: boolean;
-    message: string;
-    severity: SnackbarSeverity;
-  }>({
-    open: false,
-    message: '',
-    severity: 'info',
-  });
+  const { showSnackbar, SnackbarComponent } = useSnackbar({ defaultSeverity: 'info' });
+  const { confirm, DialogComponent } = useConfirmDialog();
+
   const currentView = bookkeeper.getCurrentView();
   const currentGameState = bookkeeper.gameState();
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
   const hasActivePoint = bookkeeper.activePoint !== null;
   const pointsCount = bookkeeper.pointsCount;
-
-  const showSnackbar = (message: string, severity: SnackbarSeverity = 'info') => {
-    setSnackbar({ open: true, message, severity });
-  };
-
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
-  };
 
   const handleRecordHalf = async () => {
     if (isHalfRecorded) {
@@ -75,11 +47,17 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     }
 
     // Show confirmation dialog
-    setConfirmDialogOpen(true);
-  };
+    const confirmed = await confirm({
+      title: 'Confirm Game Submission',
+      message:
+        'Are you sure you want to submit this game? This action cannot be undone and the game will be uploaded to the server.',
+      confirmText: 'Submit',
+    });
 
-  const handleConfirmSubmit = async () => {
-    setConfirmDialogOpen(false);
+    if (!confirmed) {
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       await bookkeeper.submitGame();
@@ -94,10 +72,6 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       // Always redirect to StatKeeper home regardless of success or failure
       navigate('/stat_keeper');
     }
-  };
-
-  const handleCancelSubmit = () => {
-    setConfirmDialogOpen(false);
   };
 
   const handleChangeLine = async () => {
@@ -154,43 +128,8 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onEnterFullscreen={handleEnterFullscreen}
       />
       <MainContent bookkeeper={bookkeeper} currentView={currentView} />
-      <Dialog
-        open={confirmDialogOpen}
-        onClose={handleCancelSubmit}
-        aria-labelledby="submit-dialog-title"
-        aria-describedby="submit-dialog-description"
-      >
-        <DialogTitle id="submit-dialog-title">Confirm Game Submission</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="submit-dialog-description">
-            Are you sure you want to submit this game? This action cannot be undone and the game
-            will be uploaded to the server.
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCancelSubmit} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleConfirmSubmit} color="primary" variant="contained" autoFocus>
-            Submit
-          </Button>
-        </DialogActions>
-      </Dialog>
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert
-          onClose={handleCloseSnackbar}
-          severity={snackbar.severity}
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
+      {DialogComponent}
+      {SnackbarComponent}
     </Box>
   );
 }
