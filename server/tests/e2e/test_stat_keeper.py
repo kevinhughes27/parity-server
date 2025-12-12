@@ -92,14 +92,9 @@ def handle_ratio_warning_if_present(page: Page):
         pass
 
 
-def ignore_ratio_warning(page: Page):
-    """Click Start Point and handle warning dialog if it appears"""
+def start_point(page: Page):
     click_button(page, "Start Point")
     handle_ratio_warning_if_present(page)
-
-
-def start_point(page: Page):
-    ignore_ratio_warning(page)
 
 
 def select_lines(page: Page, home_line: list[str], away_line: list[str]):
@@ -194,15 +189,13 @@ def submit_game(page: Page, *, failed: bool = False):
     # click the submit button in the dialog
     page.get_by_role("button", name="Submit").click()
 
-    # wait for redirect and check for appropriate snackbar/alert message
+    # wait for redirect and
     page.wait_for_url("**/stat_keeper")
     expect(page.locator("#root")).to_contain_text("Local Games")
 
     if failed:
-        # expect error snackbar would have appeared (though we've already navigated away)
         expect(page.locator("#root")).to_contain_text("sync-error")
     else:
-        # expect success - game should be uploaded
         expect(page.locator("#root")).to_contain_text("uploaded")
 
 
