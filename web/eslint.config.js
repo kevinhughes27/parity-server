@@ -31,7 +31,6 @@ export default [
         console: 'readonly',
         JSX: 'readonly',
         React: 'readonly',
-        alert: 'readonly',
         HTMLDivElement: 'readonly',
         HTMLElement: 'readonly',
         HTMLButtonElement: 'readonly',

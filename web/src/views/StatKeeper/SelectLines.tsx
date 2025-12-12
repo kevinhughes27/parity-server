@@ -3,7 +3,19 @@ import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { StoredPlayer } from './db';
-import { Box, Button, Typography, Paper } from '@mui/material';
+import {
+  Box,
+  Button,
+  Typography,
+  Paper,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Snackbar,
+  Alert,
+} from '@mui/material';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   // I'm coming for this odditity here
@@ -19,6 +31,24 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
+  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
+  const [confirmDialogMessage, setConfirmDialogMessage] = useState('');
+  const [pendingLineSubmission, setPendingLineSubmission] = useState<{
+    newHomePlayers: string[];
+    newAwayPlayers: string[];
+  } | null>(null);
+  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string }>({
+    open: false,
+    message: '',
+  });
+
+  const showSnackbar = (message: string) => {
+    setSnackbar({ open: true, message });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   const getRatioCounts = (playerNames: string[]) => {
     const open = playerNames.filter(name => {
@@ -118,11 +148,21 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       if (currentSelection.length < lineSize) {
         newSelection = [...currentSelection, playerName];
       } else {
-        alert(`Cannot select more than ${lineSize} players for ${teamName}.`);
+        showSnackbar(`Cannot select more than ${lineSize} players for ${teamName}.`);
         return;
       }
     }
     setter(newSelection.sort((a, b) => a.localeCompare(b)));
+  };
+
+  const submitLineSelection = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
+    if (currentGameState === GameState.EditingLines && bookkeeper.activePoint) {
+      // This is a mid-point substitution (active point exists)
+      await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
+    } else {
+      // Normal line selection or editing lines before any stats recorded
+      await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
+    }
   };
 
   const handleDone = async () => {
@@ -135,31 +175,40 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       const incompleteWarnings = getIncompleteLinesWarning();
       const allWarnings = [...ratioWarnings, ...incompleteWarnings];
 
-      // If there are warnings, show them but allow user to continue
-      if (allWarnings.length > 0) {
-        const continueAnyway = window.confirm(
-          `Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`
-        );
-        if (!continueAnyway) {
-          return;
-        }
-      }
-
       // Prepare new line
       const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
       const newAwayPlayers = [...selectedAwayPlayers].sort((a, b) => a.localeCompare(b));
 
-      if (currentGameState === GameState.EditingLines && bookkeeper.activePoint) {
-        // This is a mid-point substitution (active point exists)
-        await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
+      // If there are warnings, show them but allow user to continue
+      if (allWarnings.length > 0) {
+        setConfirmDialogMessage(
+          `Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`
+        );
+        setPendingLineSubmission({ newHomePlayers, newAwayPlayers });
+        setConfirmDialogOpen(true);
       } else {
-        // Normal line selection or editing lines before any stats recorded
-        await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
+        await submitLineSelection(newHomePlayers, newAwayPlayers);
       }
     } else {
       // this is a technical limitation. also the submit is disabled with the same criteria
-      window.alert('Please select at least two players from each team.');
+      showSnackbar('Please select at least two players from each team.');
     }
+  };
+
+  const handleConfirmContinue = async () => {
+    setConfirmDialogOpen(false);
+    if (pendingLineSubmission) {
+      await submitLineSelection(
+        pendingLineSubmission.newHomePlayers,
+        pendingLineSubmission.newAwayPlayers
+      );
+      setPendingLineSubmission(null);
+    }
+  };
+
+  const handleCancelContinue = () => {
+    setConfirmDialogOpen(false);
+    setPendingLineSubmission(null);
   };
 
   const handleUndo = async () => {
@@ -310,6 +359,44 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         ]}
         secondaryActions={secondaryActions}
       />
+
+      <Dialog
+        open={confirmDialogOpen}
+        onClose={handleCancelContinue}
+        aria-labelledby="warning-dialog-title"
+        aria-describedby="warning-dialog-description"
+      >
+        <DialogTitle id="warning-dialog-title">Line Selection Warning</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="warning-dialog-description" sx={{ whiteSpace: 'pre-line' }}>
+            {confirmDialogMessage}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelContinue} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleConfirmContinue} color="primary" variant="contained" autoFocus>
+            Continue Anyway
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="warning"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

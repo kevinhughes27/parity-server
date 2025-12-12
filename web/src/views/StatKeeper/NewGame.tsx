@@ -15,6 +15,7 @@ import {
   TextField,
   Paper,
   Alert,
+  Snackbar,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { clearCache, Matchup } from '../../api';
@@ -302,6 +303,15 @@ function NewGame() {
   const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
+  const [snackbar, setSnackbar] = useState<{
+    open: boolean;
+    message: string;
+    severity: 'error' | 'warning';
+  }>({
+    open: false,
+    message: '',
+    severity: 'warning',
+  });
 
   const { leagueTeams, loadingTeams, errorTeams } = useTeams(currentLeague?.league?.id?.toString());
 
@@ -313,6 +323,14 @@ function NewGame() {
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
   const [selectedMatchupId, setSelectedMatchupId] = useState<number | null>(null);
+
+  const showSnackbar = (message: string, severity: 'error' | 'warning' = 'warning') => {
+    setSnackbar({ open: true, message, severity });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   useEffect(() => {
     const loadCurrentLeague = async () => {
@@ -351,7 +369,7 @@ function NewGame() {
 
   const handleCreateGame = async () => {
     if (!currentLeague?.league?.id || !selectedHomeTeamObj || !selectedAwayTeamObj) {
-      alert('Please select both teams.');
+      showSnackbar('Please select both teams.', 'warning');
       return;
     }
 
@@ -366,7 +384,10 @@ function NewGame() {
       navigate(`/stat_keeper/game/${id}`);
     } catch (error) {
       console.error('Failed to create new game:', error);
-      alert(`Failed to create game: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      showSnackbar(
+        `Failed to create game: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        'error'
+      );
     }
   };
 
@@ -454,6 +475,22 @@ function NewGame() {
       {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
         <ActionBar handleCreateGame={handleCreateGame} canCreateGame={!!canCreateGame} />
       )}
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }

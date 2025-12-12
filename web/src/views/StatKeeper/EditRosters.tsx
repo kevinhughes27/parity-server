@@ -4,7 +4,7 @@ import { useTeams } from './hooks';
 import EditRoster from './EditRoster';
 import { StoredPlayer } from './db';
 import ActionBar from './ActionBar';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Snackbar, Alert } from '@mui/material';
 
 const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const {
@@ -17,6 +17,23 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const [awayRoster, setAwayRoster] = useState<StoredPlayer[]>([]);
   const [originalHomeRoster, setOriginalHomeRoster] = useState<StoredPlayer[]>([]);
   const [originalAwayRoster, setOriginalAwayRoster] = useState<StoredPlayer[]>([]);
+  const [snackbar, setSnackbar] = useState<{
+    open: boolean;
+    message: string;
+    severity: 'error' | 'warning';
+  }>({
+    open: false,
+    message: '',
+    severity: 'warning',
+  });
+
+  const showSnackbar = (message: string, severity: 'error' | 'warning' = 'warning') => {
+    setSnackbar({ open: true, message, severity });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   const sortAndSetHomeRoster = (roster: StoredPlayer[]) => {
     setHomeRoster(sortRosters(roster));
@@ -44,7 +61,7 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const handleUpdateRosters = async () => {
     if (homeRoster.length === 0 || awayRoster.length === 0) {
-      alert('Rosters cannot be empty.');
+      showSnackbar('Rosters cannot be empty.', 'warning');
       return;
     }
 
@@ -57,8 +74,9 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       console.log('Rosters updated successfully.');
     } catch (error) {
       console.error('Failed to update rosters:', error);
-      alert(
-        `Failed to update rosters: ${error instanceof Error ? error.message : 'Unknown error'}`
+      showSnackbar(
+        `Failed to update rosters: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        'error'
       );
     }
   };
@@ -166,6 +184,22 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           },
         ]}
       />
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
