@@ -79,17 +79,27 @@ def start_game(page: Page):
     click_button(page, "Update Rosters")
 
 
-def ignore_ratio_warning(page: Page):
-    def handle_ratio_warning(dialog):
-        if "expected 4 ON2, 2 WN2" in dialog.message:
-            dialog.accept()
+def handle_ratio_warning_if_present(page: Page):
+    """Handle MUI warning dialog if it appears (without clicking any button first)"""
+    try:
+        # Wait a short time for dialog to appear
+        dialog = page.get_by_role("heading", name="Line Selection Warning")
+        if dialog.is_visible(timeout=500):
+            # Click "Continue Anyway" button
+            page.get_by_role("button", name="Continue Anyway").click()
+    except Exception:
+        # No dialog appeared, which is fine
+        pass
 
-    page.once("dialog", handle_ratio_warning)
+
+def ignore_ratio_warning(page: Page):
+    """Click Start Point and handle warning dialog if it appears"""
+    click_button(page, "Start Point")
+    handle_ratio_warning_if_present(page)
 
 
 def start_point(page: Page):
     ignore_ratio_warning(page)
-    click_button(page, "Start Point")
 
 
 def select_lines(page: Page, home_line: list[str], away_line: list[str]):
@@ -1322,13 +1332,13 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
     # change line
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Change Line").click()
-    ignore_ratio_warning(page)
     expect(page.locator("#root")).to_contain_text("Resume Point")
 
     # sub brian for kevin
     click_button(page, "Brian Kells")
     click_button(page, "Kevin Hughes(S)")
     click_button(page, "Resume Point")
+    handle_ratio_warning_if_present(page)
 
     click_button(page, "Throwaway")
     click_button(page, "Kevin Hughes(S)")
@@ -1394,8 +1404,8 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     click_button(page, "Kyle Sprysa")
 
     # resume
-    ignore_ratio_warning(page)
     click_button(page, "Resume Point")
+    handle_ratio_warning_if_present(page)
 
     # play by play
     play_by_play = [
@@ -1786,34 +1796,36 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     expect_help_message(page, "Select players for the first point.")
     expect_game_state(page, "SelectingLines")
 
-    # dialogs are auto-clicked in playwright. this adds extra insurance we hit each
-    # handler and make the message assertions.
-    dialog_handled = False
+    # Helper function to check MUI dialog and dismiss
+    def expect_mui_dialog_and_dismiss(expected_messages: list[str]):
+        """Check for MUI warning dialog with expected messages and dismiss it"""
+        # Wait for dialog to appear
+        expect(page.get_by_role("heading", name="Line Selection Warning")).to_be_visible()
 
-    # Helper function to create dialog handlers for different warning types
-    def expect_dialog_and_dismiss(expected_messages):
-        """Helper to create a dialog handler that checks for expected messages and dismisses"""
-        nonlocal dialog_handled
-        dialog_handled = False
+        # Check that all expected messages are in the dialog
+        dialog_content = page.get_by_role("dialog")
+        for expected in expected_messages:
+            expect(dialog_content).to_contain_text(expected)
 
-        def handler(dialog):
-            nonlocal dialog_handled
-            dialog_handled = True
-            for expected in expected_messages:
-                assert expected in dialog.message
-            dialog.dismiss()
+        # Click cancel to dismiss
+        page.get_by_role("button", name="Cancel").click()
 
-        return handler
+        # Wait for dialog to close
+        expect(page.get_by_role("heading", name="Line Selection Warning")).not_to_be_visible()
+
+    def expect_snackbar(expected_message: str):
+        """Check for snackbar with expected message"""
+        expect(page.get_by_role("alert")).to_contain_text(expected_message)
+        # Wait for it to disappear
+        expect(page.get_by_role("alert")).not_to_be_visible(timeout=5000)
 
     # not enough left
     home_line = rosters[home_team_name][:5]
     away_line = rosters[away_team_name][:6]
     select_lines(page, home_line, away_line)
 
-    dialog_handled = False
-    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
-    assert dialog_handled
+    expect_mui_dialog_and_dismiss([f"{home_team_name}: 5/6 players selected"])
     select_lines(page, home_line, away_line)  # reset
 
     # not enough right
@@ -1821,10 +1833,8 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:5]
     select_lines(page, home_line, away_line)
 
-    dialog_handled = False
-    page.once("dialog", expect_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"]))
     click_button(page, "Start Point")
-    assert dialog_handled
+    expect_mui_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"])
     select_lines(page, home_line, away_line)  # reset
 
     # too many setup
@@ -1832,18 +1842,14 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = rosters[away_team_name][:6]
 
     # too many left
-    dialog_handled = False
     select_lines(page, home_line, away_line)
-    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {home_team_name}."]))
-    # click 7th player triggers dialog
+    # click 7th player triggers snackbar
     click_button(page, rosters[home_team_name][7])
-    assert dialog_handled
+    expect_snackbar(f"Cannot select more than 6 players for {home_team_name}.")
 
     # too many right
-    dialog_handled = False
-    page.once("dialog", expect_dialog_and_dismiss([f"Cannot select more than 6 players for {away_team_name}."]))
     click_button(page, rosters[away_team_name][7])
-    assert dialog_handled
+    expect_snackbar(f"Cannot select more than 6 players for {away_team_name}.")
 
     # reset
     select_lines(page, home_line, away_line)
@@ -1853,10 +1859,8 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
     select_lines(page, home_line, away_line)
 
-    dialog_handled = False
-    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"]))
     click_button(page, "Start Point")
-    assert dialog_handled
+    expect_mui_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"])
     select_lines(page, home_line, away_line)  # reset
 
     # Ratio error
@@ -1864,10 +1868,8 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
     select_lines(page, home_line, away_line)
 
-    dialog_handled = False
-    page.once("dialog", expect_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"]))
     click_button(page, "Start Point")
-    assert dialog_handled
+    expect_mui_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"])
     select_lines(page, home_line, away_line)  # reset
 
     # Valid line

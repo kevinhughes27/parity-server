@@ -1,5 +1,14 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, TextField, Switch, FormControlLabel } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  TextField,
+  Switch,
+  FormControlLabel,
+  Snackbar,
+  Alert,
+} from '@mui/material';
 import { StoredPlayer } from './db';
 import { TeamPlayer } from '../../api';
 
@@ -206,8 +215,20 @@ const EditRoster: React.FC<EditRosterProps> = ({
   const [newSubName, setNewSubName] = useState('');
   const [newSubGender, setNewSubGender] = useState(true); // Default to open
   const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
+  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string }>({
+    open: false,
+    message: '',
+  });
 
   const currentRosterNames = currentRoster.map(p => p.name);
+
+  const showSnackbar = (message: string) => {
+    setSnackbar({ open: true, message });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
 
   // Filter out players already on the current roster for the dropdown
   const availableLeaguePlayersForDropdown = allLeaguePlayers.filter(
@@ -227,7 +248,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
       onRosterChange([...currentRoster, newPlayer]);
       setNewSubName('');
     } else if (currentRosterNames.includes(newSubName.trim())) {
-      alert(`${newSubName.trim()} is already on the roster.`);
+      showSnackbar(`${newSubName.trim()} is already on the roster.`);
     }
   };
 
@@ -242,7 +263,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
         setSelectedLeaguePlayer('');
       }
     } else if (currentRosterNames.includes(selectedLeaguePlayer)) {
-      alert(`${selectedLeaguePlayer} is already on the roster.`);
+      showSnackbar(`${selectedLeaguePlayer} is already on the roster.`);
     }
   };
 
@@ -282,6 +303,22 @@ const EditRoster: React.FC<EditRosterProps> = ({
           onAddSub={handleAddSubByName}
         />
       </Box>
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="warning"
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

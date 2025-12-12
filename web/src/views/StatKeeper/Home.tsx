@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,6 +16,13 @@ import {
   CardContent,
   CardActions,
   Chip,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+  Snackbar,
+  Alert,
 } from '@mui/material';
 
 // Helper function to determine chip color based on game status
@@ -34,6 +41,17 @@ const getStatusColor = (status: StoredGame['status']) => {
 
 function Home() {
   const navigate = useNavigate();
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const [gameToDelete, setGameToDelete] = useState<{ id: number; name: string } | null>(null);
+  const [snackbar, setSnackbar] = useState<{
+    open: boolean;
+    message: string;
+    severity: 'error' | 'success';
+  }>({
+    open: false,
+    message: '',
+    severity: 'success',
+  });
 
   const games = useLiveQuery(() => db.games.orderBy('lastModified').reverse().toArray(), []);
   if (games === undefined) {
@@ -44,27 +62,48 @@ function Home() {
     navigate('/stat_keeper/new_game');
   };
 
+  const showSnackbar = (message: string, severity: 'error' | 'success' = 'success') => {
+    setSnackbar({ open: true, message, severity });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
   const handleDeleteGame = async (localId: number | undefined) => {
     if (localId === undefined) {
       console.error('Cannot delete game with undefined ID.');
       return;
     }
-    const gameToDelete = games?.find(g => g.localId === localId);
-    const gameName = gameToDelete
-      ? `${gameToDelete.homeTeam} vs ${gameToDelete.awayTeam}`
-      : `Game ID ${localId}`;
+    const game = games?.find(g => g.localId === localId);
+    const gameName = game ? `${game.homeTeam} vs ${game.awayTeam}` : `Game ID ${localId}`;
 
-    const message = `Are you sure you want to delete the game: ${gameName}? This action cannot be undone.`;
+    setGameToDelete({ id: localId, name: gameName });
+    setDeleteDialogOpen(true);
+  };
 
-    if (window.confirm(message)) {
-      try {
-        await db.games.delete(localId);
-        console.log(`Game with localId: ${localId} deleted successfully.`);
-      } catch (error) {
-        console.error('Failed to delete game:', error);
-        alert(`Failed to delete game: ${error instanceof Error ? error.message : 'Unknown error'}`);
-      }
+  const handleConfirmDelete = async () => {
+    if (!gameToDelete) return;
+
+    try {
+      await db.games.delete(gameToDelete.id);
+      console.log(`Game with localId: ${gameToDelete.id} deleted successfully.`);
+      showSnackbar('Game deleted successfully.', 'success');
+    } catch (error) {
+      console.error('Failed to delete game:', error);
+      showSnackbar(
+        `Failed to delete game: ${error instanceof Error ? error.message : 'Unknown error'}`,
+        'error'
+      );
+    } finally {
+      setDeleteDialogOpen(false);
+      setGameToDelete(null);
     }
+  };
+
+  const handleCancelDelete = () => {
+    setDeleteDialogOpen(false);
+    setGameToDelete(null);
   };
 
   const resumableStatuses: StoredGame['status'][] = ['in-progress'];
@@ -218,6 +257,45 @@ function Home() {
         <CompletedGamesSection games={otherGames} />
         {games.length === 0 && <EmptyState />}
       </Container>
+
+      <Dialog
+        open={deleteDialogOpen}
+        onClose={handleCancelDelete}
+        aria-labelledby="delete-dialog-title"
+        aria-describedby="delete-dialog-description"
+      >
+        <DialogTitle id="delete-dialog-title">Confirm Delete</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="delete-dialog-description">
+            Are you sure you want to delete the game: {gameToDelete?.name}? This action cannot be
+            undone.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelDelete} color="primary">
+            Cancel
+          </Button>
+          <Button onClick={handleConfirmDelete} color="error" variant="contained" autoFocus>
+            Delete
+          </Button>
+        </DialogActions>
+      </Dialog>
+
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          variant="filled"
+          sx={{ width: '100%' }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 }
