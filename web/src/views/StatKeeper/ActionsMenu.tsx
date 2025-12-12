@@ -44,13 +44,12 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
     currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines;
 
   const canChangeLine = !isSelectingOrEditingLines && !isEditingRosters;
+  const canEditRosters = !isEditingRosters
 
   const canRecordHalf = !isHalfRecorded && !hasActivePoint && pointsCount > 0;
 
   const canSubmitGame =
     gameStatus !== 'submitted' && gameStatus !== 'uploaded' && !isSubmitting && pointsCount > 0;
-
-  // edit rosters menu should be disabled when alreadying editing rosters
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -82,7 +81,13 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
           🔄 Change Line
         </MenuItem>
 
-        <MenuItem onClick={() => handleAction(onEditRosters)}>📝 Edit Rosters</MenuItem>
+        <MenuItem
+          onClick={() => handleAction(onEditRosters)}
+          disabled={!canEditRosters}
+          sx={{ color: !canEditRosters ? '#999' : 'inherit' }}
+        >
+          📝 Edit Rosters
+        </MenuItem>
 
         <Divider />
 
