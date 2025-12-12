@@ -3,19 +3,9 @@ import { Bookkeeper, GameState } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { StoredPlayer } from './db';
-import {
-  Box,
-  Button,
-  Typography,
-  Paper,
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-  Snackbar,
-  Alert,
-} from '@mui/material';
+import { Box, Button, Typography, Paper, DialogContentText } from '@mui/material';
+import { useSnackbar } from './notifications';
+import { useConfirmDialog } from './confirm';
 
 const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   // I'm coming for this odditity here
@@ -31,24 +21,9 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
   const [selectedHomePlayers, setSelectedHomePlayers] = useState<string[]>([]);
   const [selectedAwayPlayers, setSelectedAwayPlayers] = useState<string[]>([]);
-  const [confirmDialogOpen, setConfirmDialogOpen] = useState(false);
-  const [confirmDialogMessage, setConfirmDialogMessage] = useState('');
-  const [pendingLineSubmission, setPendingLineSubmission] = useState<{
-    newHomePlayers: string[];
-    newAwayPlayers: string[];
-  } | null>(null);
-  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string }>({
-    open: false,
-    message: '',
-  });
 
-  const showSnackbar = (message: string) => {
-    setSnackbar({ open: true, message });
-  };
-
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
-  };
+  const { showSnackbar, SnackbarComponent } = useSnackbar();
+  const { confirm, DialogComponent } = useConfirmDialog();
 
   const getRatioCounts = (playerNames: string[]) => {
     const open = playerNames.filter(name => {
@@ -181,34 +156,28 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
 
       // If there are warnings, show them but allow user to continue
       if (allWarnings.length > 0) {
-        setConfirmDialogMessage(
-          `Warning!\n${allWarnings.join('\n')}\nDo you want to continue anyway?`
-        );
-        setPendingLineSubmission({ newHomePlayers, newAwayPlayers });
-        setConfirmDialogOpen(true);
-      } else {
-        await submitLineSelection(newHomePlayers, newAwayPlayers);
+        const confirmed = await confirm({
+          title: 'Line Selection Warning',
+          content: (
+            <DialogContentText sx={{ whiteSpace: 'pre-line' }}>
+              Warning!{'\n'}
+              {allWarnings.join('\n')}
+              {'\n'}Do you want to continue anyway?
+            </DialogContentText>
+          ),
+          confirmText: 'Continue Anyway',
+        });
+
+        if (!confirmed) {
+          return;
+        }
       }
+
+      await submitLineSelection(newHomePlayers, newAwayPlayers);
     } else {
       // this is a technical limitation. also the submit is disabled with the same criteria
       showSnackbar('Please select at least two players from each team.');
     }
-  };
-
-  const handleConfirmContinue = async () => {
-    setConfirmDialogOpen(false);
-    if (pendingLineSubmission) {
-      await submitLineSelection(
-        pendingLineSubmission.newHomePlayers,
-        pendingLineSubmission.newAwayPlayers
-      );
-      setPendingLineSubmission(null);
-    }
-  };
-
-  const handleCancelContinue = () => {
-    setConfirmDialogOpen(false);
-    setPendingLineSubmission(null);
   };
 
   const handleUndo = async () => {
@@ -360,43 +329,8 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         secondaryActions={secondaryActions}
       />
 
-      <Dialog
-        open={confirmDialogOpen}
-        onClose={handleCancelContinue}
-        aria-labelledby="warning-dialog-title"
-        aria-describedby="warning-dialog-description"
-      >
-        <DialogTitle id="warning-dialog-title">Line Selection Warning</DialogTitle>
-        <DialogContent>
-          <DialogContentText id="warning-dialog-description" sx={{ whiteSpace: 'pre-line' }}>
-            {confirmDialogMessage}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCancelContinue} color="primary">
-            Cancel
-          </Button>
-          <Button onClick={handleConfirmContinue} color="primary" variant="contained" autoFocus>
-            Continue Anyway
-          </Button>
-        </DialogActions>
-      </Dialog>
-
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert
-          onClose={handleCloseSnackbar}
-          severity="warning"
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
+      {DialogComponent}
+      {SnackbarComponent}
     </Box>
   );
 };

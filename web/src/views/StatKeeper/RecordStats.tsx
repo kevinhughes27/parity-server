@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { StoredPlayer } from './db';
-import { Box, Button, Typography, Snackbar, Alert } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
+import { useSnackbar } from './notifications';
 
 const playerButtonStyles = {
   enabled: {
@@ -30,21 +31,10 @@ const playerButtonStyles = {
 };
 
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
-  const [snackbar, setSnackbar] = useState<{ open: boolean; message: string }>({
-    open: false,
-    message: '',
-  });
+  const { showSnackbar, SnackbarComponent } = useSnackbar();
 
   const homeRoster = bookkeeper.getHomeRoster();
   const awayRoster = bookkeeper.getAwayRoster();
-
-  const showSnackbar = (message: string) => {
-    setSnackbar({ open: true, message });
-  };
-
-  const handleCloseSnackbar = () => {
-    setSnackbar({ ...snackbar, open: false });
-  };
 
   const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
@@ -242,21 +232,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         ]}
       />
 
-      <Snackbar
-        open={snackbar.open}
-        autoHideDuration={3000}
-        onClose={handleCloseSnackbar}
-        anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-      >
-        <Alert
-          onClose={handleCloseSnackbar}
-          severity="warning"
-          variant="filled"
-          sx={{ width: '100%' }}
-        >
-          {snackbar.message}
-        </Alert>
-      </Snackbar>
+      {SnackbarComponent}
     </Box>
   );
 };
