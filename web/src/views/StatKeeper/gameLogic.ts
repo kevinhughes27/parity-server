@@ -437,12 +437,21 @@ export class GameMethods {
       );
     }
 
+    // Store lastPlayedLine so we can restore it on undo
     this.game.undoStack.push({
       type: 'recordHalf',
       timestamp: this.timestamp(),
+      data: {
+        lastPlayedLine: this.game.lastPlayedLine ? { ...this.game.lastPlayedLine } : null,
+      },
     });
 
     this.game.pointsAtHalf = this.game.points.length;
+
+    // Clear line selection and last played line so user must select new lines for next point
+    this.game.homePlayers = null;
+    this.game.awayPlayers = null;
+    this.game.lastPlayedLine = null;
   }
 
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
@@ -557,7 +566,7 @@ export class GameMethods {
         this.undoRecordPoint(command);
         break;
       case 'recordHalf':
-        this.undoRecordHalf();
+        this.undoRecordHalf(command);
         break;
     }
   }
@@ -656,8 +665,13 @@ export class GameMethods {
     }
   }
 
-  undoRecordHalf(): void {
+  undoRecordHalf(command: UndoCommand): void {
     this.game.pointsAtHalf = 0; // Reset to "no half recorded"
+
+    // Restore lastPlayedLine so subsequent point undo works correctly
+    if (command.data && command.data.lastPlayedLine) {
+      this.game.lastPlayedLine = command.data.lastPlayedLine;
+    }
   }
 
   determinePointPossession(point: any): boolean {
