@@ -11,7 +11,7 @@ const SelectLines: React.FC<{
   bookkeeper: Bookkeeper;
   onComplete?: () => void;
 }> = ({ bookkeeper, onComplete }) => {
-  // Get mode directly from bookkeeper - no need to infer
+  // Get mode directly from bookkeeper
   const mode = bookkeeper.getSelectLinesMode();
   const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
@@ -189,13 +189,15 @@ const SelectLines: React.FC<{
     }
   };
 
+  const handleCancel = async () => {
+    onComplete?.();
+  };
+
   const handleUndo = async () => {
-    if (isEditing) {
-      // Cancel editing - just exit back to previous view
+    await bookkeeper.undo();
+    // undoing half does not complete the line selection
+    if (bookkeeper.getUndoEvent() != 'recordHalf') {
       onComplete?.();
-    } else {
-      // Undo last game action
-      await bookkeeper.undo();
     }
   };
 
@@ -277,15 +279,15 @@ const SelectLines: React.FC<{
   if (isEditing) {
     secondaryActions.push({
       label: 'Cancel',
-      onClick: handleUndo,
+      onClick: handleCancel,
       color: 'warning' as const,
       variant: 'contained' as const,
     });
   } else if (bookkeeper.getUndoCount() > 0) {
     let text = 'Undo';
-    if (bookkeeper.getUndoEvent() == 'recordPoint') {
+    if (bookkeeper.getUndoEvent() === 'recordPoint') {
       text = 'Undo Point';
-    } else if (bookkeeper.getUndoEvent() == 'recordHalf') {
+    } else if (bookkeeper.getUndoEvent() === 'recordHalf') {
       text = 'Undo Half';
     }
     secondaryActions.push({

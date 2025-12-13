@@ -22,17 +22,21 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   // Local UI state - NOT persisted
   // Start in roster editing mode if this is a brand new game (no points recorded)
   const isNewGame = bookkeeper.pointsCount === 0;
+  const isNewPoint = bookkeeper.homePlayers === null || bookkeeper.awayPlayers === null;
   const [isEditingRosters, setIsEditingRosters] = useState(isNewGame);
-  const [isChangingLines, setIsChangingLines] = useState(false);
+  const [isChangingLines, setIsChangingLines] = useState(isNewPoint);
 
   const { showSnackbar, SnackbarComponent } = useSnackbar({ defaultSeverity: 'info' });
   const { confirm, DialogComponent } = useConfirmDialog();
 
-  // Compute base view from bookkeeper
-  const baseView = bookkeeper.getCurrentView();
-
-  // Determine actual view based on local state overrides
-  const currentView = isEditingRosters ? 'editRosters' : isChangingLines ? 'selectLines' : baseView;
+  // Determine view
+  const currentView = isEditingRosters
+    ? 'editRosters'
+    : isChangingLines
+      ? 'selectLines'
+      : isNewPoint
+        ? 'selectLines'
+        : 'recordStats';
 
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
   const hasActivePoint = bookkeeper.activePoint !== null;

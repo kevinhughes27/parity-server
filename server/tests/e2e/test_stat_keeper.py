@@ -307,7 +307,6 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    # SelectingLines removed - view state now computed
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
