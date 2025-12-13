@@ -1,4 +1,4 @@
-import { StoredGame, StoredPlayer, UndoCommand, type GameView } from './db';
+import { StoredGame, StoredPlayer, UndoCommand } from './db';
 import { type PointEvent as ApiPointEvent, type Point as ApiPoint } from '../../api';
 
 export enum EventType {
@@ -526,18 +526,6 @@ export class GameMethods {
 
     // Update the active point with new players
     activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
-  }
-
-  determineView(): GameView {
-    if (this.game.localError !== null) {
-      return 'error_state';
-    }
-
-    if (this.game.homePlayers === null || this.game.awayPlayers === null) {
-      return 'selectLines';
-    }
-
-    return 'recordStats';
   }
 
   undo(): void {

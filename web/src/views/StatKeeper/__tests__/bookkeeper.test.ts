@@ -364,12 +364,10 @@ describe('Bookkeeper', () => {
     // Record half
     await bookkeeper.recordHalf();
     expect(bookkeeper.pointsAtHalf).toBe(1);
-    expect(bookkeeper.getCurrentView()).toBe('selectLines');
 
     // Undo half
     await bookkeeper.undo();
     expect(bookkeeper.pointsAtHalf).toBe(0);
-    expect(bookkeeper.getCurrentView()).toBe('selectLines');
   });
 
   test('should handle substitution during active point', async () => {

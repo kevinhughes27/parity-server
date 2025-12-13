@@ -1,13 +1,6 @@
 import Dexie, { type EntityTable } from 'dexie';
 import { type Point } from '../../api';
 
-// prettier-ignore
-export type GameView =
-  | 'selectLines'
-  | 'recordStats'
-  | 'editRosters'
-  | 'error_state';
-
 type UndoCommandType =
   | 'recordFirstActor'
   | 'recordPull'

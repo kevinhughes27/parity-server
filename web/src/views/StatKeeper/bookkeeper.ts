@@ -6,7 +6,6 @@ import {
   type Team,
   leagues as apiLeagues,
 } from '../../api';
-import { type GameView } from './db';
 import { EventType, GameMethods, GameState, PointMethods } from './gameLogic';
 
 export type SelectLinesMode = 'initial' | 'editing' | 'substitution';
@@ -258,11 +257,6 @@ export class Bookkeeper {
   }
   get week(): number {
     return this.game.week;
-  }
-
-  // View state management
-  getCurrentView(): GameView {
-    return this.gameMethods.determineView();
   }
 
   /**
