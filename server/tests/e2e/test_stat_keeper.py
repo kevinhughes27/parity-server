@@ -98,8 +98,6 @@ def start_point(page: Page):
 
 
 def select_lines(page: Page, home_line: list[str], away_line: list[str]):
-    # it would be nice if this would force the state by reseting any other selected players
-    # that would remove some custom reset logic in a few tests
     for player in home_line:
         page.get_by_role("button", name=player).click()
     for player in away_line:
@@ -949,6 +947,8 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # expect select lines state with no players selected
     expect_help_message(page, "Select players for the next point.")
+    expect_players_not_selected(page, rosters[home])
+    expect_players_not_selected(page, rosters[away])
 
     # test undoing half time
     click_button(page, "Undo Half")
@@ -969,7 +969,8 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # select lines again
     expect_help_message(page, "Select players for the next point.")
-    select_lines(page, rosters[home][6:], rosters[away][6:])  # reset
+    expect_players_not_selected(page, rosters[home])
+    expect_players_not_selected(page, rosters[away])
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1926,8 +1927,6 @@ def test_perf(server, league, rosters, page: Page) -> None:
 
     # wait for snackbar to appear and disappear
     expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
-
-    select_lines(page, home_line_1, away_line_1)  # reset
 
     # second half - 20 more points
     for point_num in range(20, 40):
