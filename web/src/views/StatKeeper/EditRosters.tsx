@@ -7,7 +7,10 @@ import ActionBar from './ActionBar';
 import { Box, Typography } from '@mui/material';
 import { useSnackbar } from './notifications';
 
-const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
+const EditRosters: React.FC<{
+  bookkeeper: Bookkeeper;
+  onComplete?: () => void;
+}> = ({ bookkeeper, onComplete }) => {
   const {
     allLeaguePlayers, // Already sorted from useTeams
     loadingTeams: loadingLeaguePlayers,
@@ -55,9 +58,10 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       // Update the stored game rosters
       await bookkeeper.updateRosters(homeRoster, awayRoster);
 
-      bookkeeper.cancelEditingRosters();
-
       console.log('Rosters updated successfully.');
+
+      // Notify parent to clear local editing state
+      onComplete?.();
     } catch (error) {
       console.error('Failed to update rosters:', error);
       showSnackbar(
@@ -73,7 +77,9 @@ const EditRosters: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       sortAndSetHomeRoster(bookkeeper.getHomeRoster());
       sortAndSetAwayRoster(bookkeeper.getAwayRoster());
     }
-    bookkeeper.cancelEditingRosters();
+
+    // Notify parent to clear local editing state
+    onComplete?.();
   };
 
   if (loadingLeaguePlayers) {

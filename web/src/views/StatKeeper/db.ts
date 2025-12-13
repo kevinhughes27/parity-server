@@ -61,8 +61,6 @@ export interface StoredGame {
 
   // UI state
   localError: string | null;
-  isEditingLines: boolean;
-  isEditingRosters: boolean;
 
   // Undo system
   undoStack: UndoCommand[];
@@ -81,10 +79,10 @@ const db = new Dexie('StatKeeperDB') as Dexie & {
 
 // Define the database schema and versioning
 // When schema changes, we simply clear all data since local data isn't important after submission
-db.version(2)
+db.version(3)
   .stores({
     games:
-      '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, isEditingLines, isEditingRosters, *undoStack',
+      '++localId, league_id, week, homeTeam, homeTeamId, awayTeam, awayTeamId, status, lastModified, homePossession, firstActor, pointsAtHalf, *undoStack',
   })
   .upgrade(tx => {
     // Clear all existing data on schema changes - local data isn't important after submission

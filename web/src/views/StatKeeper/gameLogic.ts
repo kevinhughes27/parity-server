@@ -11,8 +11,6 @@ export enum EventType {
 }
 
 export enum GameState {
-  SelectingLines,
-  EditingLines,
   Start,
   Pull,
   PickUp,
@@ -173,14 +171,6 @@ export class GameMethods {
 
   gameState(): GameState {
     const activePointMethods = this.getActivePointMethods();
-
-    if (this.game.isEditingLines) {
-      return GameState.EditingLines;
-    }
-
-    if (this.game.homePlayers === null || this.game.awayPlayers === null) {
-      return GameState.SelectingLines;
-    }
 
     if (activePointMethods === null) {
       return GameState.Start;
@@ -458,7 +448,6 @@ export class GameMethods {
   recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
     this.game.homePlayers = [...activeHomePlayers];
     this.game.awayPlayers = [...activeAwayPlayers];
-    this.game.isEditingLines = false; // Clear editing state
   }
 
   updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): void {
@@ -537,22 +526,11 @@ export class GameMethods {
 
     // Update the active point with new players
     activePointMethods.updateCurrentPlayers(newOffensePlayers, newDefensePlayers);
-
-    // Clear editing state
-    this.game.isEditingLines = false;
   }
 
-  determineCorrectView(): GameView {
+  determineView(): GameView {
     if (this.game.localError !== null) {
       return 'error_state';
-    }
-
-    if (this.game.isEditingRosters) {
-      return 'editRosters';
-    }
-
-    if (this.game.isEditingLines) {
-      return 'selectLines';
     }
 
     if (this.game.homePlayers === null || this.game.awayPlayers === null) {
@@ -706,21 +684,5 @@ export class GameMethods {
 
   setError(error: string | null): void {
     this.game.localError = error;
-  }
-
-  startEditingLines(): void {
-    this.game.isEditingLines = true;
-  }
-
-  cancelEditingLines(): void {
-    this.game.isEditingLines = false;
-  }
-
-  startEditingRosters(): void {
-    this.game.isEditingRosters = true;
-  }
-
-  cancelEditingRosters(): void {
-    this.game.isEditingRosters = false;
   }
 }

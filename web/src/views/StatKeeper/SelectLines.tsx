@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Bookkeeper, GameState } from './bookkeeper';
+import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { StoredPlayer } from './db';
@@ -7,13 +7,18 @@ import { Box, Button, Typography, Paper, DialogContentText } from '@mui/material
 import { useSnackbar } from './notifications';
 import { useConfirmDialog } from './confirm';
 
-const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
-  // I'm coming for this odditity here
-  const currentGameState = bookkeeper.gameState();
-  const isEditingLine =
-    currentGameState === GameState.EditingLines || bookkeeper.activePoint !== null;
+const SelectLines: React.FC<{
+  bookkeeper: Bookkeeper;
+  onComplete?: () => void;
+}> = ({ bookkeeper, onComplete }) => {
+  // Get mode directly from bookkeeper - no need to infer
+  const mode = bookkeeper.getSelectLinesMode();
   const lastPlayedLine = bookkeeper.lastPlayedLine;
   const lineSize = bookkeeper.league.lineSize;
+
+  // Determine behavior based on mode
+  const isEditing = mode === 'editing' || mode === 'substitution';
+  const isSubstitution = mode === 'substitution';
 
   // Memoize rosters to prevent infinite re-renders
   const homeRoster = useMemo(() => bookkeeper.getHomeRoster(), [bookkeeper]);
@@ -87,11 +92,12 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   useEffect(() => {
-    if (isEditingLine && bookkeeper.homePlayers && bookkeeper.awayPlayers) {
+    if (isEditing && bookkeeper.homePlayers && bookkeeper.awayPlayers) {
+      // Editing existing lines - pre-populate
       setSelectedHomePlayers(bookkeeper.homePlayers);
       setSelectedAwayPlayers(bookkeeper.awayPlayers);
     } else if (lastPlayedLine) {
-      // pre-select players not on the last played line.
+      // Initial selection - pre-select players not on last line
       setSelectedHomePlayers(
         homeRoster.filter(p => !lastPlayedLine.home.includes(p.name)).map(p => p.name)
       );
@@ -103,7 +109,7 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       setSelectedAwayPlayers([]);
     }
   }, [
-    isEditingLine,
+    mode,
     lastPlayedLine,
     bookkeeper.homePlayers,
     bookkeeper.awayPlayers,
@@ -131,13 +137,16 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const submitLineSelection = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
-    if (currentGameState === GameState.EditingLines && bookkeeper.activePoint) {
-      // This is a mid-point substitution (active point exists)
+    if (isSubstitution) {
+      // Mid-point substitution
       await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
     } else {
-      // Normal line selection or editing lines before any stats recorded
+      // Normal line selection (initial or editing before point starts)
       await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
     }
+
+    // Notify parent to clear local editing state
+    onComplete?.();
   };
 
   const handleDone = async () => {
@@ -181,10 +190,11 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   };
 
   const handleUndo = async () => {
-    if (currentGameState === GameState.EditingLines) {
-      // Cancel editing and return to previous state
-      bookkeeper.cancelEditingLines();
+    if (isEditing) {
+      // Cancel editing - just exit back to previous view
+      onComplete?.();
     } else {
+      // Undo last game action
       await bookkeeper.undo();
     }
   };
@@ -244,27 +254,27 @@ const SelectLines: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
     );
   };
 
-  const buttonText = isEditingLine ? 'Resume Point' : 'Start Point';
+  const buttonText = isEditing ? 'Resume Point' : 'Start Point';
 
   const helpText = () => {
-    if (isEditingLine) {
-      return "Tap player names to Edit the active line, then click 'Resume Point'.";
+    if (mode === 'substitution') {
+      return "Substituting players mid-point. Adjust the line and click 'Resume Point'.";
     }
-
+    if (mode === 'editing') {
+      return "Editing line before point starts. Adjust and click 'Resume Point'.";
+    }
     if (bookkeeper.firstPoint()) {
       return 'Select players for the first point.';
     }
-
     if (bookkeeper.firstPointAfterHalf()) {
       return 'Select players for the next point.';
     }
-
     return 'Players not on the previous line are pre-selected. Adjust and confirm.';
   };
 
   const secondaryActions = [];
 
-  if (isEditingLine) {
+  if (isEditing) {
     secondaryActions.push({
       label: 'Cancel',
       onClick: handleUndo,

@@ -165,7 +165,6 @@ def refute_play_by_play(page: Page, events: list[str]):
 
 def expect_next_line_text(page: Page):
     expect_help_message(page, "Players not on the previous line are pre-selected. Adjust and confirm.")
-    expect_game_state(page, "SelectingLines")
 
 
 def expect_text(page: Page, text: str):
@@ -221,7 +220,6 @@ def test_basic_point(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = [
         "Brian Kells",
         "Jonathan Champagne",
@@ -309,7 +307,7 @@ def test_throwaway(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
+    # SelectingLines removed - view state now computed
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -443,7 +441,6 @@ def test_drop(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -508,7 +505,6 @@ def test_callahan(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -562,7 +558,6 @@ def test_undo(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -709,7 +704,6 @@ def test_undo_pull(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -763,7 +757,6 @@ def test_button_states(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
 
     # all player buttons enabled
     expect_players_enabled(page, rosters[home])
@@ -926,7 +919,6 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -958,7 +950,6 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # expect select lines state with no players selected
     expect_help_message(page, "Select players for the next point.")
-    expect_game_state(page, "SelectingLines")
 
     # test undoing half time
     click_button(page, "Undo Half")
@@ -979,7 +970,6 @@ def test_halftime(server, league, rosters, page: Page) -> None:
 
     # select lines again
     expect_help_message(page, "Select players for the next point.")
-    expect_game_state(page, "SelectingLines")
     select_lines(page, rosters[home][6:], rosters[away][6:])  # reset
     select_lines(page, home_line, away_line)
     expect_lines_selected(page, home, away)
@@ -1021,7 +1011,6 @@ def test_resume(server, league, rosters, browser_context_args, browser: Browser,
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1105,7 +1094,6 @@ def test_resubmit(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1191,7 +1179,6 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1233,7 +1220,6 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     select_lines(page, rosters[home][:6], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1301,7 +1287,6 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     select_lines(page, rosters[home][:6], rosters[away][:6])
     expect_lines_selected(page, home, away)
     start_point(page)
@@ -1364,7 +1349,6 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1382,7 +1366,7 @@ def test_change_line_mid_point(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Change Line").click()
 
     # help text
-    message = "Tap player names to Edit the active line, then click 'Resume Point'."
+    message = "Substituting players mid-point. Adjust the line and click 'Resume Point'."
     expect_help_message(page, message)
 
     # undo is not available
@@ -1465,7 +1449,6 @@ def test_back_to_back_defense(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1551,7 +1534,6 @@ def test_dropped_pull(server, league, rosters, page: Page) -> None:
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
     home_line = rosters[home][:6]
     away_line = rosters[away][:6]
     select_lines(page, home_line, away_line)
@@ -1787,7 +1769,6 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
 
     # select lines
     expect_help_message(page, "Select players for the first point.")
-    expect_game_state(page, "SelectingLines")
 
     # Helper function to check MUI dialog and dismiss
     def expect_mui_dialog_and_dismiss(expected_messages: list[str]):
@@ -1898,7 +1879,6 @@ def test_perf(server, league, rosters, page: Page) -> None:
         # select lines (auto-selected after first point)
         if point_num == 0:
             expect_help_message(page, "Select players for the first point.")
-            expect_game_state(page, "SelectingLines")
             select_lines(page, home_line_1, away_line_1)
             expect_lines_selected(page, home, away)
         else:

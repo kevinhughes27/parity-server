@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, IconButton, Menu, MenuItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
-import { GameState } from './bookkeeper';
 import { StoredGame } from './db';
 
 interface ActionsMenuProps {
@@ -10,8 +9,7 @@ interface ActionsMenuProps {
   gameStatus: StoredGame['status'] | undefined;
   isHalfRecorded: boolean;
   isSubmitting: boolean;
-  currentGameState: GameState;
-  isEditingRosters: boolean;
+  currentView: string;
   hasActivePoint: boolean;
   pointsCount: number;
   onRecordHalf: () => Promise<void>;
@@ -26,8 +24,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   gameStatus,
   isHalfRecorded,
   isSubmitting,
-  currentGameState,
-  isEditingRosters,
+  currentView,
   hasActivePoint,
   pointsCount,
   onRecordHalf,
@@ -40,11 +37,10 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   const open = Boolean(anchorEl);
 
   // Define all disabled states as constants
-  const isSelectingOrEditingLines =
-    currentGameState === GameState.SelectingLines || currentGameState === GameState.EditingLines;
+  const isInLineSelectionView = currentView === 'selectLines';
 
-  const canChangeLine = !isSelectingOrEditingLines && !isEditingRosters;
-  const canEditRosters = !isEditingRosters
+  const canChangeLine = !isInLineSelectionView && currentView !== 'editRosters';
+  const canEditRosters = currentView !== 'editRosters';
 
   const canRecordHalf = !isHalfRecorded && !hasActivePoint && pointsCount > 0;
 

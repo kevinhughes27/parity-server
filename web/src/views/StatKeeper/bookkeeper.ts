@@ -9,6 +9,8 @@ import {
 import { type GameView } from './db';
 import { EventType, GameMethods, GameState, PointMethods } from './gameLogic';
 
+export type SelectLinesMode = 'initial' | 'editing' | 'substitution';
+
 // Helper function to sort players by gender (open first) then alphabetically
 export function sortRosters(players: StoredPlayer[]): StoredPlayer[] {
   return [...players].sort((a, b) => {
@@ -98,8 +100,6 @@ export class Bookkeeper {
 
       // UI state
       localError: null,
-      isEditingLines: false,
-      isEditingRosters: true,
 
       // Undo system
       undoStack: [],
@@ -262,7 +262,27 @@ export class Bookkeeper {
 
   // View state management
   getCurrentView(): GameView {
-    return this.gameMethods.determineCorrectView();
+    return this.gameMethods.determineView();
+  }
+
+  /**
+   * Determines the mode for the SelectLines component.
+   * Computed from game state, not stored.
+   */
+  getSelectLinesMode(): SelectLinesMode {
+    const hasActivePoint = this.game.activePoint !== null;
+    const hasLines = this.game.homePlayers !== null && this.game.awayPlayers !== null;
+
+    if (hasActivePoint && hasLines) {
+      // Mid-point substitution
+      return 'substitution';
+    } else if (hasLines) {
+      // Editing existing line selection (before any events recorded)
+      return 'editing';
+    } else {
+      // Initial line selection
+      return 'initial';
+    }
   }
 
   get lastPlayedLine(): { home: string[]; away: string[] } | null {
@@ -289,10 +309,6 @@ export class Bookkeeper {
 
   public firstPointOfGameOrHalf(): boolean {
     return this.gameMethods.firstPointOfGameOrHalf();
-  }
-
-  public isEditingRosters(): boolean {
-    return this.game.isEditingRosters;
   }
 
   private async performAction(action: () => void): Promise<void> {
@@ -395,26 +411,6 @@ export class Bookkeeper {
 
   public setError(error: string | null): void {
     this.gameMethods.setError(error);
-    this.notifyListeners();
-  }
-
-  public startEditingLines(): void {
-    this.gameMethods.startEditingLines();
-    this.notifyListeners();
-  }
-
-  public cancelEditingLines(): void {
-    this.gameMethods.cancelEditingLines();
-    this.notifyListeners();
-  }
-
-  public startEditingRosters(): void {
-    this.gameMethods.startEditingRosters();
-    this.notifyListeners();
-  }
-
-  public cancelEditingRosters(): void {
-    this.gameMethods.cancelEditingRosters();
     this.notifyListeners();
   }
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Box, Typography, AppBar, Toolbar } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { Bookkeeper, GameState } from './bookkeeper';
+import { Bookkeeper } from './bookkeeper';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
@@ -18,11 +18,22 @@ interface EditGameProps {
 function EditGame({ bookkeeper, localGameId }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Local UI state - NOT persisted
+  // Start in roster editing mode if this is a brand new game (no points recorded)
+  const isNewGame = bookkeeper.pointsCount === 0;
+  const [isEditingRosters, setIsEditingRosters] = useState(isNewGame);
+  const [isChangingLines, setIsChangingLines] = useState(false);
+
   const { showSnackbar, SnackbarComponent } = useSnackbar({ defaultSeverity: 'info' });
   const { confirm, DialogComponent } = useConfirmDialog();
 
-  const currentView = bookkeeper.getCurrentView();
-  const currentGameState = bookkeeper.gameState();
+  // Compute base view from bookkeeper
+  const baseView = bookkeeper.getCurrentView();
+
+  // Determine actual view based on local state overrides
+  const currentView = isEditingRosters ? 'editRosters' : isChangingLines ? 'selectLines' : baseView;
+
   const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
   const hasActivePoint = bookkeeper.activePoint !== null;
   const pointsCount = bookkeeper.pointsCount;
@@ -74,26 +85,20 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     }
   };
 
-  const handleChangeLine = async () => {
-    const currentGameState = bookkeeper.gameState();
-    if (
-      currentGameState === GameState.SelectingLines ||
-      currentGameState === GameState.EditingLines
-    ) {
-      return;
-    }
-
-    // Always start editing lines mode (keeps current players for editing)
-    // This works whether there's an active point or just selected players
-    bookkeeper.startEditingLines();
+  const handleChangeLine = () => {
+    setIsChangingLines(true);
   };
 
-  const handleEditRosters = async () => {
-    if (currentView === 'editRosters') {
-      return;
-    }
+  const handleEditRosters = () => {
+    setIsEditingRosters(true);
+  };
 
-    bookkeeper.startEditingRosters();
+  const handleExitEditingRosters = () => {
+    setIsEditingRosters(false);
+  };
+
+  const handleExitChangingLines = () => {
+    setIsChangingLines(false);
   };
 
   const handleEnterFullscreen = async () => {
@@ -115,8 +120,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
       <TopBar
         bookkeeper={bookkeeper}
         localGameId={localGameId}
-        currentGameState={currentGameState}
-        isEditingRosters={bookkeeper.isEditingRosters()}
+        currentView={currentView}
         isHalfRecorded={isHalfRecorded}
         hasActivePoint={hasActivePoint}
         pointsCount={pointsCount}
@@ -127,7 +131,12 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         onEditRosters={handleEditRosters}
         onEnterFullscreen={handleEnterFullscreen}
       />
-      <MainContent bookkeeper={bookkeeper} currentView={currentView} />
+      <MainContent
+        bookkeeper={bookkeeper}
+        currentView={currentView}
+        onExitEditingRosters={handleExitEditingRosters}
+        onExitChangingLines={handleExitChangingLines}
+      />
       {DialogComponent}
       {SnackbarComponent}
     </Box>
@@ -137,8 +146,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
 function TopBar({
   bookkeeper,
   localGameId,
-  currentGameState,
-  isEditingRosters,
+  currentView,
   isHalfRecorded,
   hasActivePoint,
   pointsCount,
@@ -151,16 +159,15 @@ function TopBar({
 }: {
   bookkeeper: any;
   localGameId: string;
-  currentGameState: GameState;
-  isEditingRosters: boolean;
+  currentView: string;
   isHalfRecorded: boolean;
   hasActivePoint: boolean;
   pointsCount: number;
   isSubmitting: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
-  onChangeLine: () => Promise<void>;
-  onEditRosters: () => Promise<void>;
+  onChangeLine: () => void;
+  onEditRosters: () => void;
   onEnterFullscreen: () => Promise<void>;
 }) {
   return (
@@ -182,8 +189,7 @@ function TopBar({
           <ActionsMenu
             numericGameId={parseInt(localGameId)}
             gameStatus={bookkeeper.getGameStatus()}
-            currentGameState={currentGameState}
-            isEditingRosters={isEditingRosters}
+            currentView={currentView}
             isHalfRecorded={isHalfRecorded}
             hasActivePoint={hasActivePoint}
             pointsCount={pointsCount}
@@ -208,7 +214,17 @@ function TopBar({
   );
 }
 
-function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView: string }) {
+function MainContent({
+  bookkeeper,
+  currentView,
+  onExitEditingRosters,
+  onExitChangingLines,
+}: {
+  bookkeeper: any;
+  currentView: string;
+  onExitEditingRosters: () => void;
+  onExitChangingLines: () => void;
+}) {
   return (
     <Box
       sx={{
@@ -219,11 +235,15 @@ function MainContent({ bookkeeper, currentView }: { bookkeeper: any; currentView
         overscrollBehavior: 'none',
       }}
     >
-      {currentView === 'selectLines' && <SelectLines bookkeeper={bookkeeper} />}
+      {currentView === 'selectLines' && (
+        <SelectLines bookkeeper={bookkeeper} onComplete={onExitChangingLines} />
+      )}
 
       {currentView === 'recordStats' && <RecordStats bookkeeper={bookkeeper} />}
 
-      {currentView === 'editRosters' && <EditRosters bookkeeper={bookkeeper} />}
+      {currentView === 'editRosters' && (
+        <EditRosters bookkeeper={bookkeeper} onComplete={onExitEditingRosters} />
+      )}
     </Box>
   );
 }
