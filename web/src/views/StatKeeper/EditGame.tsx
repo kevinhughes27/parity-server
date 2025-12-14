@@ -15,7 +15,7 @@ interface EditGameProps {
   localGameId: string;
 }
 
-function EditGame({ bookkeeper, localGameId }: EditGameProps) {
+function EditGame({ bookkeeper }: EditGameProps) {
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -38,11 +38,9 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
         ? 'selectLines'
         : 'recordStats';
 
-  const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
-  const hasActivePoint = bookkeeper.activePoint !== null;
-  const pointsCount = bookkeeper.pointsCount;
-
   const handleRecordHalf = async () => {
+    const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
+
     if (isHalfRecorded) {
       showSnackbar('Half has already been recorded.', 'warning');
       return;
@@ -123,11 +121,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       <TopBar
         bookkeeper={bookkeeper}
-        localGameId={localGameId}
         currentView={currentView}
-        isHalfRecorded={isHalfRecorded}
-        hasActivePoint={hasActivePoint}
-        pointsCount={pointsCount}
         isSubmitting={isSubmitting}
         onRecordHalf={handleRecordHalf}
         onSubmitGame={handleSubmitGame}
@@ -149,11 +143,7 @@ function EditGame({ bookkeeper, localGameId }: EditGameProps) {
 
 function TopBar({
   bookkeeper,
-  localGameId,
   currentView,
-  isHalfRecorded,
-  hasActivePoint,
-  pointsCount,
   isSubmitting,
   onRecordHalf,
   onSubmitGame,
@@ -161,12 +151,8 @@ function TopBar({
   onEditRosters,
   onEnterFullscreen,
 }: {
-  bookkeeper: any;
-  localGameId: string;
+  bookkeeper: Bookkeeper;
   currentView: string;
-  isHalfRecorded: boolean;
-  hasActivePoint: boolean;
-  pointsCount: number;
   isSubmitting: boolean;
   onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
@@ -191,12 +177,8 @@ function TopBar({
         </Link>
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <ActionsMenu
-            numericGameId={parseInt(localGameId)}
-            gameStatus={bookkeeper.getGameStatus()}
+            bookkeeper={bookkeeper}
             currentView={currentView}
-            isHalfRecorded={isHalfRecorded}
-            hasActivePoint={hasActivePoint}
-            pointsCount={pointsCount}
             isSubmitting={isSubmitting}
             onRecordHalf={onRecordHalf}
             onSubmitGame={onSubmitGame}
