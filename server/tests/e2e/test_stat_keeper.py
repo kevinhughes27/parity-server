@@ -92,6 +92,13 @@ def handle_ratio_warning_if_present(page: Page):
         pass
 
 
+def expect_snackbar(page: Page, expected_message: str):
+    """Check for snackbar with expected message"""
+    expect(page.get_by_role("alert")).to_contain_text(expected_message)
+    # Wait for it to disappear
+    expect(page.get_by_role("alert")).not_to_be_visible(timeout=5000)
+
+
 def start_point(page: Page):
     click_button(page, "Start Point")
     handle_ratio_warning_if_present(page)
@@ -941,9 +948,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     expect_next_line_text(page)
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Record Half").click()
-
-    # expect success snackbar
-    expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
+    expect_snackbar(page, "Half time recorded.")
 
     # expect select lines state with no players selected
     expect_help_message(page, "Select players for the next point.")
@@ -966,6 +971,7 @@ def test_halftime(server, league, rosters, page: Page) -> None:
     expect_next_line_text(page)
     open_hamburger_menu(page)
     page.get_by_role("menuitem", name="Record Half").click()
+    expect_snackbar(page, "Half time recorded.")
 
     # select lines again
     expect_help_message(page, "Select players for the next point.")
@@ -1787,12 +1793,6 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
         # Wait for dialog to close
         expect(page.get_by_role("heading", name="Line Selection Warning")).not_to_be_visible()
 
-    def expect_snackbar(expected_message: str):
-        """Check for snackbar with expected message"""
-        expect(page.get_by_role("alert")).to_contain_text(expected_message)
-        # Wait for it to disappear
-        expect(page.get_by_role("alert")).not_to_be_visible(timeout=5000)
-
     # not enough left
     home_line = rosters[home_team_name][:5]
     away_line = rosters[away_team_name][:6]
@@ -1819,11 +1819,11 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     select_lines(page, home_line, away_line)
     # click 7th player triggers snackbar
     click_button(page, rosters[home_team_name][7])
-    expect_snackbar(f"Cannot select more than 6 players for {home_team_name}.")
+    expect_snackbar(page, f"Cannot select more than 6 players for {home_team_name}.")
 
     # too many right
     click_button(page, rosters[away_team_name][7])
-    expect_snackbar(f"Cannot select more than 6 players for {away_team_name}.")
+    expect_snackbar(page, f"Cannot select more than 6 players for {away_team_name}.")
 
     # reset
     select_lines(page, home_line, away_line)
@@ -1926,7 +1926,7 @@ def test_perf(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Record Half").click()
 
     # wait for snackbar to appear and disappear
-    expect(page.get_by_role("alert")).to_contain_text("Half time recorded.")
+    expect_snackbar(page, "Half time recorded.")
 
     # second half - 20 more points
     for point_num in range(20, 40):
