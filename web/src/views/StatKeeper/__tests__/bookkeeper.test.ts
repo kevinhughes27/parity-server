@@ -364,10 +364,23 @@ describe('Bookkeeper', () => {
     // Record half
     await bookkeeper.recordHalf();
     expect(bookkeeper.pointsAtHalf).toBe(1);
+    expect(bookkeeper.homePlayers).toBeNull();
+    expect(bookkeeper.awayPlayers).toBeNull();
+    expect(bookkeeper.lastPlayedLine).toBeNull();
 
     // Undo half
     await bookkeeper.undo();
     expect(bookkeeper.pointsAtHalf).toBe(0);
+
+    const lastLine = bookkeeper.lastPlayedLine;
+    expect(lastLine).not.toBeNull();
+    expect(lastLine?.home).toEqual(homeLine);
+    expect(lastLine?.away).toEqual(awayLine);
+
+    // Now Undo Point
+    await bookkeeper.undo();
+    expect(bookkeeper.homePlayers).toEqual(homeLine);
+    expect(bookkeeper.awayPlayers).toEqual(awayLine);
   });
 
   test('should handle substitution during active point', async () => {
