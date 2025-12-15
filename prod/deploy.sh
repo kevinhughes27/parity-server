@@ -12,17 +12,8 @@ deploy () {
   remote="$1"
   thisdir="$(dirname $(readlink -f "${BASH_SOURCE[0]}"))"
 
-  # check for required Sentry configuration
-  if [ -z "${PARITY_VITE_SENTRY_DSN:-}" ]; then
-    echo "Error: VITE_SENTRY_DSN environment variable is not set"
-    echo "Please set it before running deploy:"
-    echo "  export VITE_SENTRY_DSN=https://your-key@o0000000.ingest.sentry.io/0000000"
-    echo "  ./prod/deploy.sh -r <remote>"
-    exit 1
-  fi
-
   # build frontend
-  (cd $thisdir/../web && VITE_SENTRY_DSN="$PARITY_VITE_SENTRY_DSN" yarn build)
+  (cd $thisdir/../web && yarn build)
 
   # copy caddyfile
   # caddy will reload on changes
