@@ -225,9 +225,6 @@ const SelectLines: React.FC<{
           backgroundColor: isSelected ? '#1976d2' : 'transparent',
           borderColor: isSelected ? '#1976d2' : '#2196f3',
           color: isSelected ? 'white' : '#1976d2',
-          '&:hover': {
-            backgroundColor: isSelected ? '#1565c0' : '#e3f2fd',
-          },
         };
       } else {
         // Women players: purple styling
@@ -236,9 +233,6 @@ const SelectLines: React.FC<{
           backgroundColor: isSelected ? '#9c27b0' : 'transparent',
           borderColor: isSelected ? '#9c27b0' : '#ce93d8',
           color: isSelected ? 'white' : '#9c27b0',
-          '&:hover': {
-            backgroundColor: isSelected ? '#7b1fa2' : '#f3e5f5',
-          },
         };
       }
     };
