@@ -1811,22 +1811,23 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     expect_mui_dialog_and_dismiss([f"{away_team_name}: 5/6 players selected"])
     select_lines(page, home_line, away_line)  # reset
 
-    # too many setup
-    home_line = rosters[home_team_name][:6]
-    away_line = rosters[away_team_name][:6]
-
     # too many left
+    home_line = rosters[home_team_name][:7]  # 7 players (too many)
+    away_line = rosters[away_team_name][:6]
     select_lines(page, home_line, away_line)
-    # click 7th player triggers snackbar
-    click_button(page, rosters[home_team_name][7])
-    expect_snackbar(page, f"Cannot select more than 6 players for {home_team_name}.")
+
+    click_button(page, "Start Point")
+    expect_mui_dialog_and_dismiss([f"{home_team_name}: 7/6 players selected (too many)"])
+    select_lines(page, home_line, away_line)  # reset
 
     # too many right
-    click_button(page, rosters[away_team_name][7])
-    expect_snackbar(page, f"Cannot select more than 6 players for {away_team_name}.")
-
-    # reset
+    home_line = rosters[home_team_name][:6]
+    away_line = rosters[away_team_name][:7]  # 7 players (too many)
     select_lines(page, home_line, away_line)
+
+    click_button(page, "Start Point")
+    expect_mui_dialog_and_dismiss([f"{away_team_name}: 7/6 players selected (too many)"])
+    select_lines(page, home_line, away_line)  # reset
 
     # Ratio error
     home_line = sorted_home_roster[:5] + sorted_home_roster[9:10]  # 5 ON2 1 WN2

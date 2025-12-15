@@ -73,18 +73,26 @@ const SelectLines: React.FC<{
     return warnings;
   };
 
-  const getIncompleteLinesWarning = () => {
+  const getLinesWarning = () => {
     const warnings: string[] = [];
 
-    if (selectedHomePlayers.length !== lineSize) {
+    if (selectedHomePlayers.length < lineSize) {
       warnings.push(
         `${bookkeeper.getHomeTeamName()}: ${selectedHomePlayers.length}/${lineSize} players selected`
       );
+    } else if (selectedHomePlayers.length > lineSize) {
+      warnings.push(
+        `${bookkeeper.getHomeTeamName()}: ${selectedHomePlayers.length}/${lineSize} players selected (too many)`
+      );
     }
 
-    if (selectedAwayPlayers.length !== lineSize) {
+    if (selectedAwayPlayers.length < lineSize) {
       warnings.push(
         `${bookkeeper.getAwayTeamName()}: ${selectedAwayPlayers.length}/${lineSize} players selected`
+      );
+    } else if (selectedAwayPlayers.length > lineSize) {
+      warnings.push(
+        `${bookkeeper.getAwayTeamName()}: ${selectedAwayPlayers.length}/${lineSize} players selected (too many)`
       );
     }
 
@@ -120,18 +128,12 @@ const SelectLines: React.FC<{
   const togglePlayerSelection = (playerName: string, isHomeTeam: boolean) => {
     const currentSelection = isHomeTeam ? selectedHomePlayers : selectedAwayPlayers;
     const setter = isHomeTeam ? setSelectedHomePlayers : setSelectedAwayPlayers;
-    const teamName = isHomeTeam ? bookkeeper.getHomeTeamName() : bookkeeper.getAwayTeamName();
 
     let newSelection;
     if (currentSelection.includes(playerName)) {
       newSelection = currentSelection.filter(p => p !== playerName);
     } else {
-      if (currentSelection.length < lineSize) {
-        newSelection = [...currentSelection, playerName];
-      } else {
-        showSnackbar(`Cannot select more than ${lineSize} players for ${teamName}.`);
-        return;
-      }
+      newSelection = [...currentSelection, playerName];
     }
     setter(newSelection.sort((a, b) => a.localeCompare(b)));
   };
@@ -156,8 +158,8 @@ const SelectLines: React.FC<{
 
     if (enoughPlayers) {
       const ratioWarnings = getRatioWarnings();
-      const incompleteWarnings = getIncompleteLinesWarning();
-      const allWarnings = [...ratioWarnings, ...incompleteWarnings];
+      const lineWarnings = getLinesWarning();
+      const allWarnings = [...ratioWarnings, ...lineWarnings];
 
       // Prepare new line
       const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
@@ -168,10 +170,20 @@ const SelectLines: React.FC<{
         const confirmed = await confirm({
           title: 'Line Selection Warning',
           content: (
-            <DialogContentText sx={{ whiteSpace: 'pre-line' }}>
-              Warning!{'\n'}
-              {allWarnings.join('\n')}
-              {'\n'}Do you want to continue anyway?
+            <DialogContentText>
+              <Box component="div" sx={{ mb: 2 }}>
+                The following issues were detected with the line selection:
+              </Box>
+              <Box component="ul" sx={{ m: 0, pl: 2.5 }}>
+                {allWarnings.map((warning, index) => (
+                  <Box component="li" key={index} sx={{ mb: 0.5 }}>
+                    {warning}
+                  </Box>
+                ))}
+              </Box>
+              <Box component="div" sx={{ mt: 2 }}>
+                Do you want to continue anyway?
+              </Box>
             </DialogContentText>
           ),
           confirmText: 'Continue Anyway',
