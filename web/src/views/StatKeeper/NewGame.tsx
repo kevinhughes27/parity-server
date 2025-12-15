@@ -205,8 +205,8 @@ const CreateGameSection: React.FC<{
   availableAwayTeams: any[];
   selectedHomeTeamObj: any;
   selectedAwayTeamObj: any;
-  week: number;
-  setWeek: (week: number) => void;
+  week: string;
+  setWeek: (week: string) => void;
 }> = ({
   homeTeamIdStr,
   setHomeTeamIdStr,
@@ -246,10 +246,27 @@ const CreateGameSection: React.FC<{
       <TextField
         id="week-select"
         label="Week"
-        type="number"
+        type="text"
         value={week}
-        onChange={e => setWeek(parseInt(e.target.value, 10) || 1)}
-        inputProps={{ min: 1 }}
+        onChange={e => {
+          const value = e.target.value;
+          // Allow empty string temporarily while typing
+          if (value === '') {
+            setWeek('');
+            return;
+          }
+          // Only allow digits
+          if (/^\d+$/.test(value)) {
+            setWeek(value);
+          }
+        }}
+        onBlur={() => {
+          // If empty on blur, set to 1
+          if (week === '') {
+            setWeek('1');
+          }
+        }}
+        inputProps={{ inputMode: 'numeric', pattern: '[0-9]*' }}
         sx={{ width: '120px' }}
       />
     </Paper>
@@ -312,7 +329,7 @@ function NewGame() {
     currentLeague?.league?.id?.toString()
   );
 
-  const [week, setWeek] = useState<number>(1);
+  const [week, setWeek] = useState<string>('1');
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
   const [selectedMatchupId, setSelectedMatchupId] = useState<number | null>(null);
@@ -346,7 +363,7 @@ function NewGame() {
     setSelectedMatchupId(matchup.id);
     setHomeTeamIdStr(matchup.homeTeamId.toString());
     setAwayTeamIdStr(matchup.awayTeamId.toString());
-    setWeek(matchup.week);
+    setWeek(matchup.week.toString());
   };
 
   const selectedHomeTeamObj = leagueTeams.find(t => t.id.toString() === homeTeamIdStr);
@@ -358,10 +375,17 @@ function NewGame() {
       return;
     }
 
+    // Validate week is a valid positive number
+    const weekNum = parseInt(week, 10);
+    if (!week || isNaN(weekNum) || weekNum < 1) {
+      showSnackbar('Please enter a valid week number (1 or greater).');
+      return;
+    }
+
     try {
       const id = await Bookkeeper.newGame(
         currentLeague,
-        week,
+        weekNum,
         selectedHomeTeamObj,
         selectedAwayTeamObj
       );
