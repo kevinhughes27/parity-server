@@ -22,7 +22,6 @@ dependencies = [
     "pytest-mock>=3.14.0",
     "playwright>=1.52.0",
     "pytest-playwright>=0.7.2",
-    "sentry-sdk[fastapi]>=2.42.0",
 ]
 
 [build-system]

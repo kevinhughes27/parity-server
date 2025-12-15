@@ -25,7 +25,6 @@
 
 ```
 PARITY_EDIT_PASSWORD=...
-SENTRY_DSN=https://your-key@o0000000.ingest.sentry.io/0000000
 ```
 
 /home/ubuntu/zuluru-sync.env:
