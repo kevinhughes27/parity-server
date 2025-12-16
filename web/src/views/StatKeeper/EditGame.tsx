@@ -107,7 +107,6 @@ function EditGame({ bookkeeper }: EditGameProps) {
     try {
       if (document.documentElement.requestFullscreen) {
         await document.documentElement.requestFullscreen();
-        showSnackbar('Entered fullscreen mode', 'success');
       } else {
         showSnackbar('Fullscreen not supported on this device', 'error');
       }

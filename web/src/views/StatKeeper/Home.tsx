@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLiveQuery } from 'dexie-react-hooks';
 import { db, StoredGame } from './db';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getLeagueName } from '../../api';
 import Loading from '../../components/Loading';
 import { useSnackbar } from './notifications';
@@ -35,7 +35,6 @@ const getStatusColor = (status: StoredGame['status']) => {
 };
 
 function Home() {
-  const navigate = useNavigate();
   const { showSnackbar, SnackbarComponent } = useSnackbar({ defaultSeverity: 'success' });
   const { confirm, DialogComponent } = useConfirmDialog();
 
@@ -45,7 +44,10 @@ function Home() {
   }
 
   const handleStartNewGame = () => {
-    navigate('/stat_keeper/new_game');
+    // use a hard reload here to:
+    // - enforce using the latest code
+    // - clear the api cache to ensure fresh rosters
+    window.location.href = '/stat_keeper/new_game';
   };
 
   const handleDeleteGame = async (localId: number | undefined) => {

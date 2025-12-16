@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { useTeams, useFullscreen, useSchedule } from './hooks';
+import { useTeams, useSchedule } from './hooks';
 import { Bookkeeper } from './bookkeeper';
 import {
   AppBar,
@@ -17,9 +17,10 @@ import {
   Alert,
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import { clearCache, Matchup } from '../../api';
+import { Matchup } from '../../api';
 import { homeColors, awayColors } from '../../helpers';
 import { useSnackbar } from './notifications';
+import { useConfirmDialog } from './confirm';
 
 interface CurrentLeague {
   league: {
@@ -308,20 +309,72 @@ const ActionBar: React.FC<{
   );
 };
 
+const FullscreenPrompt: React.FC<{
+  open: boolean;
+  onEnable: () => Promise<void>;
+  onSkip: () => void;
+}> = ({ open, onEnable, onSkip }) => {
+  const { confirm, DialogComponent } = useConfirmDialog();
+  const copy = `For the best stat keeping experience, we recommend using fullscreen mode.
+This will hide browser controls and give you more screen space.
+
+You can re-enable fullscreen later from the menu at the top of the screen.`;
+
+  useEffect(() => {
+    if (open) {
+      confirm({
+        title: 'Enable Fullscreen Mode?',
+        message: copy,
+        confirmText: 'Enable Fullscreen',
+        cancelText: 'Skip',
+        confirmColor: 'primary',
+      }).then(async confirmed => {
+        if (confirmed) {
+          await onEnable();
+        } else {
+          onSkip();
+        }
+      });
+    }
+  }, [open, confirm, onEnable, onSkip]);
+
+  return <>{DialogComponent}</>;
+};
+
 function NewGame() {
   const navigate = useNavigate();
-  useFullscreen();
 
-  // clear cache
-  useEffect(() => {
-    clearCache();
-  }, []);
-
+  const [showFullscreenPrompt, setShowFullscreenPrompt] = useState(false);
   const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
 
   const { showSnackbar, SnackbarComponent } = useSnackbar();
+
+  // Check if we need to show fullscreen dialog
+  useEffect(() => {
+    if (!document.fullscreenElement) {
+      setShowFullscreenPrompt(true);
+    }
+  }, []);
+
+  const handleEnableFullscreen = async () => {
+    try {
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        showSnackbar('Fullscreen not supported on this device', 'error');
+      }
+    } catch (error) {
+      showSnackbar('Failed to enter fullscreen', 'error');
+      console.error('Fullscreen error:', error);
+    }
+    setShowFullscreenPrompt(false);
+  };
+
+  const handleSkipFullscreen = () => {
+    setShowFullscreenPrompt(false);
+  };
 
   const { leagueTeams, loadingTeams, errorTeams } = useTeams(currentLeague?.league?.id?.toString());
 
@@ -484,6 +537,12 @@ function NewGame() {
       {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
         <ActionBar handleCreateGame={handleCreateGame} canCreateGame={!!canCreateGame} />
       )}
+
+      <FullscreenPrompt
+        open={showFullscreenPrompt}
+        onEnable={handleEnableFullscreen}
+        onSkip={handleSkipFullscreen}
+      />
 
       {SnackbarComponent}
     </Box>

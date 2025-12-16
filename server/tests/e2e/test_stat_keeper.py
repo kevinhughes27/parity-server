@@ -43,6 +43,8 @@ def start_stats_keeper(page: Page):
     click_button(page, "Start New Game")
     expect(page.locator("h5")).to_contain_text("New Game")
 
+    click_button(page, "Enable Fullscreen")
+
 
 def select_teams(page: Page, home: str, away: str):
     # initial state
