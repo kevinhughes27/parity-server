@@ -1283,6 +1283,102 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     expect_play_by_play(page, play_by_play)
 
 
+def test_offline_functionality(server, league, rosters, page: Page) -> None:
+    """Test that the stat keeper can function without network access during the game.
+
+    Network is required initially to load rosters and at the end to submit,
+    but during gameplay (including mid-game roster edits) the app should work offline.
+    """
+    start_stats_keeper(page)
+    home = "Kells Angels Bicycle Club"
+    away = "lumleysexuals"
+
+    # create game with network available (loads rosters)
+    select_teams(page, home, away)
+    expect_rosters(page, rosters[home], rosters[away])
+    start_game(page)
+
+    # DISABLE NETWORK - simulate offline mode
+    page.route("**", lambda route: route.abort())
+
+    # select lines and start first point (should work offline)
+    expect_help_message(page, "Select players for the first point.")
+    home_line = rosters[home][:6]
+    away_line = rosters[away][:6]
+    select_lines(page, home_line, away_line)
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record first point (should work offline)
+    click_button(page, "Brian Kells")
+    click_button(page, "Pull")
+    click_button(page, "Owen Lumley")
+    click_button(page, "Heather McCabe")
+    click_button(page, "Kevin Barford")
+    click_button(page, "Point!")
+
+    play_by_play = [
+        "1.Brian Kells pulled",
+        "2.Owen Lumley passed to Heather McCabe",
+        "3.Heather McCabe passed to Kevin Barford",
+        "4.Kevin Barford scored!",
+    ]
+    expect_play_by_play(page, play_by_play)
+
+    # edit rosters mid-game while offline (should work because API was cached)
+    open_hamburger_menu(page)
+    page.get_by_role("menuitem", name="Edit Rosters").click()
+
+    # can still add sub while offline
+    # league players was cached when we started the game
+    page.get_by_role("combobox").first.select_option("An Tran")
+    page.get_by_role("button", name="Add").first.click()
+
+    # verify sub was added
+    expect(page.locator("#root")).to_contain_text("An Tran(S)")
+
+    # finish roster edit
+    click_button(page, "Update Rosters")
+
+    # select lines for second point (with the new sub)
+    expect_next_line_text(page)
+    # Note: We need to deselect one player since we added a sub (7 players selected)
+    # The flip logic selected the bench players plus the new sub
+    # Deselect one to get back to 6
+    home_bench = rosters[home][6:]
+    click_button(page, home_bench[0])  # Deselect one from bench
+    expect_lines_selected(page, home, away)
+    start_point(page)
+
+    # record second point with the substitute (still offline)
+    # The home line now has: home_bench players (minus the one we deselected) + "An Tran(S)"
+    click_button(page, "An Tran(S)")
+    # Pass to another player on the line (home_bench)
+    click_button(page, home_bench[1])
+    click_button(page, home_bench[2])
+    click_button(page, "Point!")
+
+    # verify play by play includes the substitute
+    expect_play_by_play(page, [f"An Tran(S) passed to {home_bench[1]}"])
+
+    # RE-ENABLE NETWORK - needed for submission
+    page.unroute("**")
+
+    # submit game (now with network)
+    submit_game(page)
+
+    # verify submitted stats include both regular and offline-added players
+    stats = get_stats()
+    assert stats["Brian Kells"]["pulls"] == 1
+    assert stats["Kevin Barford"]["goals"] == 1
+    assert stats["An Tran(S)"]["completions"] == 1
+    assert stats[home_bench[2]]["goals"] == 1
+
+    # verify game has the substitute in the roster
+    game = get_game(1)
+    assert "An Tran(S)" in game["homeRoster"]
+
+
 def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: Page) -> None:
     start_stats_keeper(page)
     home = "Kells Angels Bicycle Club"
