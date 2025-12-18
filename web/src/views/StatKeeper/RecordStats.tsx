@@ -124,6 +124,9 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         onClick={() => handlePlayerClick(player.name, isHomeTeamButton)}
         disabled={!buttonState.enabled}
         fullWidth
+        disableRipple
+        disableTouchRipple
+        disableFocusRipple
         variant="text"
         size="small"
         title={buttonState.reason}
@@ -135,6 +138,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           whiteSpace: 'nowrap',
           fontSize: '0.9em',
           textTransform: 'none',
+          transition: 'none',
           ...baseStyle,
           ...(applyGenderStyle ? genderStyle : {}),
         }}
