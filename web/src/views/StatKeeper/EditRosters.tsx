@@ -152,6 +152,7 @@ const EditRosters: React.FC<{
               currentRoster={awayRoster} // Already sorted by sortAndSetAwayRoster
               originalRoster={originalAwayRoster} // Original roster for reference
               onRosterChange={sortAndSetAwayRoster} // Pass the sorting setter
+              alignRight={true} // Right-align the dropdown for the away team
             />
           </Box>
         </Box>
