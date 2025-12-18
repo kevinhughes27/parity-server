@@ -1,15 +1,28 @@
 {
-  "short_name": "Parity",
-  "name": "Parity League",
+  "short_name": "StatKeeper",
+  "name": "Parity StatKeeper",
+  "description": "Offline-capable stat keeping app for Parity League",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "/icons/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "scope": "/",
+  "orientation": "any"
 }

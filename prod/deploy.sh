@@ -35,6 +35,7 @@ deploy () {
 
   # rsync frontend build
   rsync -avz --delete $thisdir/../web/build/ $remote:~/parity-server/web/build/
+  # todo - sync the service worker dist?
 
   # enable timers
   ssh "$remote" << EOF
