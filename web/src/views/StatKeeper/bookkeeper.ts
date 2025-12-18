@@ -305,100 +305,95 @@ export class Bookkeeper {
     return this.gameMethods.firstPointOfGameOrHalf();
   }
 
-  private async performAction(action: () => void): Promise<void> {
+  private performAction(action: () => void): void {
     // Action
     action();
 
-    // Save to IndexedDb
-    await this.saveToDatabase();
-
-    // Notify React components
+    // Notify React components immediately
     this.notifyListeners();
+
+    // Save to IndexedDb in background
+    this.saveToDatabase().catch(() => {
+      // Error is already set in saveToDatabase via setError
+      // Just notify to update UI with error state
+      this.notifyListeners();
+    });
   }
 
-  public async recordActivePlayers(
-    activeHomePlayers: string[],
-    activeAwayPlayers: string[]
-  ): Promise<void> {
-    await this.performAction(() => {
+  public recordActivePlayers(activeHomePlayers: string[], activeAwayPlayers: string[]): void {
+    this.performAction(() => {
       this.gameMethods.recordActivePlayers(activeHomePlayers, activeAwayPlayers);
     });
   }
 
-  public async recordSubstitution(
-    newHomePlayers: string[],
-    newAwayPlayers: string[]
-  ): Promise<void> {
-    await this.performAction(() => {
+  public recordSubstitution(newHomePlayers: string[], newAwayPlayers: string[]): void {
+    this.performAction(() => {
       this.gameMethods.recordSubstitution(newHomePlayers, newAwayPlayers);
     });
   }
 
-  public async recordFirstActor(player: string, isHomeTeamPlayer: boolean): Promise<void> {
-    await this.performAction(() => {
+  public recordFirstActor(player: string, isHomeTeamPlayer: boolean): void {
+    this.performAction(() => {
       this.gameMethods.recordFirstActor(player, isHomeTeamPlayer);
     });
   }
 
-  public async recordPull(): Promise<void> {
-    await this.performAction(() => {
+  public recordPull(): void {
+    this.performAction(() => {
       this.gameMethods.recordPull();
     });
   }
 
-  public async recordPass(receiver: string): Promise<void> {
-    await this.performAction(() => {
+  public recordPass(receiver: string): void {
+    this.performAction(() => {
       this.gameMethods.recordPass(receiver);
     });
   }
 
-  public async recordDrop(): Promise<void> {
-    await this.performAction(() => {
+  public recordDrop(): void {
+    this.performAction(() => {
       this.gameMethods.recordDrop();
     });
   }
 
-  public async recordThrowAway(): Promise<void> {
-    await this.performAction(() => {
+  public recordThrowAway(): void {
+    this.performAction(() => {
       this.gameMethods.recordThrowAway();
     });
   }
 
-  public async recordD(): Promise<void> {
-    await this.performAction(() => {
+  public recordD(): void {
+    this.performAction(() => {
       this.gameMethods.recordD();
     });
   }
 
-  public async recordCatchD(): Promise<void> {
-    await this.performAction(() => {
+  public recordCatchD(): void {
+    this.performAction(() => {
       this.gameMethods.recordCatchD();
     });
   }
 
-  public async recordPoint(): Promise<void> {
-    await this.performAction(() => {
+  public recordPoint(): void {
+    this.performAction(() => {
       this.gameMethods.recordPoint();
     });
   }
 
-  public async recordHalf(): Promise<void> {
-    await this.performAction(() => {
+  public recordHalf(): void {
+    this.performAction(() => {
       this.gameMethods.recordHalf();
     });
   }
 
-  public async undo(): Promise<void> {
-    await this.performAction(() => {
+  public undo(): void {
+    this.performAction(() => {
       this.gameMethods.undo();
     });
   }
 
-  public async updateRosters(
-    homeRoster: StoredPlayer[],
-    awayRoster: StoredPlayer[]
-  ): Promise<void> {
-    await this.performAction(() => {
+  public updateRosters(homeRoster: StoredPlayer[], awayRoster: StoredPlayer[]): void {
+    this.performAction(() => {
       this.gameMethods.updateRosters(homeRoster, awayRoster);
     });
   }

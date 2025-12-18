@@ -48,7 +48,7 @@ const EditRosters: React.FC<{
     }
   }, [bookkeeper]);
 
-  const handleUpdateRosters = async () => {
+  const handleUpdateRosters = () => {
     if (homeRoster.length === 0 || awayRoster.length === 0) {
       showSnackbar('Rosters cannot be empty.');
       return;
@@ -56,7 +56,7 @@ const EditRosters: React.FC<{
 
     try {
       // Update the stored game rosters
-      await bookkeeper.updateRosters(homeRoster, awayRoster);
+      bookkeeper.updateRosters(homeRoster, awayRoster);
 
       console.log('Rosters updated successfully.');
 
