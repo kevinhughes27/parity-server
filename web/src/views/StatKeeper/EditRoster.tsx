@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
-import { Box, Typography, Button, TextField, Switch, FormControlLabel } from '@mui/material';
+import {
+  Box,
+  Typography,
+  Button,
+  TextField,
+  Switch,
+  FormControlLabel,
+  Autocomplete,
+} from '@mui/material';
 import { StoredPlayer } from './db';
 import { TeamPlayer } from '../../api';
 import { useSnackbar } from './notifications';
@@ -96,102 +104,89 @@ const PlayerList: React.FC<{
   );
 };
 
-// Component for adding a league player
-const AddLeaguePlayerForm: React.FC<{
+// Component for adding a player (league player or custom substitute)
+const AddPlayerForm: React.FC<{
   availablePlayers: TeamPlayer[];
-  selectedPlayer: string;
-  onSelectPlayer: (player: string) => void;
+  inputValue: string;
+  onInputChange: (value: string) => void;
+  selectedPlayer: TeamPlayer | null;
+  onSelectPlayer: (player: TeamPlayer | null) => void;
+  showGenderToggle: boolean;
+  gender: boolean;
+  onGenderChange: (isOpen: boolean) => void;
   onAddPlayer: () => void;
-}> = ({ availablePlayers, selectedPlayer, onSelectPlayer, onAddPlayer }) => {
+}> = ({
+  availablePlayers,
+  inputValue,
+  onInputChange,
+  selectedPlayer,
+  onSelectPlayer,
+  showGenderToggle,
+  gender,
+  onGenderChange,
+  onAddPlayer,
+}) => {
   return (
-    <Box sx={{ mb: 1.25 }}>
+    <Box>
       <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
-        Add Player from League
+        Add Player
       </Typography>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5 }}>
-        <Box
-          component="select"
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+        <Autocomplete
+          freeSolo
+          options={availablePlayers}
+          getOptionLabel={option =>
+            typeof option === 'string' ? option : `${option.name} (${option.team})`
+          }
           value={selectedPlayer}
-          onChange={e => onSelectPlayer(e.target.value)}
-          sx={{
-            flexGrow: 1,
-            p: '6px',
-            fontSize: '0.9em',
-            minWidth: '100px',
-            borderRadius: 1,
-            border: '1px solid #ccc',
+          onChange={(_, newValue) => {
+            if (typeof newValue === 'string') {
+              onSelectPlayer(null);
+            } else {
+              onSelectPlayer(newValue);
+            }
           }}
-        >
-          <option value="">Select Player</option>
-          {availablePlayers.map(player => (
-            <option key={player.name} value={player.name}>
-              {player.name} ({player.team})
-            </option>
-          ))}
-        </Box>
+          inputValue={inputValue}
+          onInputChange={(_, newInputValue) => {
+            onInputChange(newInputValue);
+          }}
+          renderInput={params => (
+            <TextField
+              {...params}
+              placeholder="Type to search or add new..."
+              size="small"
+              sx={{ fontSize: '0.9em' }}
+            />
+          )}
+          sx={{ flexGrow: 1 }}
+          size="small"
+        />
+        {showGenderToggle && (
+          <FormControlLabel
+            control={
+              <Switch checked={gender} onChange={e => onGenderChange(e.target.checked)} size="small" />
+            }
+            label={gender ? 'ON2' : 'WN2'}
+            labelPlacement="start"
+            sx={{
+              m: 0,
+              fontSize: '0.9em',
+              '& .MuiFormControlLabel-label': {
+                fontSize: '0.9em',
+                fontWeight: 500,
+                minWidth: '35px',
+              },
+            }}
+          />
+        )}
         <Button
           onClick={onAddPlayer}
-          disabled={!selectedPlayer}
+          disabled={!inputValue.trim()}
           variant="outlined"
           size="small"
           sx={{ fontSize: '0.9em', flexShrink: 0 }}
         >
           Add
-        </Button>
-      </Box>
-    </Box>
-  );
-};
-
-// Component for adding a custom substitute
-const AddSubstituteForm: React.FC<{
-  newSubName: string;
-  newSubGender: boolean; // true for ON2, false for WN2
-  onSubNameChange: (name: string) => void;
-  onSubGenderChange: (isOpen: boolean) => void;
-  onAddSub: () => void;
-}> = ({ newSubName, newSubGender, onSubNameChange, onSubGenderChange, onAddSub }) => {
-  return (
-    <Box>
-      <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
-        Add Custom Substitute
-      </Typography>
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-        <TextField
-          value={newSubName}
-          onChange={e => onSubNameChange(e.target.value)}
-          placeholder="Name"
-          size="small"
-          sx={{ flexGrow: 1, fontSize: '0.9em' }}
-        />
-        <FormControlLabel
-          control={
-            <Switch
-              checked={newSubGender}
-              onChange={e => onSubGenderChange(e.target.checked)}
-              size="small"
-            />
-          }
-          label={newSubGender ? 'ON2' : 'WN2'}
-          labelPlacement="start"
-          sx={{
-            m: 0,
-            fontSize: '0.9em',
-            '& .MuiFormControlLabel-label': {
-              fontSize: '0.9em',
-              fontWeight: 500,
-              minWidth: '35px',
-            },
-          }}
-        />
-        <Button
-          onClick={onAddSub}
-          disabled={!newSubName.trim()}
-          variant="outlined"
-          size="small"
-          sx={{ fontSize: '0.9em', flexShrink: 0 }}
-        >
-          Add Sub
         </Button>
       </Box>
     </Box>
@@ -204,65 +199,57 @@ const EditRoster: React.FC<EditRosterProps> = ({
   originalRoster,
   onRosterChange,
 }) => {
-  const [newSubName, setNewSubName] = useState('');
-  const [newSubGender, setNewSubGender] = useState(true); // Default to open
-  const [selectedLeaguePlayer, setSelectedLeaguePlayer] = useState('');
+  const [inputValue, setInputValue] = useState('');
+  const [selectedPlayer, setSelectedPlayer] = useState<TeamPlayer | null>(null);
+  const [newPlayerGender, setNewPlayerGender] = useState(true); // Default to open
 
   const { showSnackbar, SnackbarComponent } = useSnackbar();
 
   const currentRosterNames = currentRoster.map(p => p.name);
 
-  // Filter out players already on the current roster for the dropdown
-  const availableLeaguePlayersForDropdown = allLeaguePlayers.filter(
-    p => !currentRosterNames.includes(p.name)
-  );
+  // Filter out players already on the current roster
+  const availablePlayers = allLeaguePlayers.filter(p => !currentRosterNames.includes(p.name));
+
+  // Determine if we should show the gender toggle
+  // Show it only when typing a new name (not selecting from dropdown)
+  const showGenderToggle = inputValue.trim() !== '' && selectedPlayer === null;
 
   const handleRemovePlayer = (playerName: string) => {
     onRosterChange(currentRoster.filter(player => player.name !== playerName));
   };
 
-  const handleAddSubByName = () => {
-    if (!newSubName.trim()) {
-      showSnackbar(`Enter name`);
+  const handleAddPlayer = () => {
+    if (!inputValue.trim()) {
+      showSnackbar('Select or Enter a player name');
       return;
     }
 
-    if (
-      !currentRosterNames.includes(newSubName.trim()) &&
-      !currentRosterNames.includes(`${newSubName.trim()}(S)`)
-    ) {
-      const newPlayer: StoredPlayer = {
-        name: `${newSubName.trim()}(S)`,
-        is_open: newSubGender,
+    let newPlayer: StoredPlayer;
+
+    // Adding a league player
+    if (selectedPlayer) {
+      const wasInOriginalRoster = originalRoster.some(p => p.name === selectedPlayer.name);
+      const name = wasInOriginalRoster ? selectedPlayer.name : `${selectedPlayer.name}(S)`;
+      newPlayer = {
+        name: name,
+        is_open: selectedPlayer.is_open,
       };
-      onRosterChange([...currentRoster, newPlayer]);
-      setNewSubName('');
+    // Adding a custom substitute (typed name not in league)
     } else {
-      showSnackbar(`${newSubName.trim()} is already on the roster.`);
-    }
-  };
-
-  const handleAddLeaguePlayer = () => {
-    if (!selectedLeaguePlayer) {
-      showSnackbar(`No player selected`);
-      return;
+      newPlayer = {
+        name: `${inputValue.trim()}(S)`,
+        is_open: newPlayerGender,
+      };
     }
 
-    if (
-      !currentRosterNames.includes(selectedLeaguePlayer) &&
-      !currentRosterNames.includes(`${selectedLeaguePlayer}(S)`)
-    ) {
-      const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
-      if (leaguePlayer) {
-        const wasInOriginalRoster = originalRoster.some(p => p.name === leaguePlayer.name);
-        const name = wasInOriginalRoster ? leaguePlayer.name : `${leaguePlayer.name}(S)`;
-        const newPlayer: StoredPlayer = { name: name, is_open: leaguePlayer.is_open };
-        onRosterChange([...currentRoster, newPlayer]);
-        setSelectedLeaguePlayer('');
-      }
-    } else {
-      showSnackbar(`${selectedLeaguePlayer} is already on the roster.`);
+    if (currentRosterNames.includes(newPlayer.name)) {
+       showSnackbar(`${newPlayer.name} is already on the roster.`);
+       return;
     }
+
+    onRosterChange([...currentRoster, newPlayer]);
+    setInputValue('');
+    setSelectedPlayer(null);
   };
 
   return (
@@ -285,20 +272,18 @@ const EditRoster: React.FC<EditRosterProps> = ({
       {/* Scrollable Player List */}
       <PlayerList currentRoster={currentRoster} onRemovePlayer={handleRemovePlayer} />
 
-      {/* Add Player Sections */}
+      {/* Add Player Section */}
       <Box sx={{ flexShrink: 0 }}>
-        <AddLeaguePlayerForm
-          availablePlayers={availableLeaguePlayersForDropdown}
-          selectedPlayer={selectedLeaguePlayer}
-          onSelectPlayer={setSelectedLeaguePlayer}
-          onAddPlayer={handleAddLeaguePlayer}
-        />
-        <AddSubstituteForm
-          newSubName={newSubName}
-          newSubGender={newSubGender}
-          onSubNameChange={setNewSubName}
-          onSubGenderChange={setNewSubGender}
-          onAddSub={handleAddSubByName}
+        <AddPlayerForm
+          availablePlayers={availablePlayers}
+          inputValue={inputValue}
+          onInputChange={setInputValue}
+          selectedPlayer={selectedPlayer}
+          onSelectPlayer={setSelectedPlayer}
+          showGenderToggle={showGenderToggle}
+          gender={newPlayerGender}
+          onGenderChange={setNewPlayerGender}
+          onAddPlayer={handleAddPlayer}
         />
       </Box>
       {SnackbarComponent}
