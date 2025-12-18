@@ -222,20 +222,36 @@ const EditRoster: React.FC<EditRosterProps> = ({
   };
 
   const handleAddSubByName = () => {
-    if (newSubName.trim() && !currentRosterNames.includes(newSubName.trim())) {
+    if (!newSubName.trim()) {
+      showSnackbar(`Enter name`);
+      return;
+    }
+
+    if (
+      !currentRosterNames.includes(newSubName.trim()) &&
+      !currentRosterNames.includes(`${newSubName.trim()}(S)`)
+    ) {
       const newPlayer: StoredPlayer = {
         name: `${newSubName.trim()}(S)`,
         is_open: newSubGender,
       };
       onRosterChange([...currentRoster, newPlayer]);
       setNewSubName('');
-    } else if (currentRosterNames.includes(newSubName.trim())) {
+    } else {
       showSnackbar(`${newSubName.trim()} is already on the roster.`);
     }
   };
 
   const handleAddLeaguePlayer = () => {
-    if (selectedLeaguePlayer && !currentRosterNames.includes(selectedLeaguePlayer)) {
+    if (!selectedLeaguePlayer) {
+      showSnackbar(`No player selected`);
+      return;
+    }
+
+    if (
+      !currentRosterNames.includes(selectedLeaguePlayer) &&
+      !currentRosterNames.includes(`${selectedLeaguePlayer}(S)`)
+    ) {
       const leaguePlayer = allLeaguePlayers.find(p => p.name === selectedLeaguePlayer);
       if (leaguePlayer) {
         const wasInOriginalRoster = originalRoster.some(p => p.name === leaguePlayer.name);
@@ -244,7 +260,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
         onRosterChange([...currentRoster, newPlayer]);
         setSelectedLeaguePlayer('');
       }
-    } else if (currentRosterNames.includes(selectedLeaguePlayer)) {
+    } else {
       showSnackbar(`${selectedLeaguePlayer} is already on the roster.`);
     }
   };
@@ -285,7 +301,6 @@ const EditRoster: React.FC<EditRosterProps> = ({
           onAddSub={handleAddSubByName}
         />
       </Box>
-
       {SnackbarComponent}
     </Box>
   );
