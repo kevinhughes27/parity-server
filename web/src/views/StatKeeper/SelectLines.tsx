@@ -227,6 +227,7 @@ const SelectLines: React.FC<{
         whiteSpace: 'nowrap',
         textTransform: 'none',
         fontSize: '0.9em',
+        transition: 'none',
         fontWeight: isSelected ? 'bold' : 'normal',
       };
 
@@ -254,6 +255,9 @@ const SelectLines: React.FC<{
         key={player.name}
         onClick={() => togglePlayerSelection(player.name, isHomeTeam)}
         fullWidth
+        disableRipple
+        disableTouchRipple
+        disableFocusRipple
         variant={isSelected ? 'contained' : 'outlined'}
         sx={getButtonSx()}
       >
