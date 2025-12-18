@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Box, IconButton, Menu, MenuItem, Divider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
 import { Bookkeeper } from './bookkeeper';
+import { useSnackbar } from './notifications';
 
 interface ActionsMenuProps {
   bookkeeper: Bookkeeper;
@@ -12,7 +14,6 @@ interface ActionsMenuProps {
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
   onEditRosters: () => void;
-  onEnterFullscreen: () => void;
 }
 
 const ActionsMenu: React.FC<ActionsMenuProps> = ({
@@ -23,9 +24,9 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   onSubmitGame,
   onChangeLine,
   onEditRosters,
-  onEnterFullscreen,
 }) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+  const { showSnackbar, SnackbarComponent } = useSnackbar({ defaultSeverity: 'info' });
   const open = Boolean(anchorEl);
 
   const gameStatus = bookkeeper.getGameStatus();
@@ -57,55 +58,89 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
     handleClose();
   };
 
+  const enterFullscreen = async () => {
+    try {
+      if (document.documentElement.requestFullscreen) {
+        await document.documentElement.requestFullscreen();
+      } else {
+        showSnackbar('Fullscreen not supported on this device', 'error');
+      }
+    } catch (error) {
+      showSnackbar('Failed to enter fullscreen', 'error');
+      console.error('Fullscreen error:', error);
+    }
+  };
+
+  const exitFullscreen = async () => {
+    try {
+      if (document.fullscreenElement) {
+        await document.exitFullscreen();
+      } else {
+        showSnackbar('Exit Fullscreen', 'error');
+      }
+    } catch (error) {
+      showSnackbar('Failed to exit fullscreen', 'error');
+      console.error('Fullscreen error:', error);
+    }
+  };
+
   return (
-    <Box>
-      <IconButton onClick={handleClick} size="medium" sx={{ border: '1px solid #ccc' }}>
-        <MenuIcon />
-      </IconButton>
+    <>
+      <Box>
+        <IconButton onClick={handleClick} size="medium" sx={{ border: '1px solid #ccc' }}>
+          <MenuIcon />
+        </IconButton>
 
-      <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
-        <MenuItem
-          onClick={() => handleAction(onChangeLine)}
-          disabled={!canChangeLine}
-          sx={{ color: !canChangeLine ? '#999' : 'inherit' }}
-        >
-          🔄 Change Line
-        </MenuItem>
+        <Menu id="game-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
+          <MenuItem
+            onClick={() => handleAction(onChangeLine)}
+            disabled={!canChangeLine}
+            sx={{ color: !canChangeLine ? '#999' : 'inherit' }}
+          >
+            🔄 Change Line
+          </MenuItem>
 
-        <MenuItem
-          onClick={() => handleAction(onEditRosters)}
-          disabled={!canEditRosters}
-          sx={{ color: !canEditRosters ? '#999' : 'inherit' }}
-        >
-          📝 Edit Rosters
-        </MenuItem>
+          <MenuItem
+            onClick={() => handleAction(onEditRosters)}
+            disabled={!canEditRosters}
+            sx={{ color: !canEditRosters ? '#999' : 'inherit' }}
+          >
+            📝 Edit Rosters
+          </MenuItem>
 
-        <Divider />
+          <Divider />
 
-        <MenuItem onClick={() => handleAction(onEnterFullscreen)}>
-          <FullscreenIcon sx={{ mr: 1, fontSize: '1.2em' }} />
-          Enter Fullscreen
-        </MenuItem>
+          <MenuItem onClick={() => handleAction(enterFullscreen)}>
+            <FullscreenIcon sx={{ mr: 1, fontSize: '1.2em' }} />
+            Enter Fullscreen
+          </MenuItem>
 
-        <Divider />
+          <MenuItem onClick={() => handleAction(exitFullscreen)}>
+            <FullscreenExitIcon sx={{ mr: 1, fontSize: '1.2em' }} />
+            Exit Fullscreen
+          </MenuItem>
 
-        <MenuItem
-          onClick={() => handleAction(onRecordHalf)}
-          disabled={!canRecordHalf}
-          sx={{ color: !canRecordHalf ? '#999' : 'inherit' }}
-        >
-          ⏸️ Record Half
-        </MenuItem>
+          <Divider />
 
-        <MenuItem
-          onClick={() => handleAction(onSubmitGame)}
-          disabled={!canSubmitGame}
-          sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
-        >
-          {isSubmitting ? '⏳ Submitting...' : '✅ Submit Game'}
-        </MenuItem>
-      </Menu>
-    </Box>
+          <MenuItem
+            onClick={() => handleAction(onRecordHalf)}
+            disabled={!canRecordHalf}
+            sx={{ color: !canRecordHalf ? '#999' : 'inherit' }}
+          >
+            ⏸️ Record Half
+          </MenuItem>
+
+          <MenuItem
+            onClick={() => handleAction(onSubmitGame)}
+            disabled={!canSubmitGame}
+            sx={{ color: !canSubmitGame ? '#999' : 'inherit' }}
+          >
+            {isSubmitting ? '⏳ Submitting...' : '✅ Submit Game'}
+          </MenuItem>
+        </Menu>
+      </Box>
+      {SnackbarComponent}
+    </>
   );
 };
 
