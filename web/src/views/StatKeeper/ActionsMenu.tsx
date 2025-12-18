@@ -10,7 +10,7 @@ interface ActionsMenuProps {
   bookkeeper: Bookkeeper;
   currentView: string;
   isSubmitting: boolean;
-  onRecordHalf: () => Promise<void>;
+  onRecordHalf: () => void;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
   onEditRosters: () => void;

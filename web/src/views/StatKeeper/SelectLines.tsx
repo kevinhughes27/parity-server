@@ -138,13 +138,13 @@ const SelectLines: React.FC<{
     setter(newSelection.sort((a, b) => a.localeCompare(b)));
   };
 
-  const submitLineSelection = async (newHomePlayers: string[], newAwayPlayers: string[]) => {
+  const submitLineSelection = (newHomePlayers: string[], newAwayPlayers: string[]) => {
     if (isSubstitution) {
       // Mid-point substitution
-      await bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
+      bookkeeper.recordSubstitution(newHomePlayers, newAwayPlayers);
     } else {
       // Normal line selection (initial or editing before point starts)
-      await bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
+      bookkeeper.recordActivePlayers(newHomePlayers, newAwayPlayers);
     }
 
     // Notify parent to clear local editing state
@@ -194,7 +194,7 @@ const SelectLines: React.FC<{
         }
       }
 
-      await submitLineSelection(newHomePlayers, newAwayPlayers);
+      submitLineSelection(newHomePlayers, newAwayPlayers);
     } else {
       // this is a technical limitation. also the submit is disabled with the same criteria
       showSnackbar('Please select at least two players from each team.');
@@ -205,8 +205,8 @@ const SelectLines: React.FC<{
     onComplete?.();
   };
 
-  const handleUndo = async () => {
-    await bookkeeper.undo();
+  const handleUndo = () => {
+    bookkeeper.undo();
     // undoing half does not complete the line selection
     if (bookkeeper.getUndoEvent() != 'recordHalf') {
       onComplete?.();
