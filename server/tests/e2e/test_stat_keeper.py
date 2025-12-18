@@ -71,8 +71,7 @@ def expect_rosters(page: Page, home_players: list[str], away_players: list[str])
         expect(page.locator("#root")).to_contain_text(player)
 
     # roster editing now visible
-    expect(page.get_by_role("heading", name="Add Player from League").first).to_be_visible()
-    expect(page.get_by_role("heading", name="Add Custom Substitute").first).to_be_visible()
+    expect(page.get_by_role("heading", name="Add Player").first).to_be_visible()
 
 
 def start_game(page: Page):
@@ -1158,14 +1157,29 @@ def test_edit_initial_rosters(server, league, rosters, page: Page) -> None:
     select_teams(page, home, away)
     expect_rosters(page, rosters[home], rosters[away])
 
-    # add league player (home team - first combobox)
-    page.get_by_role("combobox").first.select_option("Matthew Schijns")
+    # add league player (home team - first autocomplete)
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Matthew Schijns")
+    page.get_by_role("option", name="Matthew Schijns").click()
     page.get_by_role("button", name="Add").first.click()
 
-    # add sub (away team - second textbox and button)
-    page.get_by_role("textbox", name="Name").nth(1).click()
-    page.get_by_role("textbox", name="Name").nth(1).fill("Kevin Hughes")
-    page.get_by_role("button", name="Add Sub").nth(1).click()
+    # trying to add the player again gives a warning
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Matthew Schijns")
+    page.get_by_role("option", name="Matthew Schijns").click()
+    page.get_by_role("button", name="Add").first.click()
+    expect_snackbar(page, "Matthew Schijns(S) is already on the roster.")
+
+    # add sub (away team - second autocomplete)
+    page.get_by_placeholder("Type to search or add new...").nth(1).click()
+    page.get_by_placeholder("Type to search or add new...").nth(1).fill("Kevin Hughes")
+    page.get_by_role("button", name="Add").nth(1).click()
+
+    # trying to add the player again gives a warning
+    page.get_by_placeholder("Type to search or add new...").nth(1).click()
+    page.get_by_placeholder("Type to search or add new...").nth(1).fill("Kevin Hughes")
+    page.get_by_role("button", name="Add").nth(1).click()
+    expect_snackbar(page, "Kevin Hughes(S) is already on the roster.")
 
     # remove player (away team)
     page.get_by_role("listitem").filter(has_text="Kevin BarfordRemove").get_by_role("button").click()
@@ -1243,14 +1257,16 @@ def test_edit_rosters_mid_game(server, league, rosters, page: Page) -> None:
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Name").first.click()
-    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
-    page.get_by_role("button", name="Add Sub").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Kevin Hughes")
+    page.get_by_role("button", name="Add").first.click()
 
     # test removing and re-adding a roster player doesn't add (S) suffix
     page.get_by_role("listitem").filter(has_text="Brian KellsRemove").get_by_role("button").click()
     expect(page.locator("#root")).not_to_contain_text("Brian KellsRemove")
-    page.get_by_role("combobox").first.select_option("Brian Kells")
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Brian Kells")
+    page.get_by_role("option", name="Brian Kells").click()
     page.get_by_role("button", name="Add").first.click()
 
     # verify Brian Kells was added back WITHOUT (S) suffix
@@ -1329,7 +1345,9 @@ def test_offline_functionality(server, league, rosters, page: Page) -> None:
 
     # can still add sub while offline
     # league players was cached when we started the game
-    page.get_by_role("combobox").first.select_option("An Tran")
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("An Tran")
+    page.get_by_role("option", name="An Tran").click()
     page.get_by_role("button", name="Add").first.click()
 
     # verify sub was added
@@ -1404,9 +1422,9 @@ def test_edit_rosters_mid_point_and_change_line(server, league, rosters, page: P
     page.get_by_role("menuitem", name="Edit Rosters").click()
 
     # add sub
-    page.get_by_role("textbox", name="Name").first.click()
-    page.get_by_role("textbox", name="Name").first.fill("Kevin Hughes")
-    page.get_by_role("button", name="Add Sub").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Kevin Hughes")
+    page.get_by_role("button", name="Add").first.click()
     click_button(page, "Update Rosters")
 
     # change line
@@ -1704,16 +1722,24 @@ def test_custom_substitutes(session, server, league, rosters, page: Page) -> Non
     select_teams(page, home, away)
     expect_rosters(page, rosters[home], rosters[away])
 
-    # add open sub to the home team
-    page.get_by_role("textbox", name="Name").first.click()
-    page.get_by_role("textbox", name="Name").first.fill("Open Sub")
-    page.get_by_role("button", name="Add Sub").first.click()
+    # add open sub to the home team (default is ON2, so just add)
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Open Sub")
+    page.get_by_role("button", name="Add").first.click()
 
-    # add wn2 sub to away team
-    page.get_by_role("textbox", name="Name").nth(1).click()
-    page.get_by_role("textbox", name="Name").nth(1).fill("WN2 Sub")
-    page.get_by_role("checkbox", name="ON2").nth(1).uncheck()
-    page.get_by_role("button", name="Add Sub").nth(1).click()
+    # trying to add the player again gives a warning
+    page.get_by_placeholder("Type to search or add new...").first.click()
+    page.get_by_placeholder("Type to search or add new...").first.fill("Open Sub")
+    page.get_by_role("button", name="Add").first.click()
+    expect_snackbar(page, "Open Sub(S) is already on the roster")
+
+    # add wn2 sub to away team (need to toggle gender switch)
+    page.get_by_placeholder("Type to search or add new...").nth(1).click()
+    page.get_by_placeholder("Type to search or add new...").nth(1).fill("WN2 Sub")
+    # The gender toggle appears when typing a new name - it shows "ON2" by default
+    # Click the switch to toggle to "WN2"
+    page.get_by_text("ON2").last.click()
+    page.get_by_role("button", name="Add").nth(1).click()
 
     # check updated rosters - these should now include the subs
     home_roster = rosters[home]
