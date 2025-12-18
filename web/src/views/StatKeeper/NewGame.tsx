@@ -20,7 +20,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Matchup } from '../../api';
 import { homeColors, awayColors } from '../../helpers';
 import { useSnackbar } from './notifications';
-import { useConfirmDialog } from './confirm';
 
 interface CurrentLeague {
   league: {
@@ -158,9 +157,9 @@ const UpcomingMatchups: React.FC<{
 
 const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeague }) => {
   return (
-    <AppBar position="static" color="default" elevation={1}>
+    <AppBar position="static" color="primary" elevation={1}>
       <Toolbar sx={{ position: 'relative' }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', zIndex: 2 }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', zIndex: 2, color: 'white' }}>
           <Link
             to={'/stat_keeper'}
             style={{
@@ -183,11 +182,11 @@ const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeag
             zIndex: 1,
           }}
         >
-          <Typography variant="h5" sx={{ fontSize: '1.5em' }}>
+          <Typography variant="h5" sx={{ fontSize: '1.5em', color: 'white' }}>
             New Game
           </Typography>
           {currentLeague && (
-            <Typography variant="body2" sx={{ fontSize: '0.85em', color: 'text.secondary' }}>
+            <Typography variant="body2" sx={{ fontSize: '0.85em', color: 'white' }}>
               {currentLeague.league.name}
             </Typography>
           )}
@@ -309,72 +308,14 @@ const ActionBar: React.FC<{
   );
 };
 
-const FullscreenPrompt: React.FC<{
-  open: boolean;
-  onEnable: () => Promise<void>;
-  onSkip: () => void;
-}> = ({ open, onEnable, onSkip }) => {
-  const { confirm, DialogComponent } = useConfirmDialog();
-  const copy = `For the best stat keeping experience, we recommend using fullscreen mode.
-This will hide browser controls and give you more screen space.
-
-You can re-enable fullscreen later from the menu at the top of the screen.`;
-
-  useEffect(() => {
-    if (open) {
-      confirm({
-        title: 'Enable Fullscreen Mode?',
-        message: copy,
-        confirmText: 'Enable Fullscreen',
-        cancelText: 'Skip',
-        confirmColor: 'primary',
-      }).then(async confirmed => {
-        if (confirmed) {
-          await onEnable();
-        } else {
-          onSkip();
-        }
-      });
-    }
-  }, [open, confirm, onEnable, onSkip]);
-
-  return <>{DialogComponent}</>;
-};
-
 function NewGame() {
   const navigate = useNavigate();
 
-  const [showFullscreenPrompt, setShowFullscreenPrompt] = useState(false);
   const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
   const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
   const [errorLeague, setErrorLeague] = useState<string | null>(null);
 
   const { showSnackbar, SnackbarComponent } = useSnackbar();
-
-  // Check if we need to show fullscreen dialog
-  useEffect(() => {
-    if (!document.fullscreenElement) {
-      setShowFullscreenPrompt(true);
-    }
-  }, []);
-
-  const handleEnableFullscreen = async () => {
-    try {
-      if (document.documentElement.requestFullscreen) {
-        await document.documentElement.requestFullscreen();
-      } else {
-        showSnackbar('Fullscreen not supported on this device', 'error');
-      }
-    } catch (error) {
-      showSnackbar('Failed to enter fullscreen', 'error');
-      console.error('Fullscreen error:', error);
-    }
-    setShowFullscreenPrompt(false);
-  };
-
-  const handleSkipFullscreen = () => {
-    setShowFullscreenPrompt(false);
-  };
 
   const { leagueTeams, loadingTeams, errorTeams } = useTeams(currentLeague?.league?.id?.toString());
 
@@ -537,12 +478,6 @@ function NewGame() {
       {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
         <ActionBar handleCreateGame={handleCreateGame} canCreateGame={!!canCreateGame} />
       )}
-
-      <FullscreenPrompt
-        open={showFullscreenPrompt}
-        onEnable={handleEnableFullscreen}
-        onSkip={handleSkipFullscreen}
-      />
 
       {SnackbarComponent}
     </Box>

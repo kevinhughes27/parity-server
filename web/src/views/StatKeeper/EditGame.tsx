@@ -103,19 +103,6 @@ function EditGame({ bookkeeper }: EditGameProps) {
     setIsChangingLines(false);
   };
 
-  const handleEnterFullscreen = async () => {
-    try {
-      if (document.documentElement.requestFullscreen) {
-        await document.documentElement.requestFullscreen();
-      } else {
-        showSnackbar('Fullscreen not supported on this device', 'error');
-      }
-    } catch (error) {
-      showSnackbar('Failed to enter fullscreen', 'error');
-      console.error('Fullscreen error:', error);
-    }
-  };
-
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
       <TopBar
@@ -126,7 +113,6 @@ function EditGame({ bookkeeper }: EditGameProps) {
         onSubmitGame={handleSubmitGame}
         onChangeLine={handleChangeLine}
         onEditRosters={handleEditRosters}
-        onEnterFullscreen={handleEnterFullscreen}
       />
       <MainContent
         bookkeeper={bookkeeper}
@@ -148,7 +134,6 @@ function TopBar({
   onSubmitGame,
   onChangeLine,
   onEditRosters,
-  onEnterFullscreen,
 }: {
   bookkeeper: Bookkeeper;
   currentView: string;
@@ -157,7 +142,6 @@ function TopBar({
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
   onEditRosters: () => void;
-  onEnterFullscreen: () => Promise<void>;
 }) {
   return (
     <AppBar position="static" color="default" elevation={1}>
@@ -183,7 +167,6 @@ function TopBar({
             onSubmitGame={onSubmitGame}
             onChangeLine={onChangeLine}
             onEditRosters={onEditRosters}
-            onEnterFullscreen={onEnterFullscreen}
           />
         </Box>
       </Toolbar>
