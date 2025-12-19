@@ -102,7 +102,4 @@ workflows:
     jobs:
       - backend
       - frontend
-      - e2e:
-          requires:
-            - backend
-            - frontend
+      - e2e
