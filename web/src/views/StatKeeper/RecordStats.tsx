@@ -36,48 +36,48 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const homeRoster = bookkeeper.getHomeRoster();
   const awayRoster = bookkeeper.getAwayRoster();
 
-  const handlePlayerClick = (playerName: string, isHomeTeamPlayer: boolean) => {
+  const handlePlayerClick = async (playerName: string, isHomeTeamPlayer: boolean) => {
     if (bookkeeper.shouldRecordNewPass()) {
-      bookkeeper.recordPass(playerName);
+      await bookkeeper.recordPass(playerName);
     } else {
-      bookkeeper.recordFirstActor(playerName, isHomeTeamPlayer);
+      await bookkeeper.recordFirstActor(playerName, isHomeTeamPlayer);
     }
   };
 
-  const handlePull = () => {
-    bookkeeper.recordPull();
+  const handlePull = async () => {
+    await bookkeeper.recordPull();
   };
 
-  const handlePoint = () => {
-    bookkeeper.recordPoint();
+  const handlePoint = async () => {
+    await bookkeeper.recordPoint();
   };
 
-  const handleDrop = () => {
-    bookkeeper.recordDrop();
+  const handleDrop = async () => {
+    await bookkeeper.recordDrop();
   };
 
-  const handleThrowaway = () => {
-    bookkeeper.recordThrowAway();
+  const handleThrowaway = async () => {
+    await bookkeeper.recordThrowAway();
   };
 
-  const handleD = () => {
+  const handleD = async () => {
     if (!bookkeeper.firstActor) {
       showSnackbar('Select the player who got the D first.');
       return;
     }
-    bookkeeper.recordD();
+    await bookkeeper.recordD();
   };
 
-  const handleCatchD = () => {
+  const handleCatchD = async () => {
     if (!bookkeeper.firstActor) {
       showSnackbar('Select the player who got the Catch D first.');
       return;
     }
-    bookkeeper.recordCatchD();
+    await bookkeeper.recordCatchD();
   };
 
-  const handleUndo = () => {
-    bookkeeper.undo();
+  const handleUndo = async () => {
+    await bookkeeper.undo();
   };
 
   const renderPlayerButton = (player: StoredPlayer, isHomeTeamButton: boolean) => {
