@@ -323,14 +323,6 @@ const EditRoster: React.FC<EditRosterProps> = ({
         overflow: 'hidden',
       }}
     >
-      <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
-        {currentRoster.length} players
-      </Typography>
-
-      {/* Scrollable Player List */}
-      <PlayerList currentRoster={currentRoster} onRemovePlayer={handleRemovePlayer} />
-
-      {/* Add Player Section */}
       <Box sx={{ flexShrink: 0 }}>
         <AddPlayerForm
           availablePlayers={availablePlayers}
@@ -345,6 +337,13 @@ const EditRoster: React.FC<EditRosterProps> = ({
           alignRight={alignRight}
         />
       </Box>
+
+      <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
+        {currentRoster.length} players
+      </Typography>
+
+      <PlayerList currentRoster={currentRoster} onRemovePlayer={handleRemovePlayer} />
+
       {SnackbarComponent}
     </Box>
   );
