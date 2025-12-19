@@ -38,7 +38,7 @@ function EditGame({ bookkeeper }: EditGameProps) {
         ? 'selectLines'
         : 'recordStats';
 
-  const handleRecordHalf = () => {
+  const handleRecordHalf = async () => {
     const isHalfRecorded = bookkeeper.pointsAtHalf > 0;
 
     if (isHalfRecorded) {
@@ -46,7 +46,7 @@ function EditGame({ bookkeeper }: EditGameProps) {
       return;
     }
     try {
-      bookkeeper.recordHalf();
+      await bookkeeper.recordHalf();
       showSnackbar('Half time recorded.', 'success');
     } catch (error) {
       showSnackbar(error instanceof Error ? error.message : 'Failed to record half time.', 'error');
@@ -138,7 +138,7 @@ function TopBar({
   bookkeeper: Bookkeeper;
   currentView: string;
   isSubmitting: boolean;
-  onRecordHalf: () => void;
+  onRecordHalf: () => Promise<void>;
   onSubmitGame: () => Promise<void>;
   onChangeLine: () => void;
   onEditRosters: () => void;
