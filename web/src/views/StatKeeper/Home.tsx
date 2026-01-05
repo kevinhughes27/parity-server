@@ -160,7 +160,7 @@ function Home() {
 
     return (
       <>
-        <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
+        <Typography variant="h6" sx={{ mt: 3, mb: 2 }}>
           In Progress
         </Typography>
         <Box>
@@ -191,8 +191,8 @@ function Home() {
 
     return (
       <>
-        <Typography variant="h5" sx={{ mt: 3, mb: 2 }}>
-          Local Games
+        <Typography variant="h6" sx={{ mt: 3, mb: 2 }}>
+          Complete
         </Typography>
         <Box>
           {games.map(game =>
@@ -216,7 +216,16 @@ function Home() {
     );
   };
 
-  // Component for empty state
+  const Preamble = () => (
+    <Box sx={{ mt: 4 }}>
+      <Typography variant="body2">
+        <strong>These games are stored locally in the browser's indexedDB.</strong>
+        They can be deleted after they have been submitted but there is no need to. They will be
+        cleared automatically if the database schema is updated.
+      </Typography>
+    </Box>
+  );
+
   const EmptyState = () => (
     <Box sx={{ mt: 4, textAlign: 'center' }}>
       <Typography variant="body1">
@@ -230,6 +239,7 @@ function Home() {
       <AppHeader />
 
       <Container sx={{ mt: 3, pb: 4 }}>
+        {games.length !== 0 && <Preamble />}
         <InProgressGamesSection games={resumableGames} />
         <CompletedGamesSection games={otherGames} />
         {games.length === 0 && <EmptyState />}
