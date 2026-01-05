@@ -71,7 +71,6 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
           overflowX: 'hidden',
           overflowY: 'auto',
           userSelect: 'none', // Prevent text selection
-          pointerEvents: 'none', // Disable all pointer interactions
         }}
       >
         {!events || events.length === 0 ? (
