@@ -71,7 +71,7 @@ def expect_rosters(page: Page, home_players: list[str], away_players: list[str])
         expect(page.locator("#root")).to_contain_text(player)
 
     # roster editing now visible
-    expect(page.get_by_role("heading", name="Add Player").first).to_be_visible()
+    expect(page.get_by_role("button", name="Add").first).to_be_visible()
 
 
 def start_game(page: Page):
@@ -194,7 +194,7 @@ def submit_game(page: Page, *, failed: bool = False):
 
     # wait for redirect and
     page.wait_for_url("**/stat_keeper")
-    expect(page.locator("#root")).to_contain_text("Local Games")
+    expect(page.locator("#root")).to_contain_text("Complete")
 
     if failed:
         expect(page.locator("#root")).to_contain_text("sync-error")
