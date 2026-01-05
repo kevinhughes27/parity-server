@@ -26,7 +26,13 @@ interface ActionBarProps {
 const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const btnSx = { minWidth: '64px', fontSize: '0.8rem', px: 1.5, py: 1.2, whiteSpace: 'nowrap' };
+  const btnSx = {
+    minWidth: isSmallScreen ? '48px' : '64px',
+    fontSize: isSmallScreen ? '0.65rem' : '0.8rem',
+    px: isSmallScreen ? 1 : 1.5,
+    py: isSmallScreen ? 0.8 : 1.2,
+    whiteSpace: 'nowrap',
+  };
 
   // Filter out disabled buttons on small screens
   const visiblePrimaryActions = isSmallScreen
