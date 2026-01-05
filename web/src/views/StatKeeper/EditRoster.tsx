@@ -162,10 +162,6 @@ const AddPlayerForm: React.FC<{
 }) => {
   return (
     <Box>
-      <Typography variant="subtitle2" sx={{ mb: 0.5, fontSize: '0.95em' }}>
-        Add Player
-      </Typography>
-      {/* Full-width autocomplete */}
       <Autocomplete
         freeSolo
         options={availablePlayers}
@@ -251,6 +247,7 @@ const AddPlayerForm: React.FC<{
 };
 
 const EditRoster: React.FC<EditRosterProps> = ({
+  teamName,
   allLeaguePlayers,
   currentRoster,
   originalRoster,
@@ -323,6 +320,10 @@ const EditRoster: React.FC<EditRosterProps> = ({
         overflow: 'hidden',
       }}
     >
+      <Typography variant="h6" sx={{ mb: 1, flexShrink: 0, fontSize: '1rem' }}>
+        {teamName}
+      </Typography>
+
       <Box sx={{ flexShrink: 0 }}>
         <AddPlayerForm
           availablePlayers={availablePlayers}
@@ -338,9 +339,7 @@ const EditRoster: React.FC<EditRosterProps> = ({
         />
       </Box>
 
-      <Typography variant="h6" sx={{ mb: 1, textAlign: 'center', flexShrink: 0, fontSize: '1rem' }}>
-        {currentRoster.length} players
-      </Typography>
+      <Box sx={{ pb: 1 }}>{currentRoster.length} players</Box>
 
       <PlayerList currentRoster={currentRoster} onRemovePlayer={handleRemovePlayer} />
 

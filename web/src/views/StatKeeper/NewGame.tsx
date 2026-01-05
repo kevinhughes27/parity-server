@@ -7,7 +7,6 @@ import {
   Toolbar,
   Box,
   Typography,
-  Button,
   FormControl,
   InputLabel,
   Select,
@@ -19,6 +18,8 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Matchup } from '../../api';
 import { homeColors, awayColors } from '../../helpers';
+import ActionBar from './ActionBar';
+import Version from './version';
 import { useSnackbar } from './notifications';
 
 interface CurrentLeague {
@@ -155,7 +156,7 @@ const UpcomingMatchups: React.FC<{
   );
 };
 
-const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeague }) => {
+const TopBar: React.FC<{}> = () => {
   return (
     <AppBar position="static" color="primary" elevation={1}>
       <Toolbar sx={{ position: 'relative' }}>
@@ -185,11 +186,6 @@ const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeag
           <Typography variant="h5" sx={{ fontSize: '1.5em', color: 'white' }}>
             New Game
           </Typography>
-          {currentLeague && (
-            <Typography variant="body2" sx={{ fontSize: '0.85em', color: 'white' }}>
-              {currentLeague.league.name}
-            </Typography>
-          )}
         </Box>
       </Toolbar>
     </AppBar>
@@ -197,6 +193,7 @@ const TopBar: React.FC<{ currentLeague: CurrentLeague | null }> = ({ currentLeag
 };
 
 const CreateGameSection: React.FC<{
+  currentLeague: CurrentLeague | null;
   homeTeamIdStr: string;
   setHomeTeamIdStr: (id: string) => void;
   awayTeamIdStr: string;
@@ -208,6 +205,7 @@ const CreateGameSection: React.FC<{
   week: string;
   setWeek: (week: string) => void;
 }> = ({
+  currentLeague,
   homeTeamIdStr,
   setHomeTeamIdStr,
   awayTeamIdStr,
@@ -224,6 +222,11 @@ const CreateGameSection: React.FC<{
       <Typography variant="h6" sx={{ mb: 2 }}>
         Create Game
       </Typography>
+      {currentLeague && (
+        <Typography variant="body2" sx={{ fontSize: '0.85em', marginBottom: '10px' }}>
+          {currentLeague.league.name}
+        </Typography>
+      )}
       <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
         <TeamPicker
           label="Home"
@@ -270,41 +273,6 @@ const CreateGameSection: React.FC<{
         sx={{ width: '120px' }}
       />
     </Paper>
-  );
-};
-
-const ActionBar: React.FC<{
-  handleCreateGame: () => Promise<void>;
-  canCreateGame: boolean;
-}> = ({ handleCreateGame, canCreateGame }) => {
-  return (
-    <Box
-      sx={{
-        position: 'fixed',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        height: '70px',
-        p: '10px 15px',
-        backgroundColor: 'white',
-        borderTop: '1px solid #ccc',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        boxSizing: 'border-box',
-        zIndex: 100,
-      }}
-    >
-      <Button
-        onClick={handleCreateGame}
-        variant="contained"
-        color="success"
-        disabled={!canCreateGame}
-        sx={{ fontSize: '1em', px: 3 }}
-      >
-        Create Game
-      </Button>
-    </Box>
   );
 };
 
@@ -401,8 +369,7 @@ function NewGame() {
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-      <TopBar currentLeague={currentLeague} />
-
+      <TopBar />
       <Box
         sx={{
           flexGrow: 1,
@@ -454,6 +421,7 @@ function NewGame() {
             )}
 
             <CreateGameSection
+              currentLeague={currentLeague}
               homeTeamIdStr={homeTeamIdStr}
               setHomeTeamIdStr={setHomeTeamIdStr}
               awayTeamIdStr={awayTeamIdStr}
@@ -476,9 +444,30 @@ function NewGame() {
       </Box>
 
       {!loadingTeams && !errorTeams && leagueTeams.length > 0 && (
-        <ActionBar handleCreateGame={handleCreateGame} canCreateGame={!!canCreateGame} />
+        <ActionBar
+          primaryActions={[
+            {
+              label: 'Create Game',
+              onClick: handleCreateGame,
+              disabled: !canCreateGame,
+              color: 'success',
+              variant: 'contained',
+            },
+          ]}
+          secondaryActions={[
+            {
+              label: 'Cancel',
+              onClick: () => {
+                navigate('/stat_keeper');
+              },
+              color: 'primary',
+              variant: 'outlined',
+            },
+          ]}
+        />
       )}
 
+      <Version />
       {SnackbarComponent}
     </Box>
   );
