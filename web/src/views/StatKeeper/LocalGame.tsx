@@ -7,7 +7,7 @@ import ViewGame from './ViewGame';
 function LoadingState() {
   return (
     <div style={{ padding: '20px', height: '100vh', boxSizing: 'border-box' }}>
-      <p>Loading game data...</p>
+      <p>Loading game data from local indexedDB...</p>
     </div>
   );
 }
