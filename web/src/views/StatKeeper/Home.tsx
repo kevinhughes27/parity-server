@@ -4,6 +4,7 @@ import { db, StoredGame } from './db';
 import { Link } from 'react-router-dom';
 import { getLeagueName } from '../../api';
 import Loading from '../../components/Loading';
+import Version from './version';
 import { useSnackbar } from './notifications';
 import { useConfirmDialog } from './confirm';
 
@@ -228,12 +229,13 @@ function Home() {
     <Box sx={{ flexGrow: 1 }}>
       <AppHeader />
 
-      <Container sx={{ mt: 3 }}>
+      <Container sx={{ mt: 3, pb: 4 }}>
         <InProgressGamesSection games={resumableGames} />
         <CompletedGamesSection games={otherGames} />
         {games.length === 0 && <EmptyState />}
       </Container>
 
+      <Version />
       {DialogComponent}
       {SnackbarComponent}
     </Box>

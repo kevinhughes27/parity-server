@@ -15,6 +15,7 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DownloadIcon from '@mui/icons-material/Download';
 import SyncIcon from '@mui/icons-material/Sync';
+import Version from './version';
 
 function TopBar({
   bookkeeper,
@@ -165,7 +166,7 @@ function ViewGame({ bookkeeper }: ViewGameProps) {
         onResync={handleResync}
       />
 
-      <Box sx={{ flexGrow: 1, overflow: 'auto', p: 2 }}>
+      <Box sx={{ flexGrow: 1, overflow: 'auto', p: 2, pb: 4 }}>
         {resyncMessage && (
           <Alert
             severity={resyncMessage.includes('successfully') ? 'success' : 'error'}
@@ -178,6 +179,7 @@ function ViewGame({ bookkeeper }: ViewGameProps) {
 
         <GameDataViewer apiPayload={apiPayload} />
       </Box>
+      <Version />
     </Box>
   );
 }

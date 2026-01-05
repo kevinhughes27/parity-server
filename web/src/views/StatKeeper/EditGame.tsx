@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Box, Typography, AppBar, Toolbar } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Bookkeeper } from './bookkeeper';
 import SelectLines from './SelectLines';
 import RecordStats from './RecordStats';
 import EditRosters from './EditRosters';
 import ActionsMenu from './ActionsMenu';
+import Version from './version';
 import { useSnackbar } from './notifications';
 import { useConfirmDialog } from './confirm';
 
@@ -120,6 +120,7 @@ function EditGame({ bookkeeper }: EditGameProps) {
         onExitEditingRosters={handleExitEditingRosters}
         onExitChangingLines={handleExitChangingLines}
       />
+      <Version />
       {DialogComponent}
       {SnackbarComponent}
     </Box>
@@ -145,20 +146,18 @@ function TopBar({
 }) {
   return (
     <AppBar position="static" color="default" elevation={1}>
-      <Toolbar sx={{ justifyContent: 'space-between' }}>
-        <Link
-          to="/stat_keeper"
-          style={{
-            fontSize: '0.9em',
-            textDecoration: 'none',
-            color: 'inherit',
-            display: 'flex',
-            alignItems: 'center',
-          }}
+      <Toolbar sx={{ position: 'relative', justifyContent: 'center' }}>
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography variant="h5" sx={{ fontSize: '1.0em' }}>
+            {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
+          </Typography>
+          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
+            <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
+          </Typography>
+        </Box>
+        <Box
+          sx={{ position: 'absolute', right: 16, display: 'flex', alignItems: 'center', gap: 1 }}
         >
-          <ArrowBackIcon fontSize="small" sx={{ mr: 0.5 }} /> StatKeeper Home
-        </Link>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
           <ActionsMenu
             bookkeeper={bookkeeper}
             currentView={currentView}
@@ -170,14 +169,6 @@ function TopBar({
           />
         </Box>
       </Toolbar>
-      <Box sx={{ textAlign: 'center', pb: 1 }}>
-        <Typography variant="h5" sx={{ fontSize: '1.5em', mb: 0.5 }}>
-          {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
-        </Typography>
-        <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
-          <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
-        </Typography>
-      </Box>
     </AppBar>
   );
 }

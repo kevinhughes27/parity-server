@@ -29,7 +29,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
     <Box
       sx={{
         position: 'fixed',
-        bottom: 0,
+        bottom: 10,
         left: 0,
         right: 0,
         height: '70px',
