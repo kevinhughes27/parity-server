@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Stack } from '@mui/material';
+import { Box, Button, Stack, useMediaQuery, useTheme } from '@mui/material';
 
 interface ActionBarProps {
   primaryActions: {
@@ -24,7 +24,24 @@ interface ActionBarProps {
 // 690 x 900 in the simulator seems to be closer to reality
 
 const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions }) => {
-  const btnSx = { minWidth: '64px', fontSize: '0.8rem', px: 1.5, py: 1.2, whiteSpace: 'nowrap' };
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
+  const btnSx = {
+    minWidth: isSmallScreen ? '48px' : '64px',
+    fontSize: isSmallScreen ? '0.65rem' : '0.8rem',
+    px: isSmallScreen ? 1 : 1.5,
+    py: isSmallScreen ? 0.8 : 1.2,
+    whiteSpace: 'nowrap',
+  };
+
+  // Filter out disabled buttons on small screens
+  const visiblePrimaryActions = isSmallScreen
+    ? primaryActions.filter(action => !action.disabled)
+    : primaryActions;
+  const visibleSecondaryActions = isSmallScreen
+    ? secondaryActions.filter(action => !action.disabled)
+    : secondaryActions;
+
   return (
     <Box
       sx={{
@@ -50,7 +67,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
         alignItems="center"
         sx={{ overflow: 'auto' }}
       >
-        {primaryActions.map((action, index) => (
+        {visiblePrimaryActions.map((action, index) => (
           <Button
             key={index}
             onClick={action.onClick}
@@ -66,7 +83,7 @@ const ActionBar: React.FC<ActionBarProps> = ({ primaryActions, secondaryActions 
       </Stack>
 
       <Stack direction="row" spacing={0.5} alignItems="center">
-        {secondaryActions.map((action, index) => (
+        {visibleSecondaryActions.map((action, index) => (
           <Button
             key={index}
             onClick={action.onClick}
