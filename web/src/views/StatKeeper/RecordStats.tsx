@@ -3,7 +3,7 @@ import { Bookkeeper } from './bookkeeper';
 import PointDisplay from './PointDisplay';
 import ActionBar from './ActionBar';
 import { StoredPlayer } from './db';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useSnackbar } from './notifications';
 
 const playerButtonStyles = {
@@ -32,6 +32,8 @@ const playerButtonStyles = {
 
 const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
   const { showSnackbar, SnackbarComponent } = useSnackbar();
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
 
   const homeRoster = bookkeeper.getHomeRoster();
   const awayRoster = bookkeeper.getAwayRoster();
@@ -132,11 +134,11 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
         title={buttonState.reason}
         sx={{
           my: 0.2,
-          py: 1.2,
-          pl: 2,
+          py: isSmallScreen ? 0.8 : 1.2,
+          pl: isSmallScreen ? 1 : 2,
           justifyContent: 'flex-start',
           whiteSpace: 'nowrap',
-          fontSize: '0.9em',
+          fontSize: isSmallScreen ? '0.7em' : '0.9em',
           textTransform: 'none',
           transition: 'none',
           ...baseStyle,
@@ -161,7 +163,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
       <Box sx={{ flexGrow: 1, overflow: 'auto' }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1, overflowX: 'hidden' }}>
-            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+            <Typography variant="h6" sx={{ fontSize: isSmallScreen ? '0.8rem' : '1rem', mb: 1 }}>
               {bookkeeper.getHomeTeamName()}
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
@@ -172,7 +174,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           </Box>
 
           <Box sx={{ width: '30%', pl: 1, overflowX: 'hidden' }}>
-            <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
+            <Typography variant="h6" sx={{ fontSize: isSmallScreen ? '0.8rem' : '1rem', mb: 1 }}>
               {bookkeeper.getAwayTeamName()}
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
