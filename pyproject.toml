@@ -7,7 +7,7 @@ requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4==4.14.3",
     "fastapi[standard]>=0.115.12",
-    "gunicorn==23.0.0",
+    "gunicorn==24.0.0",
     "pydantic>=2.11.4",
     "pytest>=9.0.0",
     "requests==2.32.5",
