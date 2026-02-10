@@ -16,7 +16,7 @@ from server.api import CURRENT_LEAGUE_ID
 
 @pytest.fixture(scope="session")
 def browser_context_args(browser_context_args, playwright):
-    return {"viewport": {"width": 768, "height": 900}, "is_mobile": True}
+    return {"viewport": {"width": 800, "height": 900}, "is_mobile": True}
 
 
 def _is_port_open(port):
@@ -123,8 +123,8 @@ def expect_players_not_selected(page: Page, players: list[str]):
 
 
 def expect_lines_selected(page: Page, home: str, away: str):
-    expect(page.locator("#root")).to_contain_text(f"{home} (6/6)")
-    expect(page.locator("#root")).to_contain_text(f"{away} (6/6)")
+    locations = page.locator("#root").get_by_text("(6/6)", exact=True)
+    expect(locations).to_have_count(2)
 
 
 def expect_game_state(page: Page, state: str):

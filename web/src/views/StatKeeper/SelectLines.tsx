@@ -226,7 +226,7 @@ const SelectLines: React.FC<{
         justifyContent: 'center',
         whiteSpace: 'nowrap',
         textTransform: 'none',
-        fontSize: '0.9em',
+        fontSize: '1em',
         transition: 'none',
         fontWeight: isSelected ? 'bold' : 'normal',
       };
@@ -313,8 +313,11 @@ const SelectLines: React.FC<{
       <Box sx={{ flexGrow: 1, overflowX: 'hidden', mb: 1.25 }}>
         <Box sx={{ display: 'flex', height: '100%' }}>
           <Box sx={{ width: '30%', pr: 1 }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', overflowX: 'hidden', mb: 1 }}>
+              {bookkeeper.getHomeTeamName()}
+            </Typography>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.getHomeTeamName()} ({selectedHomePlayers.length}/{lineSize})
+              ({selectedHomePlayers.length}/{lineSize})
             </Typography>
             {homeRoster.map(player => renderPlayerButton(player, true))}
           </Box>
@@ -324,16 +327,19 @@ const SelectLines: React.FC<{
           </Box>
 
           <Box sx={{ width: '30%', pl: 1 }}>
+            <Typography variant="h6" sx={{ fontSize: '1rem', overflowX: 'hidden', mb: 1 }}>
+              {bookkeeper.getAwayTeamName()}
+            </Typography>
             <Typography variant="h6" sx={{ fontSize: '1rem', mb: 1 }}>
-              {bookkeeper.getAwayTeamName()} ({selectedAwayPlayers.length}/{lineSize})
+              ({selectedAwayPlayers.length}/{lineSize})
             </Typography>
             {awayRoster.map(player => renderPlayerButton(player, false))}
           </Box>
         </Box>
       </Box>
 
-      <Paper elevation={0} sx={{ mt: 2, p: 1, bgcolor: '#f5f5f5' }}>
-        <Typography variant="body2" color="text.secondary">
+      <Paper elevation={0} sx={{ mt: 2, mb: 3, p: 1, bgcolor: '#f5f5f5' }}>
+        <Typography variant="body2" color="text.secondary" sx={{ fontSize: '1rem' }}>
           {helpText()}
         </Typography>
       </Paper>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { useBookkeeper, useFullscreen } from './hooks';
+import { useBookkeeper } from './hooks';
 import EditGame from './EditGame';
 import ViewGame from './ViewGame';
 
@@ -13,7 +13,6 @@ function LoadingState() {
 }
 
 function LocalGame() {
-  useFullscreen();
   const { localGameId } = useParams<{ localGameId: string }>();
   const bookkeeper = useBookkeeper(localGameId!);
 

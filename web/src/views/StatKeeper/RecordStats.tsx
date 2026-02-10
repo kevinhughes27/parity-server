@@ -136,7 +136,7 @@ const RecordStats: React.FC<{ bookkeeper: Bookkeeper }> = ({ bookkeeper }) => {
           pl: 2,
           justifyContent: 'flex-start',
           whiteSpace: 'nowrap',
-          fontSize: '0.9em',
+          fontSize: '1em',
           textTransform: 'none',
           transition: 'none',
           ...baseStyle,

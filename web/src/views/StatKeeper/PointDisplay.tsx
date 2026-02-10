@@ -68,6 +68,7 @@ const PointDisplay: React.FC<PointDisplayProps> = ({ bookkeeper }) => {
         ref={eventsContainerRef}
         sx={{
           flexGrow: 1,
+          mb: 3,
           overflowX: 'hidden',
           overflowY: 'auto',
           userSelect: 'none', // Prevent text selection

@@ -38,7 +38,7 @@ const PlayerListItem: React.FC<{
         justifyContent: 'space-between',
         alignItems: 'center',
         p: '6px 4px',
-        fontSize: '0.9em',
+        fontSize: '1em',
         borderBottom: '1px solid #f0f0f0',
         borderLeft: `3px solid ${borderColor}`,
       }}
@@ -46,6 +46,7 @@ const PlayerListItem: React.FC<{
       <Typography
         variant="body2"
         sx={{
+          fontSize: '1em',
           whiteSpace: 'nowrap',
           overflowX: 'hidden',
         }}
@@ -59,7 +60,7 @@ const PlayerListItem: React.FC<{
         sx={{
           minWidth: 'auto',
           p: '2px 4px',
-          fontSize: '0.8em',
+          fontSize: '0.9em',
         }}
       >
         Remove
@@ -174,7 +175,7 @@ const AddPlayerForm: React.FC<{
             <Box component="li" key={key} {...optionProps}>
               <Box sx={{ display: 'flex', alignItems: 'baseline', gap: 0.5 }}>
                 <span>{option.name}</span>
-                <span style={{ color: '#888', fontSize: '0.9em' }}>({option.team})</span>
+                <span style={{ color: '#888', fontSize: '1em' }}>({option.team})</span>
               </Box>
             </Box>
           );
@@ -196,7 +197,7 @@ const AddPlayerForm: React.FC<{
             {...params}
             placeholder="Type to search or add new..."
             size="small"
-            sx={{ fontSize: '0.9em' }}
+            sx={{ fontSize: '1em' }}
           />
         )}
         PopperComponent={createWidePopper(alignRight)}
@@ -223,9 +224,9 @@ const AddPlayerForm: React.FC<{
             labelPlacement="start"
             sx={{
               m: 0,
-              fontSize: '0.9em',
+              fontSize: '1em',
               '& .MuiFormControlLabel-label': {
-                fontSize: '0.9em',
+                fontSize: '1em',
                 fontWeight: 500,
                 minWidth: '35px',
               },
@@ -237,7 +238,7 @@ const AddPlayerForm: React.FC<{
           disabled={!inputValue.trim()}
           variant="outlined"
           size="small"
-          sx={{ fontSize: '0.9em', flexShrink: 0 }}
+          sx={{ fontSize: '1em', flexShrink: 0 }}
         >
           Add
         </Button>
