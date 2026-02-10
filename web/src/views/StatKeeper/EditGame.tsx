@@ -148,10 +148,10 @@ function TopBar({
     <AppBar position="static" color="default" elevation={1}>
       <Toolbar sx={{ position: 'relative', justifyContent: 'center' }}>
         <Box sx={{ textAlign: 'center' }}>
-          <Typography variant="h5" sx={{ fontSize: '1.0em' }}>
+          <Typography variant="h5" sx={{ fontSize: '1.2em' }}>
             {bookkeeper.getHomeTeamName()} vs {bookkeeper.getAwayTeamName()}
           </Typography>
-          <Typography variant="body2" sx={{ fontSize: '0.9em' }}>
+          <Typography variant="body2" sx={{ fontSize: '1em' }}>
             <strong>Score:</strong> {bookkeeper.homeScore} - {bookkeeper.awayScore}
           </Typography>
         </Box>
@@ -189,7 +189,7 @@ function MainContent({
       sx={{
         flexGrow: 1,
         overflowY: 'auto',
-        pb: '78px', // 70 for action bar + 8
+        pb: '88px', // 80 for action bar + 8
         position: 'relative',
         overscrollBehavior: 'none',
       }}

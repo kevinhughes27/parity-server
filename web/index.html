@@ -4,7 +4,7 @@
     <title>Parity 2.0</title>
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="robots" content="noindex">
     <meta name="theme-color" content="#000000">
 
@@ -17,6 +17,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
+  <style>
+  html, body {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  </style>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/index.tsx"></script>

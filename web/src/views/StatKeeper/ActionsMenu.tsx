@@ -87,7 +87,7 @@ const ActionsMenu: React.FC<ActionsMenuProps> = ({
   return (
     <>
       <Box>
-        <IconButton onClick={handleClick} size="medium" sx={{ border: '1px solid #ccc' }}>
+        <IconButton onClick={handleClick} size="large" sx={{ border: '1px solid #ccc' }}>
           <MenuIcon />
         </IconButton>
 

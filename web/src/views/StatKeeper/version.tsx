@@ -8,7 +8,7 @@ const Version: React.FC = () => {
     <Box
       sx={{
         position: 'fixed',
-        bottom: 0,
+        bottom: 16,
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 1000,
@@ -18,7 +18,7 @@ const Version: React.FC = () => {
         variant="caption"
         sx={{
           color: 'text.disabled',
-          fontSize: '0.7rem',
+          fontSize: '0.8rem',
           opacity: 0.5,
         }}
       >
