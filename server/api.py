@@ -9,7 +9,7 @@ import datetime
 from server.stats_calculator import StatsCalculator
 import server.db as db
 
-CURRENT_LEAGUE_ID = 23
+CURRENT_LEAGUE_ID = 24
 
 
 def alias_generator(key: str) -> str:
