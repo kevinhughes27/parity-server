@@ -252,7 +252,7 @@ if __name__ == "__main__":
     with Session(engine) as session:
         league = session.get(db.League, CURRENT_LEAGUE_ID)
         assert league
-        division = True
+        division = False
 
         zuluru_sync = ZuluruSync(session, league, division)
         zuluru_sync.sync_teams()
