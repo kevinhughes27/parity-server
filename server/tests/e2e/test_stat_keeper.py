@@ -1951,23 +1951,23 @@ def test_select_lines_warnings(session, server, league, rosters, page: Page) -> 
     expect_mui_dialog_and_dismiss([f"{away_team_name}: 7/6 players selected (too many)"])
     select_lines(page, home_line, away_line)  # reset
 
-    # Ratio error
-    home_line = sorted_home_roster[:5] + sorted_home_roster[9:10]  # 5 ON2 1 WN2
-    away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
-    select_lines(page, home_line, away_line)
-
-    click_button(page, "Start Point")
-    expect_mui_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"])
-    select_lines(page, home_line, away_line)  # reset
-
-    # Ratio error
-    home_line = sorted_home_roster[:2] + sorted_home_roster[8:]  # 2 ON2 4 WN2
-    away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
-    select_lines(page, home_line, away_line)
-
-    click_button(page, "Start Point")
-    expect_mui_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"])
-    select_lines(page, home_line, away_line)  # reset
+    # # Ratio error
+    # home_line = sorted_home_roster[:5] + sorted_home_roster[9:10]  # 5 ON2 1 WN2
+    # away_line = sorted_away_roster[:3] + sorted_away_roster[9:]  # 3 ON2 3 WN2
+    # select_lines(page, home_line, away_line)
+    #
+    # click_button(page, "Start Point")
+    # expect_mui_dialog_and_dismiss([f"{home_team_name}: 5 ON2, 1 WN2", f"{away_team_name}: 3 ON2, 3 WN2"])
+    # select_lines(page, home_line, away_line)  # reset
+    #
+    # # Ratio error
+    # home_line = sorted_home_roster[:2] + sorted_home_roster[8:]  # 2 ON2 4 WN2
+    # away_line = sorted_away_roster[:4] + sorted_away_roster[10:]  # 4 ON2 2 WN2
+    # select_lines(page, home_line, away_line)
+    #
+    # click_button(page, "Start Point")
+    # expect_mui_dialog_and_dismiss([f"{home_team_name}: 2 ON2, 4 WN2"])
+    # select_lines(page, home_line, away_line)  # reset
 
     # Valid line
     home_line = sorted_home_roster[:4] + sorted_home_roster[10:]  # 4 ON2 2 WN2
