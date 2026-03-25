@@ -30,48 +30,48 @@ const SelectLines: React.FC<{
   const { showSnackbar, SnackbarComponent } = useSnackbar();
   const { confirm, DialogComponent } = useConfirmDialog();
 
-  const getRatioCounts = (playerNames: string[]) => {
-    const open = playerNames.filter(name => {
-      const player = [...homeRoster, ...awayRoster].find(p => p.name === name);
-      return player?.is_open ?? true;
-    }).length;
-    const women = playerNames.length - open;
-    return { open, women };
-  };
-
-  const checkRatioCompliance = (playerNames: string[]) => {
-    const { open, women } = getRatioCounts(playerNames);
-    const ratio = bookkeeper.getLeagueRatio();
-    return open === ratio.open && women === ratio.women;
-  };
-
-  const getRatioWarnings = () => {
-    const warnings: string[] = [];
-
-    if (selectedHomePlayers.length === lineSize) {
-      const homeCompliant = checkRatioCompliance(selectedHomePlayers);
-      if (!homeCompliant) {
-        const ratio = bookkeeper.getLeagueRatio();
-        const { open, women } = getRatioCounts(selectedHomePlayers);
-        warnings.push(
-          `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
-        );
-      }
-    }
-
-    if (selectedAwayPlayers.length === lineSize) {
-      const awayCompliant = checkRatioCompliance(selectedAwayPlayers);
-      if (!awayCompliant) {
-        const { open, women } = getRatioCounts(selectedAwayPlayers);
-        const ratio = bookkeeper.getLeagueRatio();
-        warnings.push(
-          `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
-        );
-      }
-    }
-
-    return warnings;
-  };
+  // const getRatioCounts = (playerNames: string[]) => {
+  //   const open = playerNames.filter(name => {
+  //     const player = [...homeRoster, ...awayRoster].find(p => p.name === name);
+  //     return player?.is_open ?? true;
+  //   }).length;
+  //   const women = playerNames.length - open;
+  //   return { open, women };
+  // };
+  //
+  // const checkRatioCompliance = (playerNames: string[]) => {
+  //   const { open, women } = getRatioCounts(playerNames);
+  //   const ratio = bookkeeper.getLeagueRatio();
+  //   return open === ratio.open && women === ratio.women;
+  // };
+  //
+  // const getRatioWarnings = () => {
+  //   const warnings: string[] = [];
+  //
+  //   if (selectedHomePlayers.length === lineSize) {
+  //     const homeCompliant = checkRatioCompliance(selectedHomePlayers);
+  //     if (!homeCompliant) {
+  //       const ratio = bookkeeper.getLeagueRatio();
+  //       const { open, women } = getRatioCounts(selectedHomePlayers);
+  //       warnings.push(
+  //         `${bookkeeper.getHomeTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
+  //       );
+  //     }
+  //   }
+  //
+  //   if (selectedAwayPlayers.length === lineSize) {
+  //     const awayCompliant = checkRatioCompliance(selectedAwayPlayers);
+  //     if (!awayCompliant) {
+  //       const { open, women } = getRatioCounts(selectedAwayPlayers);
+  //       const ratio = bookkeeper.getLeagueRatio();
+  //       warnings.push(
+  //         `${bookkeeper.getAwayTeamName()}: ${open} ON2, ${women} WN2 (expected ${ratio.open} ON2, ${ratio.women} WN2)`
+  //       );
+  //     }
+  //   }
+  //
+  //   return warnings;
+  // };
 
   const getLinesWarning = () => {
     const warnings: string[] = [];
@@ -157,9 +157,10 @@ const SelectLines: React.FC<{
     const enoughPlayers = leftPlayerCount > 2 && rightPlayerCount > 2;
 
     if (enoughPlayers) {
-      const ratioWarnings = getRatioWarnings();
+      // const ratioWarnings = getRatioWarnings();
       const lineWarnings = getLinesWarning();
-      const allWarnings = [...ratioWarnings, ...lineWarnings];
+      // const allWarnings = [...ratioWarnings, ...lineWarnings];
+      const allWarnings = [...lineWarnings];
 
       // Prepare new line
       const newHomePlayers = [...selectedHomePlayers].sort((a, b) => a.localeCompare(b));
