@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+IMAGE="node:22"
+PODMAN_CMD=(podman run -it --rm --userns=keep-id -v "$PWD":/app)
+
+case "$1" in
+  up)
+    echo "Starting development server..."
+    "${PODMAN_CMD[@]}" -w /app/web --network=host $IMAGE yarn run dev
+    ;;
+
+  yarn)
+    shift # Remove 'yarn' from the arguments
+    echo "Running yarn $@..."
+    "${PODMAN_CMD[@]}" -w /app/web $IMAGE yarn "$@"
+    ;;
+
+  shell)
+    echo "Opening container shell..."
+    "${PODMAN_CMD[@]}" -u root --cap-add=NET_RAW -w /app $IMAGE bash
+    ;;
+  *)
+    echo "Podman Wrapper"
+    echo "Usage:"
+    echo "  ./dev up           - Start the vite development server"
+    echo "  ./dev yarn [args]  - Run yarn commands (e.g., ./dev.sh yarn install)"
+    echo "  ./dev shell        - Open a shell inside the container for debugging"
+    ;;
+esac
