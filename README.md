@@ -9,23 +9,38 @@ Production: https://parity.ocua.ca
 How it works
 ------------
 
-There is no server to run. It is one [Cloudflare Worker](https://developers.cloudflare.com/workers/):
+There is no server to run. Parity is one [Cloudflare Worker](https://developers.cloudflare.com/workers/) that serves three things:
 
-- **The React app** (`src/`) is served as static assets. It includes the stat keeper, which records games offline in the browser (IndexedDB) and uploads them when done.
-- **The API** (`worker/index.ts`) routes `/api/:league/...` to that league's [Durable Object](https://developers.cloudflare.com/durable-objects/).
-- **One Durable Object per league** (`worker/league.ts`) holds a small SQLite database with the league's teams, schedule and games (each game is its raw list of points and events).
-- **Stats and salaries** (`shared/stats.ts`) are computed on demand from the raw events. The largest season ever takes ~40ms to compute from scratch, so nothing is precomputed or stored.
-- **The Zuluru sync** (`worker/zuluru.ts`) runs daily on a cron trigger and replaces the current league's rosters and schedule with what is on Zuluru.
+- **The React app**: the stats site, and the stat keeper which records games offline in the browser and uploads them when they are done.
+- **The API** at `/api/:league/...`, which the app uses and anyone can use to get the data out (see API below).
+- **The daily Zuluru sync**, a cron trigger that updates the current league's rosters and schedule from OCUA's Zuluru site.
 
-The league registry is `shared/leagues.json`. The first entry is the current league.
+Each league's data lives in its own [Durable Object](https://developers.cloudflare.com/durable-objects/), a small SQLite database that holds the league's teams, schedule and games. A game is stored as it was recorded, a list of points and their events. Stats and salaries are computed from the events whenever they are asked for; the largest season ever takes ~40ms, so nothing is precomputed or stored.
 
-```
-src/       React app (stats site + stat keeper)
-shared/    stats + salary logic and types, used by the app and the Worker
-worker/    the Worker, the league Durable Object and the Zuluru scraper
-e2e/       browser tests for the stat keeper
-scripts/   seed (copy leagues between servers) and compare (diff two servers' APIs)
-```
+
+Leagues
+-------
+
+Every league is a separate Durable Object named by the league's id. They don't share anything and nothing ever reads more than one of them at a time, so a season can't affect any other season and each one stays small (the biggest is ~5MB, the limit is 10GB).
+
+`shared/leagues.json` is the list of leagues. It is bundled into both the app and the Worker, the first entry is the current league: the one the stat keeper records games for and the Zuluru sync updates.
+
+The app spans leagues without knowing about Durable Objects. The league picker chooses a league from the list and every page asks for `/api/<league>/...`, which the Worker hands to that league's Durable Object.
+
+**Adding a league** is adding it to the top of `leagues.json` and deploying (see New season). There is no other setup: a Durable Object exists as soon as the Worker asks for it, and it creates its tables the first time it is used. The data arrives from the Zuluru sync and the stat keeper.
+
+**League ids are forever.** They name the Durable Object and are in every link. Taking a league out of the list only hides it, its data stays where it was.
+
+**The dev league.** In development (`./dev up`) the list has one more league, id 0, that only exists on your machine. It is the current league, so the stat keeper records games into it, and it fills itself with made up teams, a schedule and a couple of games the first time it is used. The real leagues are read from production so there is real data to look at, but anything that would change them stays local. See `worker/dev.ts`.
+
+### For another organization
+
+Nothing in the data is specific to OCUA, but the deployment is. To run Parity for another organization fork the repo and deploy it to your own Cloudflare account (your Durable Objects are your own, nothing is shared with OCUA's):
+
+1. Replace `shared/leagues.json` with your leagues. Line size, stat values and the salary formula are set per league.
+2. Rosters: the Zuluru sync (`worker/zuluru.ts`) scrapes OCUA's site. Point it at your own Zuluru, or set `zuluru` to `null` and load teams with `POST /api/:league/import` before any games are recorded (import replaces everything in the league).
+3. Set your time zone (`TIME_ZONE` in `worker/index.ts`, used for upcoming games) and where development reads real leagues from (`PRODUCTION` in `worker/dev.ts`).
+4. Deploy it (see Deploying) on your own domain.
 
 
 Development
@@ -36,13 +51,19 @@ Everything runs in a container via `./dev` (needs [podman](https://podman.io)), 
 ```sh
 ./dev setup          # install dependencies, create .dev.vars (local secrets)
 ./dev up             # the whole app at http://localhost:5173, Worker + Durable Objects included
-./dev seed           # in another terminal: copy the current league from production
-./dev seed --all     # or every league
 ```
 
-Local Durable Object data lives in `.wrangler/state`; delete it to start fresh. The local admin password is `dev` (see `.dev.vars`).
+The app opens on the dev league (see Leagues), the other leagues show production's data. Local Durable Object data lives in `.wrangler/state`, delete it to reset the dev league. The local admin password is `dev` (see `.dev.vars`).
 
-Seeding copies from production's `/api/:league/export`. Until v3 is in production use the v2 database instead: `./dev seed --all --from v2.sqlite`.
+### Code
+
+```
+src/       the React app (stats site + stat keeper)
+shared/    stats + salary logic, types and the league list, used by the app and the Worker
+worker/    the Worker, the league Durable Object, the Zuluru scraper and the dev league
+e2e/       browser tests for the stat keeper
+scripts/   seed (copy leagues between servers) and compare (diff two servers' APIs)
+```
 
 ### Tests
 
@@ -65,13 +86,14 @@ Deploying
 ./dev deploy                     # build and deploy production
 ./dev deploy --env staging       # a separate Worker with separate data, for trying things out
 ./dev wrangler tail              # production logs
+./dev seed --to https://parity-staging.<account>.workers.dev --all   # copy production's data into staging
 ```
 
 Deploys can also happen on every push to `main` by connecting the repo in the Cloudflare dashboard (Workers & Pages > parity > Settings > Builds, build command `yarn build`, deploy command `yarn wrangler deploy`).
 
 ### Hosting
 
-Parity runs in its own Cloudflare account, on its own domain (`<domain>` below). OCUA keeps `parity.ocua.ca` pointing at it with a single CNAME record, using [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/) custom hostnames (free for up to 100 hostnames, which is also how other leagues could get their own domain one day). OCUA doesn't have to give out any access to their account.
+Parity runs in its own Cloudflare account, on its own domain (`<domain>` below). OCUA keeps `parity.ocua.ca` pointing at it with a single CNAME record, using [Cloudflare for SaaS](https://developers.cloudflare.com/cloudflare-for-platforms/cloudflare-for-saas/) custom hostnames (free for up to 100). OCUA doesn't have to give out any access to their account.
 
 ### Secrets
 
@@ -151,7 +173,7 @@ Ideas
 -----
 
 - **Live games.** Games are only uploaded when they are finished, but the API already accepts `"status": "live"` uploads and keeps live games out of the stats. Saving after every point would make live scores and stats cheap to add (a Durable Object can also push updates over WebSockets).
-- **Other leagues.** Each league is its own Durable Object named `ocua/<id>`, so another organization could be another prefix and custom hostname. Live stats would be most useful to competitive teams, who usually only take stats for their own side.
+- **Single sided stats.** The stat keeper records both teams. Competitive teams usually only take stats for their own side and live stats would be most useful to them. Since running your own Parity is a fork and a deploy (see For another organization), a single sided mode could open it up to them.
 
 
 History
