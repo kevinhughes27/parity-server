@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { parseSchedule, parseTeam, parseTeamIds } from '../zuluru';
+import { parseSchedule, parseTeam, parseTeamIds, zuluruPages } from '../zuluru';
+import { leagues } from '../../shared/leagues';
 
 // Trimmed down copies of Zuluru's markup
 const teamPage = `
@@ -109,5 +110,27 @@ describe('parseSchedule', () => {
         gameEnd: '2025-05-29T12:30:00',
       },
     ]);
+  });
+});
+
+describe('zuluruPages', () => {
+  it('handles leagues and divisions', () => {
+    expect(zuluruPages('https://www.ocua.ca/zuluru/leagues/view?league=1103')).toEqual({
+      teams: 'https://www.ocua.ca/zuluru/leagues/view?league=1103',
+      schedule: 'https://www.ocua.ca/zuluru/leagues/schedule?league=1103',
+    });
+    expect(zuluruPages('https://www.ocua.ca/zuluru/divisions/view?division=1685')).toEqual({
+      teams: 'https://www.ocua.ca/zuluru/divisions/view?division=1685',
+      schedule: 'https://www.ocua.ca/zuluru/divisions/schedule?division=1685',
+    });
+    // the older url style
+    expect(zuluruPages('https://www.ocua.ca/zuluru/leagues/view/league:1103').teams).toBe(
+      'https://www.ocua.ca/zuluru/leagues/view?league=1103'
+    );
+    expect(() => zuluruPages('https://www.ocua.ca/zuluru/teams/view?team=1')).toThrow();
+  });
+
+  it.each(leagues.filter(l => l.zuluru))('league $id has a valid zuluru url', league => {
+    expect(() => zuluruPages(league.zuluru!)).not.toThrow();
   });
 });

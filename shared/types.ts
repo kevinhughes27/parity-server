@@ -62,7 +62,10 @@ export interface League {
   lineSize: number;
   statValues: StatValues;
   salaryCalc: SalaryCalc;
-  zuluruId: number | null;
+  // The Zuluru page listing the league's teams. OCUA sets up some seasons as a
+  // Zuluru league and others as a division of a bigger league, so this is either
+  // .../leagues/view?league=123 or .../divisions/view?division=456
+  zuluru: string | null;
 }
 
 // Everything a league holds. Returned by /export, accepted by /import.

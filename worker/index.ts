@@ -193,9 +193,9 @@ function parseGame(body: unknown, league: League, id: string): Game | string {
 }
 
 async function syncZuluru(env: Env, league: League) {
-  if (!league.zuluruId) throw new Error(`League ${league.id} has no zuluruId`);
+  if (!league.zuluru) throw new Error(`League ${league.id} has no zuluru url`);
   const { teams, matchups } = await fetchZuluru(
-    league.zuluruId,
+    league.zuluru,
     env.ZULURU_USER,
     env.ZULURU_PASSWORD
   );

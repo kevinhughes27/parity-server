@@ -12,22 +12,35 @@ const LOGIN = `${SITE}/user/login`;
 const TEAM_ID = /^teams_team_(\d+)$/;
 const PLAYER_ID = /^people_person_(\d+)$/;
 
-export async function fetchZuluru(zuluruLeagueId: number, user: string, password: string) {
+// Zuluru nests Leagues > Divisions > Teams. OCUA sometimes runs Parity as its
+// own league and sometimes as one division of a bigger league. Both have the
+// same pages (view lists the teams, schedule the games) so we just need to
+// know which one the url is for.
+export function zuluruPages(url: string) {
+  const match = url.match(/(league|division)[=:](\d+)/);
+  if (!match) throw new Error(`Not a zuluru league or division url: ${url}`);
+  const [, kind, id] = match;
+  return {
+    teams: `${ZULURU}/${kind}s/view?${kind}=${id}`,
+    schedule: `${ZULURU}/${kind}s/schedule?${kind}=${id}`,
+  };
+}
+
+export async function fetchZuluru(url: string, user: string, password: string) {
   if (!user || !password) throw new Error('ZULURU_USER and ZULURU_PASSWORD must be set');
 
+  const pages = zuluruPages(url);
   const session = await login(user, password);
 
-  const leaguePage = await session.get(`${ZULURU}/leagues/view/league:${zuluruLeagueId}`);
-  const teamIds = parseTeamIds(leaguePage);
-  if (teamIds.length === 0) throw new Error('No teams found');
+  const teamIds = parseTeamIds(await session.get(pages.teams));
+  if (teamIds.length === 0) throw new Error(`No teams found at ${pages.teams}`);
 
   const teams: Team[] = [];
   for (const id of teamIds) {
     teams.push(parseTeam(id, await session.get(`${ZULURU}/teams/view/team:${id}`)));
   }
 
-  const schedule = await session.get(`${ZULURU}/leagues/schedule?league=${zuluruLeagueId}`);
-  const matchups = parseSchedule(schedule);
+  const matchups = parseSchedule(await session.get(pages.schedule));
 
   return { teams, matchups };
 }
