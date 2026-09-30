@@ -26,9 +26,10 @@
 
   "observability": { "enabled": true },
 
-  // Uncomment once the Worker lives in the account that owns ocua.ca. Until then
-  // it is served at https://parity.<account-subdomain>.workers.dev
-  // "routes": [{ "pattern": "parity.ocua.ca", "custom_domain": true }],
+  // Serve everything on Parity's domain, including custom hostnames like
+  // parity.ocua.ca that CNAME to it (see Hosting in the README). Until then it is
+  // served at https://parity.<account-subdomain>.workers.dev
+  // "routes": [{ "pattern": "*/*", "zone_name": "<domain>" }],
 
   "env": {
     // A separate Worker with its own Durable Objects (so its own data).
