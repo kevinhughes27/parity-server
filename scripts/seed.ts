@@ -1,17 +1,15 @@
-// Copy leagues from one Parity server into another.
+// Copy leagues from one Parity server into another, e.g. production into
+// staging, or v2 into v3 for the migration:
 //
-// By default this copies the current league from production into your local
-// dev server (`./dev up` must be running):
+//   ./dev seed --to https://parity-staging.<account>.workers.dev          # current league
+//   ./dev seed --to https://parity-staging.<account>.workers.dev --all    # every league
+//   ./dev seed --to https://<domain> --all --from v2.sqlite               # the v2 migration
 //
-//   ./dev seed                   # current league
-//   ./dev seed --all             # every league
-//   ./dev seed --league 19       # one league
-//   ./dev seed --from https://parity.ocua.ca --to https://parity-staging.example.workers.dev
+// The source is a v3 server (its /export endpoint, production by default) or a
+// v2 sqlite database. Importing replaces the league's data on the target and
+// needs the target's admin password in ADMIN_PASSWORD (or .dev.vars).
 //
-// The source is a v3 server (its /export endpoint) or a v2 sqlite database
-// (`--from v2.sqlite`, used to migrate from parity-server). Importing replaces
-// the league's data on the target and needs the target's admin password:
-// ADMIN_PASSWORD from the env or .dev.vars.
+// (Local development doesn't need this, see the dev league in worker/dev.ts.)
 
 import { readFileSync, existsSync } from 'node:fs';
 import { parseArgs } from 'node:util';
@@ -21,11 +19,13 @@ import type { League, LeagueExport } from '../shared/types.ts';
 const { values: args } = parseArgs({
   options: {
     from: { type: 'string', default: 'https://parity.ocua.ca' },
-    to: { type: 'string', default: 'http://localhost:5173' },
+    to: { type: 'string' },
     all: { type: 'boolean', default: false },
     league: { type: 'string' },
   },
 });
+
+if (!args.to) throw new Error('--to is required (the server to copy into)');
 
 const leagues: League[] = JSON.parse(
   readFileSync(new URL('../shared/leagues.json', import.meta.url), 'utf-8')

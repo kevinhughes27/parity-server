@@ -9,7 +9,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { currentLeague } from '../shared/leagues';
 import type { Game, LeagueExport, Matchup, Team, TeamPlayer } from '../shared/types';
 import type { StatLine } from '../shared/stats';
-import rosterFixture from '../shared/__tests__/fixtures/rosters.json' with { type: 'json' };
+import rosterFixture from '../shared/fixtures/rosters.json' with { type: 'json' };
 
 export { expect };
 

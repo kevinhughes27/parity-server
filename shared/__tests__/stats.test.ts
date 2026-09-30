@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { pyRound, rollup, salaries, summarize } from '../stats';
 import type { Point, Team } from '../types';
-import snapshots from './fixtures/v2_snapshots.json';
-import rosters from './fixtures/rosters.json';
+import snapshots from '../fixtures/v2_snapshots.json';
+import rosters from '../fixtures/rosters.json';
 
 // Games recorded by the stat keeper, taken from the v2 python test suite.
 const fixtures = import.meta.glob<{
@@ -12,9 +12,9 @@ const fixtures = import.meta.glob<{
   homeRoster: string[];
   awayRoster: string[];
   points: Point[];
-}>('./fixtures/*.json', { eager: true, import: 'default' });
+}>('../fixtures/*.json', { eager: true, import: 'default' });
 
-const game = (name: string) => fixtures[`./fixtures/${name}.json`];
+const game = (name: string) => fixtures[`../fixtures/${name}.json`];
 
 const rosterTeams: Team[] = Object.entries(rosters).map(([name, players], id) => ({
   id,

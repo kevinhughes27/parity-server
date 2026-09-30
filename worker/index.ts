@@ -4,7 +4,8 @@
 
 import { LeagueObject, type GameEdit } from './league';
 import { fetchZuluru } from './zuluru';
-import { currentLeague, findLeague, leagues } from '../shared/leagues';
+import { currentLeague, devLeague, findLeague, leagues } from '../shared/leagues';
+import { fromProduction, seedDevLeague } from './dev';
 import type { Game, League, LeagueExport } from '../shared/types';
 
 export { LeagueObject };
@@ -18,8 +19,9 @@ export interface Env {
 
 const TIME_ZONE = 'America/Toronto';
 
-// Durable Object names are permanent, the org prefix leaves room for other orgs later.
-const leagueObject = (env: Env, league: League) => env.LEAGUE.getByName(`ocua/${league.id}`);
+// Each league is its own Durable Object, named by the league's id. Asking for it
+// is all it takes to create it (see Leagues in the README).
+const leagueObject = (env: Env, league: League) => env.LEAGUE.getByName(String(league.id));
 
 export default {
   async fetch(request, env) {
@@ -55,6 +57,12 @@ async function handle(request: Request, env: Env): Promise<Response> {
   const league = leagueId ? findLeague(leagueId) : undefined;
   if (!league || rest.length > 0) return json({ error: 'Not found' }, 404);
   const stub = leagueObject(env, league);
+
+  // development: see worker/dev.ts
+  if (import.meta.env.DEV) {
+    if (league.id === devLeague.id) await seedDevLeague(stub);
+    else if (method === 'GET') return fromProduction(request);
+  }
 
   const route = `${method} ${resource ?? ''}${id ? '/:id' : ''}`;
 

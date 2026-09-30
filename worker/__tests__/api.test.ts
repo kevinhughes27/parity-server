@@ -1,15 +1,18 @@
 // API tests against the real Worker + Durable Object (in workerd).
+//
+// Tests run in development mode (like `./dev up`) so they use the dev league,
+// the only local one. Reading any other league would go to production.
 // Replaces v2's test_api.py / test_admin.py.
 
 import { exports } from 'cloudflare:workers';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { leagues } from '../../shared/leagues';
 import type { LeagueExport, Team } from '../../shared/types';
-import rosters from '../../shared/__tests__/fixtures/rosters.json';
-import miniGame from '../../shared/__tests__/fixtures/mini_game.json';
-import miniGame2 from '../../shared/__tests__/fixtures/mini_game2.json';
-import miniGameEdited from '../../shared/__tests__/fixtures/mini_game_edited.json';
-import snapshots from '../../shared/__tests__/fixtures/v2_snapshots.json';
+import rosters from '../../shared/fixtures/rosters.json';
+import miniGame from '../../shared/fixtures/mini_game.json';
+import miniGame2 from '../../shared/fixtures/mini_game2.json';
+import miniGameEdited from '../../shared/fixtures/mini_game_edited.json';
+import snapshots from '../../shared/fixtures/v2_snapshots.json';
 
 const league = leagues[0];
 const api = `http://parity.test/api/${league.id}`;

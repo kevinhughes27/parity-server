@@ -44,7 +44,7 @@ case "$cmd" in
       # `./dev wrangler secret put NAME`
       printf 'ADMIN_PASSWORD=dev\nZULURU_USER=\nZULURU_PASSWORD=\n' > .dev.vars
     fi
-    echo "Ready. Run ./dev up, then ./dev seed in another terminal."
+    echo "Ready. Run ./dev up"
     ;;
   up)      run yarn dev "$@" ;;
   seed)    run node scripts/seed.ts "$@" ;;
@@ -61,7 +61,7 @@ Usage: ./dev <command>
 
   setup                   install dependencies, create .dev.vars
   up                      start the app (React + Worker + Durable Objects) on :5173
-  seed [--all]            copy the current league (or all) from production into local dev
+  seed --to <url> [--all] copy leagues between servers (e.g. production into staging)
   test                    run the unit tests
   e2e [args]              run the stat keeper tests in a browser (--ui-port=8080 to watch)
   check                   type-check, format check and unit tests
