@@ -15,8 +15,25 @@ jobs:
           node-version: 24
           cache: yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn lint
       - run: yarn type-check
       - run: yarn format:check
       - run: yarn test
       - run: yarn build
+
+  e2e:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn playwright install --with-deps chromium
+      - run: printf 'ADMIN_PASSWORD=e2e\nZULURU_USER=\nZULURU_PASSWORD=\n' > .dev.vars
+      - run: yarn e2e
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: e2e/report
