@@ -1,29 +1,60 @@
 #!/usr/bin/env bash
+# Runs all project tooling (node, yarn, wrangler) in a container so none of it
+# runs directly on your machine. Needs podman (rootless).
+#
+# The repo is mounted at /app. A named volume holds the container's $HOME
+# (yarn cache, wrangler login) between runs. Host networking lets you open the
+# dev server at http://localhost:5173 and lets `wrangler login` receive its
+# OAuth callback. CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID are passed
+# through if set.
+set -euo pipefail
+cd "$(dirname "$0")"
 
-IMAGE="node:22"
-PODMAN_CMD=(podman run -it --rm --userns=keep-id -v "$PWD":/app)
+IMAGE="docker.io/library/node:24"
 
-case "$1" in
-  up)
-    echo "Starting development server..."
-    "${PODMAN_CMD[@]}" -w /app/web --network=host $IMAGE yarn run dev
+run() {
+  local tty=(-i)
+  if [ -t 0 ] && [ -t 1 ]; then tty=(-it); fi
+
+  podman run --rm "${tty[@]}" \
+    --userns=keep-id \
+    --network=host \
+    -v "$PWD":/app -w /app \
+    -v parity-home:/home/dev:U -e HOME=/home/dev \
+    -e CLOUDFLARE_API_TOKEN -e CLOUDFLARE_ACCOUNT_ID \
+    "$IMAGE" "$@"
+}
+
+cmd="${1:-help}"
+[ $# -gt 0 ] && shift
+
+case "$cmd" in
+  setup)
+    run yarn install --frozen-lockfile
+    [ -f .dev.vars ] || cp .dev.vars.example .dev.vars
+    echo "Ready. Run ./dev up, then ./dev seed in another terminal."
     ;;
-
-  yarn)
-    shift # Remove 'yarn' from the arguments
-    echo "Running yarn $@..."
-    "${PODMAN_CMD[@]}" -w /app/web $IMAGE yarn "$@"
-    ;;
-
-  shell)
-    echo "Opening container shell..."
-    "${PODMAN_CMD[@]}" -u root --cap-add=NET_RAW -w /app $IMAGE bash
-    ;;
+  up)      run yarn dev "$@" ;;
+  seed)    run node scripts/seed.ts "$@" ;;
+  test)    run yarn test "$@" ;;
+  check)   run sh -c 'yarn lint && yarn type-check && yarn format:check && yarn test' ;;
+  yarn)    run yarn "$@" ;;
+  wrangler) run yarn wrangler "$@" ;;
+  deploy)  run sh -c 'yarn build && yarn wrangler deploy "$@"' deploy "$@" ;;
+  shell)   run bash ;;
   *)
-    echo "Podman Wrapper"
-    echo "Usage:"
-    echo "  ./dev up           - Start the vite development server"
-    echo "  ./dev yarn [args]  - Run yarn commands (e.g., ./dev.sh yarn install)"
-    echo "  ./dev shell        - Open a shell inside the container for debugging"
+    cat <<'EOF'
+Usage: ./dev <command>
+
+  setup                   install dependencies, create .dev.vars
+  up                      start the app (React + Worker + Durable Objects) on :5173
+  seed [--all]            copy the current league (or all) from production into local dev
+  test                    run the tests
+  check                   lint, type-check, format check and test (what CI runs)
+  yarn <args>             run yarn
+  wrangler <args>         run wrangler (e.g. ./dev wrangler secret put ADMIN_PASSWORD)
+  deploy [--env staging]  build and deploy
+  shell                   open a shell in the container
+EOF
     ;;
 esac
