@@ -35,7 +35,7 @@ function Layout(props: { children?: React.ReactNode }) {
         </StyledIconButton>
 
         <StyledTypography variant="h5" sx={{ display: { xs: 'none', lg: 'block' } }}>
-          Parity 2.0
+          Parity 3.0
         </StyledTypography>
 
         {props.children ? props.children : null}
