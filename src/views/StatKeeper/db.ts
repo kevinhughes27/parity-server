@@ -25,6 +25,7 @@ export interface StoredPlayer {
 
 export interface StoredGame {
   localId?: number; // Primary key, auto-incrementing. Optional because it's set by Dexie
+  uuid?: string; // Server id. Saving with the same id is idempotent. Missing on games created before v3
   league_id: number;
   week: number;
 

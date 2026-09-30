@@ -1,7 +1,6 @@
 import createPersistedState from 'use-persisted-state';
-import leagues from '../leagues.json';
+import { currentLeague } from '../../shared/leagues';
 
-const currentLeague = leagues[0];
 const initialLeague = currentLeague.id.toString();
 
 const storageKey = 'currentLeague';

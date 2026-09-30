@@ -36,6 +36,15 @@ interface UploadedGamePayload {
 
 export { GameState };
 
+// crypto.randomUUID only exists on https (or localhost). Fall back so the stat
+// keeper also works against a dev server on the LAN (e.g. testing on a tablet).
+function newGameId(): string {
+  if (crypto.randomUUID) return crypto.randomUUID();
+  return Array.from(crypto.getRandomValues(new Uint8Array(16)), b =>
+    b.toString(16).padStart(2, '0')
+  ).join('');
+}
+
 export class Bookkeeper {
   public league: League;
 
@@ -74,6 +83,7 @@ export class Bookkeeper {
     const sortedAwayRoster = [...awayRoster].sort((a, b) => a.name.localeCompare(b.name));
 
     const newGame: StoredGame = {
+      uuid: newGameId(),
       league_id: currentLeague.league.id,
       week: week,
       homeTeam: homeTeam.name,
@@ -161,10 +171,12 @@ export class Bookkeeper {
     const payload = this.transformForAPI();
 
     try {
+      this.game.uuid ??= newGameId();
       await this.saveToDatabase('submitted');
 
-      const response = await fetch(`/submit_game`, {
-        method: 'POST',
+      // PUT is idempotent so re-syncing a game that did upload is harmless
+      const response = await fetch(`/api/${this.game.league_id}/games/${this.game.uuid}`, {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
         },

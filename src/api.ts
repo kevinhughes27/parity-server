@@ -1,6 +1,6 @@
 /* global btoa */
 import 'whatwg-fetch';
-import rawLeagues from './leagues.json';
+import { leagues as registry } from '../shared/leagues';
 
 export interface LeagueFromJson {
   id: number;
@@ -8,7 +8,8 @@ export interface LeagueFromJson {
   lineSize: number;
 }
 
-export const leagues: LeagueFromJson[] = rawLeagues as LeagueFromJson[];
+// the league registry is bundled so there is no API round trip for it
+export const leagues: LeagueFromJson[] = registry;
 
 export const getLeagueName = (leagueId: number | string): string => {
   const id = typeof leagueId === 'string' ? parseInt(leagueId, 10) : leagueId;
@@ -42,16 +43,6 @@ const cachedFetch = async (url: string, _options = {}) => {
 
   return response;
 };
-
-// to save an API call round trip to get the leagues instead we
-// generate the json at build time. see `generate` in package.json
-//
-// const fetchLeagues = async () => {
-//   const response = await cachedFetch(`/api/leagues`)
-//   const leagues = await response.json()
-//   // nothing to display for league_id=1
-//   return leagues.filter((l) => l.id > 1)
-// }
 
 export interface Game {
   id: string;

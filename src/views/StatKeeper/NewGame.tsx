@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Matchup } from '../../api';
+import { currentLeague as currentLeagueConfig } from '../../../shared/leagues';
 import { homeColors, awayColors } from '../../helpers';
 import ActionBar from './ActionBar';
 import Version from './version';
@@ -25,11 +26,13 @@ import { useSnackbar } from './notifications';
 interface CurrentLeague {
   league: {
     id: number;
-    zuluru_id: number;
     name: string;
     lineSize: number;
   };
 }
+
+// games are always recorded for the current league (the first in shared/leagues.json)
+const registryLeague: CurrentLeague = { league: currentLeagueConfig };
 
 interface TeamPickerProps {
   label: string;
@@ -279,9 +282,7 @@ const CreateGameSection: React.FC<{
 function NewGame() {
   const navigate = useNavigate();
 
-  const [currentLeague, setCurrentLeague] = useState<CurrentLeague | null>(null);
-  const [loadingLeague, setLoadingLeague] = useState<boolean>(true);
-  const [errorLeague, setErrorLeague] = useState<string | null>(null);
+  const currentLeague = registryLeague;
 
   const { showSnackbar, SnackbarComponent } = useSnackbar();
 
@@ -295,25 +296,6 @@ function NewGame() {
   const [homeTeamIdStr, setHomeTeamIdStr] = useState<string>('');
   const [awayTeamIdStr, setAwayTeamIdStr] = useState<string>('');
   const [selectedMatchupId, setSelectedMatchupId] = useState<number | null>(null);
-
-  useEffect(() => {
-    const loadCurrentLeague = async () => {
-      setLoadingLeague(true);
-      setErrorLeague(null);
-      try {
-        const response = await fetch('/current_league');
-        const league = await response.json();
-        setCurrentLeague(league);
-      } catch (error) {
-        console.error('Failed to fetch current league:', error);
-        setErrorLeague(error instanceof Error ? error.message : 'Failed to load current league');
-      } finally {
-        setLoadingLeague(false);
-      }
-    };
-
-    loadCurrentLeague();
-  }, []);
 
   useEffect(() => {
     setHomeTeamIdStr('');
@@ -380,18 +362,6 @@ function NewGame() {
           pb: '86px',
         }}
       >
-        {loadingLeague && <Typography sx={{ p: 2 }}>Loading current league...</Typography>}
-        {errorLeague && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            {errorLeague}
-          </Alert>
-        )}
-        {!currentLeague && !loadingLeague && !errorLeague && (
-          <Alert severity="error" sx={{ mb: 2 }}>
-            No league data available
-          </Alert>
-        )}
-
         {loadingTeams && <Typography sx={{ flexShrink: 0, p: 2 }}>Loading teams...</Typography>}
         {errorTeams && (
           <Typography sx={{ color: 'error.main', flexShrink: 0, p: 2 }}>
