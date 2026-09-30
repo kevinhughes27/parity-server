@@ -15,7 +15,18 @@ There is no server to run. Parity is one [Cloudflare Worker](https://developers.
 - **The API** at `/api/:league/...`, which the app uses and anyone can use to get the data out (see API below).
 - **The daily Zuluru sync**, a cron trigger that keeps the current league's rosters and schedule up to date from OCUA's Zuluru site while its season is being played.
 
-Each league's data lives in its own [Durable Object](https://developers.cloudflare.com/durable-objects/), a small SQLite database that holds the league's teams, schedule and games. A game is stored as it was recorded, a list of points and their events. Stats and salaries are computed from the events whenever they are asked for; the largest season ever takes ~40ms, so nothing is precomputed or stored.
+Each league's data lives in its own [Durable Object](https://developers.cloudflare.com/durable-objects/) (`worker/league.ts`), which holds the league's teams, schedule and games. A game is stored as it was recorded, a list of points and their events. Stats and salaries are computed from the events whenever they are asked for; the largest season ever takes ~40ms, so nothing is precomputed or stored.
+
+### Durable Objects
+
+If you haven't used them: a Durable Object is a small class with its own private SQLite database, and Cloudflare runs it for you.
+
+- You get one by name (we use the league id). Cloudflare starts it when a request for it arrives and puts it to sleep when it's idle, which costs nothing. There is no server or database to set up.
+- Its database stays with it between requests. We read and write it with plain SQL (`this.ctx.storage.sql`), and the tables are created the first time it runs (`SCHEMA` in `worker/league.ts`, append only).
+- It handles one request at a time, so there are no locks or race conditions to think about.
+- The Worker calls its methods directly (`stub.stats(...)`), like calling a function on another machine.
+
+In development the same thing runs locally inside `./dev up`, with the databases in `.wrangler/state`.
 
 
 Leagues
