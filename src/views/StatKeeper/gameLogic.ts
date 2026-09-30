@@ -126,7 +126,7 @@ export class PointMethods {
         default: {
           // This exhaustive check helps ensure all event types are handled.
           // If a new EventType is added without a case here, TypeScript will error.
-          const _exhaustiveCheck: never = event.type;
+          event.type satisfies never;
           console.warn('Unknown event type in prettyPrint:', event.type);
           return `Unknown event: ${event.type}`;
         }

@@ -1,4 +1,3 @@
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';

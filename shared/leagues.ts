@@ -5,7 +5,7 @@
 // games for and what the daily Zuluru sync updates.
 
 import type { League } from './types';
-import data from './leagues.json';
+import data from './leagues.json' with { type: 'json' };
 
 export const leagues = data as League[];
 

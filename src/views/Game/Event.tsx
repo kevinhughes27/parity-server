@@ -1,4 +1,3 @@
-import React from 'react';
 import { PointEvent } from '../../api';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';

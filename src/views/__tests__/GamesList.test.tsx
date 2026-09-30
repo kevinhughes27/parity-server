@@ -68,12 +68,12 @@ describe('GamesList', () => {
 
     // Verify games are rendered
     expect(
-      screen.getByText((content, element) => {
+      screen.getByText((_content, element) => {
         return element?.textContent === 'RedvsBlue';
       })
     ).toBeInTheDocument();
     expect(
-      screen.getByText((content, element) => {
+      screen.getByText((_content, element) => {
         return element?.textContent === 'RedvsYellow';
       })
     ).toBeInTheDocument();

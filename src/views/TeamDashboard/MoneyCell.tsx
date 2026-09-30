@@ -1,4 +1,3 @@
-import React from 'react';
 import format from 'format-number';
 
 const MoneyCell = ({ data }: { data: number }) => {

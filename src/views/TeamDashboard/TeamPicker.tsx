@@ -1,4 +1,3 @@
-import React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { uniq, sortBy } from 'lodash';
