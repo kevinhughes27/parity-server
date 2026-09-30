@@ -18,7 +18,8 @@
   // Durable Object *class* migrations (creating/renaming classes), not the SQL schema.
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["LeagueObject"] }],
 
-  // Daily Zuluru roster + schedule sync for the current league (UTC, 3am Toronto)
+  // Daily Zuluru roster + schedule sync for the current league while its season
+  // is on (UTC, 3am Toronto). See Zuluru sync in the README.
   "triggers": { "crons": ["0 8 * * *"] },
 
   // Set with `./dev wrangler secret put NAME`. Locally they come from .dev.vars

@@ -3,7 +3,7 @@
 // by Cloudflare before this code runs.
 
 import { LeagueObject, type GameEdit } from './league';
-import { fetchZuluru } from './zuluru';
+import { fetchZuluru, seasonOver } from './zuluru';
 import { currentLeague, devLeague, findLeague, leagues } from '../shared/leagues';
 import { fromProduction, seedDevLeague } from './dev';
 import type { Game, League, LeagueExport } from '../shared/types';
@@ -33,8 +33,17 @@ export default {
     }
   },
 
+  // Daily Zuluru sync of the current league, until its season is over
   async scheduled(_controller, env) {
-    await syncZuluru(env, currentLeague);
+    const league = currentLeague;
+    if (!league.zuluru) return;
+
+    const matchups = await leagueObject(env, league).matchups();
+    if (seasonOver(matchups, localToday())) {
+      console.log(`Zuluru sync: league ${league.id} is over, skipping`);
+      return;
+    }
+    await syncZuluru(env, league);
   },
 } satisfies ExportedHandler<Env>;
 
@@ -72,8 +81,7 @@ async function handle(request: Request, env: Env): Promise<Response> {
       return json(withTeamNames(await stub.teams()));
 
     case 'GET schedule': {
-      const today = new Intl.DateTimeFormat('en-CA', { timeZone: TIME_ZONE }).format(new Date());
-      const { teams, matchups } = await stub.schedule(today);
+      const { teams, matchups } = await stub.schedule(localToday());
       return json({ teams: withTeamNames(teams), matchups });
     }
 
@@ -129,6 +137,10 @@ async function handle(request: Request, env: Env): Promise<Response> {
       return json(await stub.import((await request.json()) as LeagueExport));
 
     case 'POST zuluru_sync':
+      // only the current league, finished seasons keep the rosters they ended with
+      if (league.id !== currentLeague.id) {
+        return json({ error: 'Only the current league syncs with Zuluru' }, 400);
+      }
       try {
         return json(await syncZuluru(env, league));
       } catch (error) {
@@ -212,6 +224,11 @@ async function syncZuluru(env: Env, league: League) {
     `Zuluru sync: league ${league.id}, ${teams.length} teams, ${matchups.length} matchups`
   );
   return { teams: teams.length, matchups: matchups.length };
+}
+
+// YYYY-MM-DD in the league's time zone
+function localToday() {
+  return new Intl.DateTimeFormat('en-CA', { timeZone: TIME_ZONE }).format(new Date());
 }
 
 // v2 included the team name on each player

@@ -13,7 +13,7 @@ There is no server to run. Parity is one [Cloudflare Worker](https://developers.
 
 - **The React app**: the stats site, and the stat keeper which records games offline in the browser and uploads them when they are done.
 - **The API** at `/api/:league/...`, which the app uses and anyone can use to get the data out (see API below).
-- **The daily Zuluru sync**, a cron trigger that updates the current league's rosters and schedule from OCUA's Zuluru site.
+- **The daily Zuluru sync**, a cron trigger that keeps the current league's rosters and schedule up to date from OCUA's Zuluru site while its season is being played.
 
 Each league's data lives in its own [Durable Object](https://developers.cloudflare.com/durable-objects/), a small SQLite database that holds the league's teams, schedule and games. A game is stored as it was recorded, a list of points and their events. Stats and salaries are computed from the events whenever they are asked for; the largest season ever takes ~40ms, so nothing is precomputed or stored.
 
@@ -112,6 +112,14 @@ Secret values can be replaced but never read back. Add `--env staging` for stagi
 1. Find the Zuluru page that lists the Parity teams. OCUA sets up some seasons as their own Zuluru league and others as a division of a bigger league, so it is either `.../zuluru/leagues/view?league=1234` or `.../zuluru/divisions/view?division=5678`.
 2. Add the league to the top of `shared/leagues.json` with that url as `zuluru`, then deploy.
 3. The next daily sync fills in the teams and schedule, or sync right away: `curl -u admin:$PASSWORD -X POST https://parity.ocua.ca/api/<league>/zuluru_sync`.
+
+### Zuluru sync
+
+Once a day the Worker logs in to OCUA's Zuluru with the `ZULURU_USER` and `ZULURU_PASSWORD` secrets, scrapes the current league's teams and schedule, and replaces them in the current league's Durable Object. Only the Worker has the credentials. Durable Objects just store what they are given and never sync anything themselves.
+
+The sync only ever touches the current league, and it stops a week after the league's last scheduled game (playoffs are scheduled week by week) so a finished season keeps the rosters it ended with. Adding the next season to `leagues.json` starts it again. `POST /api/<league>/zuluru_sync` (admin) syncs right away, again only for the current league.
+
+When it breaks (Zuluru changes its pages, the password changes) it fails before changing anything: rosters and the schedule stay as they were, and stat keepers can still add anyone missing as a sub. The error shows up in the logs (`./dev wrangler tail` or the dashboard) and in the response from the admin endpoint.
 
 ### Backups
 

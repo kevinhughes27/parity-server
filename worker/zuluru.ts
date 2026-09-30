@@ -26,6 +26,21 @@ export function zuluruPages(url: string) {
   };
 }
 
+// The sync keeps the current league up to date while it is being played, then
+// stops so the finished season keeps the rosters it ended with. It is over a
+// week after its last scheduled game (playoffs are scheduled week by week as
+// the teams are known, so there is always a game within a week until then).
+// Before Zuluru has a schedule there are no matchups and it keeps syncing.
+export function seasonOver(matchups: Matchup[], today: string) {
+  if (matchups.length === 0) return false;
+  const lastGame = matchups
+    .map(m => m.gameStart.slice(0, 10))
+    .sort()
+    .at(-1)!;
+  const weekAfter = new Date(Date.parse(lastGame) + 7 * 86400_000).toISOString().slice(0, 10);
+  return today > weekAfter;
+}
+
 export async function fetchZuluru(url: string, user: string, password: string) {
   if (!user || !password) throw new Error('ZULURU_USER and ZULURU_PASSWORD must be set');
 

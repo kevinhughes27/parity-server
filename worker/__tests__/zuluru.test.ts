@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseSchedule, parseTeam, parseTeamIds, zuluruPages } from '../zuluru';
+import { parseSchedule, parseTeam, parseTeamIds, seasonOver, zuluruPages } from '../zuluru';
 import { leagues } from '../../shared/leagues';
 
 // Trimmed down copies of Zuluru's markup
@@ -132,5 +132,29 @@ describe('zuluruPages', () => {
 
   it.each(leagues.filter(l => l.zuluru))('league $id has a valid zuluru url', league => {
     expect(() => zuluruPages(league.zuluru!)).not.toThrow();
+  });
+});
+
+describe('seasonOver', () => {
+  const games = (...days: string[]) =>
+    days.map((day, i) => ({
+      id: i,
+      week: i + 1,
+      homeTeamId: 1,
+      awayTeamId: 2,
+      gameStart: `${day}T19:00:00`,
+      gameEnd: `${day}T20:30:00`,
+    }));
+
+  it('keeps syncing until a week after the last scheduled game', () => {
+    const schedule = games('2026-03-15', '2026-03-22');
+    expect(seasonOver(schedule, '2026-03-01')).toBe(false); // before the season
+    expect(seasonOver(schedule, '2026-03-22')).toBe(false); // last game
+    expect(seasonOver(schedule, '2026-03-29')).toBe(false); // a week later (playoffs?)
+    expect(seasonOver(schedule, '2026-03-30')).toBe(true);
+  });
+
+  it('keeps syncing before Zuluru has a schedule', () => {
+    expect(seasonOver([], '2026-03-30')).toBe(false);
   });
 });

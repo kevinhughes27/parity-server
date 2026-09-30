@@ -190,6 +190,12 @@ describe('admin', () => {
     expect(await getJson(`${api}/games`)).toHaveLength(1);
   });
 
+  it('only syncs the current league with zuluru', async () => {
+    const past = leagues.find(l => l.id !== league.id)!;
+    const res = await send('POST', `http://parity.test/api/${past.id}/zuluru_sync`, null, admin);
+    expect(res.status).toBe(400);
+  });
+
   it('reports zuluru sync failures without touching rosters', async () => {
     const res = await send('POST', `${api}/zuluru_sync`, null, admin);
     expect(res.status).toBe(502);
