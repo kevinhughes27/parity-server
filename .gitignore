@@ -1,21 +1,16 @@
-# python
-__pycache__
-*.pyc
-.venv
-.ruff_cache
-.mypy_cache
-*egg-info
-
-# node
+# dependencies
 node_modules
-yarn-error.log
 
-# test db
-*test.sqlite
+# build + test output
+dist
+coverage
+*.log
 
-# cache for zuluru syncs
-tmp
+# wrangler local state (local Durable Object SQLite lives here) + secrets
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
 
-# android release builds
-android/app/league/release/*
-.aider*
+# misc
+.DS_Store
