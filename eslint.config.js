@@ -18,24 +18,6 @@ export default [
           jsx: true
         }
       },
-      globals: {
-        window: 'readonly',
-        document: 'readonly',
-        navigator: 'readonly',
-        fetch: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        Response: 'readonly',
-        Blob: 'readonly',
-        prompt: 'readonly',
-        console: 'readonly',
-        JSX: 'readonly',
-        React: 'readonly',
-        HTMLDivElement: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLButtonElement: 'readonly',
-        URL: 'readonly',
-      }
     },
     plugins: {
       '@typescript-eslint': tseslint,
@@ -50,6 +32,8 @@ export default [
         'caughtErrorsIgnorePattern': '^_'
       }],
       'no-unused-vars': 'off',
+      // typescript already checks for undefined names (and knows browser + worker globals)
+      'no-undef': 'off',
       'react/jsx-uses-vars': 'error',
       'react/jsx-uses-react': 'error'
     },
